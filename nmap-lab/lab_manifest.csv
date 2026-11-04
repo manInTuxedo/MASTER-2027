@@ -1,0 +1,10 @@
+id,product_family,role,docker_image,expected_version,host_port
+apache_old,Apache HTTP Server,old,httpd:2.4.49,2.4.49,8001
+apache_mid,Apache HTTP Server,mid,httpd:2.4.54,2.4.54,8002
+apache_latest,Apache HTTP Server,latest,httpd:2.4,,8003
+nginx_old,nginx,old,nginx:1.18.0,1.18.0,8004
+nginx_mid,nginx,mid,nginx:1.22.1,1.22.1,8005
+nginx_latest,nginx,latest,nginx:stable,,8006
+mysql_old,MySQL,old,mysql:5.7.30,5.7.30,8007
+mysql_mid,MySQL,mid,mysql:8.0.32,8.0.32,8008
+mysql_latest,MySQL,latest,mysql:8.4,,8009

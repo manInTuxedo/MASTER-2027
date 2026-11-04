@@ -1,0 +1,42 @@
+# Phase 1 lab: 3 products x 3 versions (old, mid, latest) = 9 services.
+# Every port is bound to 127.0.0.1, so nothing is reachable from your network.
+# Tags are suggestions: run "docker compose pull" and swap any tag that does not exist
+# (see hub.docker.com/_/httpd , /_/nginx , /_/mysql for the tag lists).
+name: nmap-cve-lab
+
+services:
+  # ---- Apache HTTP Server ----
+  apache_old:
+    image: httpd:2.4.49
+    ports: ["127.0.0.1:8001:80"]
+  apache_mid:
+    image: httpd:2.4.54
+    ports: ["127.0.0.1:8002:80"]
+  apache_latest:
+    image: httpd:2.4
+    ports: ["127.0.0.1:8003:80"]
+
+  # ---- nginx ----
+  nginx_old:
+    image: nginx:1.18.0
+    ports: ["127.0.0.1:8004:80"]
+  nginx_mid:
+    image: nginx:1.22.1
+    ports: ["127.0.0.1:8005:80"]
+  nginx_latest:
+    image: nginx:stable
+    ports: ["127.0.0.1:8006:80"]
+
+  # ---- MySQL (takes 20-40 s to finish starting; the password is fake and lab-only) ----
+  mysql_old:
+    image: mysql:5.7.30
+    environment: { MYSQL_ROOT_PASSWORD: lab_only_password }
+    ports: ["127.0.0.1:8007:3306"]
+  mysql_mid:
+    image: mysql:8.0.32
+    environment: { MYSQL_ROOT_PASSWORD: lab_only_password }
+    ports: ["127.0.0.1:8008:3306"]
+  mysql_latest:
+    image: mysql:8.4
+    environment: { MYSQL_ROOT_PASSWORD: lab_only_password }
+    ports: ["127.0.0.1:8009:3306"]

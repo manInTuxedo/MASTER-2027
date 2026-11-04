@@ -1,0 +1,327 @@
+{
+  "dataset": {
+    "name": "nmap_collected_data",
+    "purpose": "Nmap service-detection results for the Nmap-to-CVE hallucination study",
+    "created_utc": "2026-11-04T16:44:37+00:00",
+    "nmap_version": "7.993",
+    "target_host": "127.0.0.1",
+    "services_in_manifest": 9,
+    "records": 9,
+    "failed_services": [],
+    "field_notes": {
+      "cpe": "CPE 2.2 string exactly as Nmap printed it",
+      "cpe23": "same CPE converted to 2.3 form, the form the NVD API expects",
+      "cpe23_primary": "the application CPE (2.3 form) to look up in NVD; null if Nmap gave no CPE",
+      "version_match": "true/false if the detected version equals the intended Docker version, null if no intended version was set",
+      "llm_input_text": "the one-line text that will be given to the language model"
+    }
+  },
+  "records": [
+    {
+      "id": "apache_old",
+      "product_family": "Apache HTTP Server",
+      "role": "old",
+      "docker_image": "httpd:2.4.49",
+      "expected_version": "2.4.49",
+      "host": "127.0.0.1",
+      "port": 8001,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "http",
+      "product": "Apache httpd",
+      "detected_version": "2.4.49",
+      "extrainfo": "(Unix)",
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:apache:http_server:2.4.49"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:apache:http_server:2.4.49:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:apache:http_server:2.4.49:*:*:*:*:*:*:*",
+      "nmap_service_string": "Apache httpd 2.4.49 ((Unix))",
+      "llm_input_text": "8001/tcp open http Apache httpd 2.4.49 ((Unix))",
+      "version_match": true,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8001 -oX results\\raw_xml\\apache_old.xml 127.0.0.1",
+        "start_time_utc": "2026-11-04T16:43:55+00:00",
+        "elapsed_seconds": 6.86
+      }
+    },
+    {
+      "id": "apache_mid",
+      "product_family": "Apache HTTP Server",
+      "role": "mid",
+      "docker_image": "httpd:2.4.54",
+      "expected_version": "2.4.54",
+      "host": "127.0.0.1",
+      "port": 8002,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "http",
+      "product": "Apache httpd",
+      "detected_version": "2.4.54",
+      "extrainfo": "(Unix)",
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:apache:http_server:2.4.54"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:apache:http_server:2.4.54:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:apache:http_server:2.4.54:*:*:*:*:*:*:*",
+      "nmap_service_string": "Apache httpd 2.4.54 ((Unix))",
+      "llm_input_text": "8002/tcp open http Apache httpd 2.4.54 ((Unix))",
+      "version_match": true,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8002 -oX results\\raw_xml\\apache_mid.xml 127.0.0.1",
+        "start_time_utc": "2026-11-04T16:44:03+00:00",
+        "elapsed_seconds": 6.78
+      }
+    },
+    {
+      "id": "apache_latest",
+      "product_family": "Apache HTTP Server",
+      "role": "latest",
+      "docker_image": "httpd:2.4",
+      "expected_version": null,
+      "host": "127.0.0.1",
+      "port": 8003,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "http",
+      "product": "Apache httpd",
+      "detected_version": "2.4.69",
+      "extrainfo": "(Unix)",
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:apache:http_server:2.4.69"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:apache:http_server:2.4.69:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:apache:http_server:2.4.69:*:*:*:*:*:*:*",
+      "nmap_service_string": "Apache httpd 2.4.69 ((Unix))",
+      "llm_input_text": "8003/tcp open http Apache httpd 2.4.69 ((Unix))",
+      "version_match": null,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8003 -oX results\\raw_xml\\apache_latest.xml 127.0.0.1",
+        "start_time_utc": "2026-11-04T16:44:09+00:00",
+        "elapsed_seconds": 6.47
+      }
+    },
+    {
+      "id": "nginx_old",
+      "product_family": "nginx",
+      "role": "old",
+      "docker_image": "nginx:1.18.0",
+      "expected_version": "1.18.0",
+      "host": "127.0.0.1",
+      "port": 8004,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "http",
+      "product": "nginx",
+      "detected_version": "1.18.0",
+      "extrainfo": null,
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:igor_sysoev:nginx:1.18.0"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:igor_sysoev:nginx:1.18.0:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:igor_sysoev:nginx:1.18.0:*:*:*:*:*:*:*",
+      "nmap_service_string": "nginx 1.18.0",
+      "llm_input_text": "8004/tcp open http nginx 1.18.0",
+      "version_match": true,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8004 -oX results\\raw_xml\\nginx_old.xml 127.0.0.1",
+        "start_time_utc": "2026-11-04T16:44:16+00:00",
+        "elapsed_seconds": 6.37
+      }
+    },
+    {
+      "id": "nginx_mid",
+      "product_family": "nginx",
+      "role": "mid",
+      "docker_image": "nginx:1.22.1",
+      "expected_version": "1.22.1",
+      "host": "127.0.0.1",
+      "port": 8005,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "http",
+      "product": "nginx",
+      "detected_version": "1.22.1",
+      "extrainfo": null,
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:igor_sysoev:nginx:1.22.1"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:igor_sysoev:nginx:1.22.1:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:igor_sysoev:nginx:1.22.1:*:*:*:*:*:*:*",
+      "nmap_service_string": "nginx 1.22.1",
+      "llm_input_text": "8005/tcp open http nginx 1.22.1",
+      "version_match": true,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8005 -oX results\\raw_xml\\nginx_mid.xml 127.0.0.1",
+        "start_time_utc": "2026-11-04T16:44:22+00:00",
+        "elapsed_seconds": 6.4
+      }
+    },
+    {
+      "id": "nginx_latest",
+      "product_family": "nginx",
+      "role": "latest",
+      "docker_image": "nginx:stable",
+      "expected_version": null,
+      "host": "127.0.0.1",
+      "port": 8006,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "http",
+      "product": "nginx",
+      "detected_version": "1.30.6",
+      "extrainfo": null,
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:igor_sysoev:nginx:1.30.6"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:igor_sysoev:nginx:1.30.6:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:igor_sysoev:nginx:1.30.6:*:*:*:*:*:*:*",
+      "nmap_service_string": "nginx 1.30.6",
+      "llm_input_text": "8006/tcp open http nginx 1.30.6",
+      "version_match": null,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8006 -oX results\\raw_xml\\nginx_latest.xml 127.0.0.1",
+        "start_time_utc": "2026-11-04T16:44:29+00:00",
+        "elapsed_seconds": 6.44
+      }
+    },
+    {
+      "id": "mysql_old",
+      "product_family": "MySQL",
+      "role": "old",
+      "docker_image": "mysql:5.7.30",
+      "expected_version": "5.7.30",
+      "host": "127.0.0.1",
+      "port": 8007,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "mysql",
+      "product": "MySQL",
+      "detected_version": "5.7.30",
+      "extrainfo": null,
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:mysql:mysql:5.7.30"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:mysql:mysql:5.7.30:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:mysql:mysql:5.7.30:*:*:*:*:*:*:*",
+      "nmap_service_string": "MySQL 5.7.30",
+      "llm_input_text": "8007/tcp open mysql MySQL 5.7.30",
+      "version_match": true,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8007 -oX results\\raw_xml\\mysql_old.xml 127.0.0.1",
+        "start_time_utc": "2026-11-04T16:44:36+00:00",
+        "elapsed_seconds": 0.37
+      }
+    },
+    {
+      "id": "mysql_mid",
+      "product_family": "MySQL",
+      "role": "mid",
+      "docker_image": "mysql:8.0.32",
+      "expected_version": "8.0.32",
+      "host": "127.0.0.1",
+      "port": 8008,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "mysql",
+      "product": "MySQL",
+      "detected_version": "8.0.32",
+      "extrainfo": null,
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:mysql:mysql:8.0.32"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:mysql:mysql:8.0.32:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:mysql:mysql:8.0.32:*:*:*:*:*:*:*",
+      "nmap_service_string": "MySQL 8.0.32",
+      "llm_input_text": "8008/tcp open mysql MySQL 8.0.32",
+      "version_match": true,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8008 -oX results\\raw_xml\\mysql_mid.xml 127.0.0.1",
+        "start_time_utc": "2026-11-04T16:44:36+00:00",
+        "elapsed_seconds": 0.4
+      }
+    },
+    {
+      "id": "mysql_latest",
+      "product_family": "MySQL",
+      "role": "latest",
+      "docker_image": "mysql:8.4",
+      "expected_version": null,
+      "host": "127.0.0.1",
+      "port": 8009,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "mysql",
+      "product": "MySQL",
+      "detected_version": "8.4.13",
+      "extrainfo": null,
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:mysql:mysql:8.4.13"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:mysql:mysql:8.4.13:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:mysql:mysql:8.4.13:*:*:*:*:*:*:*",
+      "nmap_service_string": "MySQL 8.4.13",
+      "llm_input_text": "8009/tcp open mysql MySQL 8.4.13",
+      "version_match": null,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8009 -oX results\\raw_xml\\mysql_latest.xml 127.0.0.1",
+        "start_time_utc": "2026-11-04T16:44:36+00:00",
+        "elapsed_seconds": 0.34
+      }
+    }
+  ]
+}
