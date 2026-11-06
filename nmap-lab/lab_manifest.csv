@@ -10,7 +10,7 @@ mysql_mid,MySQL,mid,mysql:8.0.32,8.0.32,8008,
 mysql_latest,MySQL,latest,mysql:8.4.13,8.4.13,8009,
 redis_old,Redis,old,redis:6.0.5,6.0.5,8010,redis-info
 redis_mid,Redis,mid,redis:7.0.5,7.0.5,8011,redis-info
-redis_latest,Redis,latest,redis:8,,8012,redis-info
+redis_latest,Redis,latest,redis:8.10.3,8.10.3,8012,redis-info
 openssh_old,OpenSSH,old,lab-openssh:8.4p1,8.4,8013,
 openssh_mid,OpenSSH,mid,lab-openssh:9.6p1,9.6,8014,
 openssh_latest,OpenSSH,latest,lab-openssh:10.3p1,10.3,8015,

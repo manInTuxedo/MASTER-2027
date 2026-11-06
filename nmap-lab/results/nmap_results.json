@@ -2,7 +2,7 @@
   "dataset": {
     "name": "nmap_collected_data",
     "purpose": "Nmap service-detection results for the Nmap-to-CVE hallucination study",
-    "created_utc": "2026-11-05T15:12:06+00:00",
+    "created_utc": "2026-11-06T01:57:46+00:00",
     "nmap_version": "7.993",
     "target_host": "127.0.0.1",
     "services_in_manifest": 15,
@@ -51,8 +51,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8001 -oX results\\raw_xml\\apache_old.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:10:57+00:00",
-        "elapsed_seconds": 6.3
+        "start_time_utc": "2026-11-06T01:56:36+00:00",
+        "elapsed_seconds": 7.4
       }
     },
     {
@@ -87,8 +87,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8002 -oX results\\raw_xml\\apache_mid.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:11:03+00:00",
-        "elapsed_seconds": 6.27
+        "start_time_utc": "2026-11-06T01:56:44+00:00",
+        "elapsed_seconds": 6.26
       }
     },
     {
@@ -123,8 +123,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8003 -oX results\\raw_xml\\apache_latest.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:11:10+00:00",
-        "elapsed_seconds": 6.26
+        "start_time_utc": "2026-11-06T01:56:50+00:00",
+        "elapsed_seconds": 6.31
       }
     },
     {
@@ -159,8 +159,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8004 -oX results\\raw_xml\\nginx_old.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:11:16+00:00",
-        "elapsed_seconds": 6.26
+        "start_time_utc": "2026-11-06T01:56:56+00:00",
+        "elapsed_seconds": 6.25
       }
     },
     {
@@ -195,8 +195,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8005 -oX results\\raw_xml\\nginx_mid.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:11:22+00:00",
-        "elapsed_seconds": 6.24
+        "start_time_utc": "2026-11-06T01:57:03+00:00",
+        "elapsed_seconds": 6.28
       }
     },
     {
@@ -204,7 +204,7 @@
       "product_family": "nginx",
       "role": "latest",
       "docker_image": "nginx:1.30.6",
-      "image_digest": "nginx@sha256:f12e4e280502f79dae4488c9f677ab3ebe8a7079818bbfbf3242f236bac64d34",
+      "image_digest": "nginx@sha256:42c68eab6f7e22611786a9fe1d1c019e275c50185bd54b8f75dc2b9184322703",
       "expected_version": "1.30.6",
       "nse_script": null,
       "host": "127.0.0.1",
@@ -231,8 +231,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8006 -oX results\\raw_xml\\nginx_latest.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:11:29+00:00",
-        "elapsed_seconds": 6.25
+        "start_time_utc": "2026-11-06T01:57:09+00:00",
+        "elapsed_seconds": 6.29
       }
     },
     {
@@ -267,7 +267,7 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8007 -oX results\\raw_xml\\mysql_old.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:11:35+00:00",
+        "start_time_utc": "2026-11-06T01:57:15+00:00",
         "elapsed_seconds": 0.22
       }
     },
@@ -303,8 +303,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8008 -oX results\\raw_xml\\mysql_mid.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:11:35+00:00",
-        "elapsed_seconds": 0.22
+        "start_time_utc": "2026-11-06T01:57:16+00:00",
+        "elapsed_seconds": 0.23
       }
     },
     {
@@ -339,7 +339,7 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8009 -oX results\\raw_xml\\mysql_latest.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:11:36+00:00",
+        "start_time_utc": "2026-11-06T01:57:16+00:00",
         "elapsed_seconds": 0.22
       }
     },
@@ -375,8 +375,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE --script redis-info -sV -sT -Pn -n --version-intensity 7 -p 8010 -oX results\\raw_xml\\redis_old.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:11:36+00:00",
-        "elapsed_seconds": 6.26
+        "start_time_utc": "2026-11-06T01:57:16+00:00",
+        "elapsed_seconds": 6.29
       }
     },
     {
@@ -411,7 +411,7 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE --script redis-info -sV -sT -Pn -n --version-intensity 7 -p 8011 -oX results\\raw_xml\\redis_mid.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:11:42+00:00",
+        "start_time_utc": "2026-11-06T01:57:23+00:00",
         "elapsed_seconds": 11.27
       }
     },
@@ -419,9 +419,9 @@
       "id": "redis_latest",
       "product_family": "Redis",
       "role": "latest",
-      "docker_image": "redis:8",
+      "docker_image": "redis:8.10.3",
       "image_digest": "redis@sha256:f245f4c83b84a9e9a0588da1c9456e579455310f0945d5db52cd2ba27f2000cc",
-      "expected_version": null,
+      "expected_version": "8.10.3",
       "nse_script": "redis-info",
       "host": "127.0.0.1",
       "port": 8012,
@@ -443,12 +443,12 @@
       "cpe23_primary": "cpe:2.3:a:redis:redis:8.10.3:*:*:*:*:*:*:*",
       "nmap_service_string": "Redis key-value store 8.10.3 (64 bits)",
       "llm_input_text": "8012/tcp open redis Redis key-value store 8.10.3 (64 bits)",
-      "version_match": null,
+      "version_match": true,
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE --script redis-info -sV -sT -Pn -n --version-intensity 7 -p 8012 -oX results\\raw_xml\\redis_latest.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:11:54+00:00",
-        "elapsed_seconds": 11.28
+        "start_time_utc": "2026-11-06T01:57:34+00:00",
+        "elapsed_seconds": 11.27
       }
     },
     {
@@ -483,8 +483,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8013 -oX results\\raw_xml\\openssh_old.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:12:05+00:00",
-        "elapsed_seconds": 0.22
+        "start_time_utc": "2026-11-06T01:57:46+00:00",
+        "elapsed_seconds": 0.23
       }
     },
     {
@@ -519,8 +519,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8014 -oX results\\raw_xml\\openssh_mid.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:12:06+00:00",
-        "elapsed_seconds": 0.22
+        "start_time_utc": "2026-11-06T01:57:46+00:00",
+        "elapsed_seconds": 0.23
       }
     },
     {
@@ -555,8 +555,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8015 -oX results\\raw_xml\\openssh_latest.xml 127.0.0.1",
-        "start_time_utc": "2026-11-05T15:12:06+00:00",
-        "elapsed_seconds": 0.24
+        "start_time_utc": "2026-11-06T01:57:46+00:00",
+        "elapsed_seconds": 0.23
       }
     }
   ]
