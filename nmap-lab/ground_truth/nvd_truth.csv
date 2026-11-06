@@ -1,0 +1,509 @@
+﻿service_id,product_family,role,detected_version,cve_id,published,last_modified,vuln_status,cvss_v3_score,cvss_v3_severity,cve_tags,unbounded_version_match,found_by,found_by_raw
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2006-20001,2023-01-17T20:15:11.177,2026-06-16T22:24:06.513,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2021-41524,2021-10-05T09:15:07.427,2026-06-17T04:08:35.283,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2021-41773,2021-10-05T09:15:07.593,2026-06-17T04:08:53.933,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2021-42013,2021-10-07T16:15:09.270,2026-06-17T04:09:09.193,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2021-44224,2021-12-20T12:15:07.393,2026-06-17T04:12:04.890,Modified,8.2,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2021-44790,2021-12-20T12:15:07.440,2026-06-17T04:12:50.913,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-22719,2022-03-14T11:15:09.023,2026-06-17T04:28:51.680,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-22720,2022-03-14T11:15:09.083,2026-06-17T04:28:51.860,Modified,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-22721,2022-03-14T11:15:09.133,2026-06-17T04:28:52.040,Modified,9.1,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-23943,2022-03-14T11:15:09.187,2026-06-17T04:31:01.600,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-26377,2022-06-09T17:15:09.077,2026-06-17T04:35:05.860,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-28330,2022-06-09T17:15:09.133,2026-06-17T04:38:24.010,Modified,5.3,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-28614,2022-06-09T17:15:09.180,2026-06-17T04:38:42.627,Modified,5.3,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-28615,2022-06-09T17:15:09.230,2026-06-17T04:38:42.763,Modified,9.1,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-29404,2022-06-09T17:15:09.283,2026-06-17T04:40:06.993,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-30556,2022-06-09T17:15:09.867,2026-06-17T04:43:51.183,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-31813,2022-06-09T17:15:09.977,2026-06-17T04:46:21.743,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-36760,2023-01-17T20:15:11.580,2026-06-17T04:53:56.180,Modified,9.0,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2022-37436,2023-01-17T20:15:11.670,2026-06-17T04:55:06.020,Modified,5.3,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2023-25690,2023-03-07T16:15:09.477,2026-06-17T05:41:44.507,Modified,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2023-27522,2023-03-07T16:15:09.613,2026-06-17T05:45:23.607,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2023-31122,2023-10-23T07:15:11.103,2026-06-17T05:56:18.907,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2023-38709,2024-04-04T20:15:08.047,2026-06-17T06:10:59.800,Modified,7.3,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2023-45802,2023-10-23T07:15:11.330,2026-06-17T06:29:33.053,Analyzed,5.9,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-24795,2024-04-04T20:15:08.663,2026-06-17T07:14:52.787,Analyzed,6.3,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-27316,2024-04-04T20:15:08.720,2026-06-17T07:19:38.200,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-38472,2024-07-01T19:15:04.563,2026-11-03T22:17:21.750,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-38473,2024-07-01T19:15:04.657,2026-06-17T07:40:21.093,Analyzed,8.1,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-38474,2024-07-01T19:15:04.760,2026-06-17T07:40:21.237,Modified,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-38475,2024-07-01T19:15:04.883,2026-06-17T07:40:21.380,Analyzed,9.1,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-38476,2024-07-01T19:15:04.977,2026-06-17T07:40:21.557,Modified,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-38477,2024-07-01T19:15:05.083,2026-06-17T07:40:21.713,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-39573,2024-07-01T19:15:05.760,2026-06-17T07:42:15.597,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-40898,2024-07-18T10:15:03.217,2026-06-17T07:46:49.050,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-42516,2025-07-10T17:15:45.343,2026-06-17T07:49:35.933,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-43204,2025-07-10T17:15:45.987,2026-06-17T07:50:36.103,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-43394,2025-07-10T17:15:46.133,2026-06-17T07:50:57.760,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2024-47252,2025-07-10T17:15:46.400,2026-06-17T07:56:47.053,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2025-23048,2025-07-10T17:15:46.553,2026-06-17T08:51:41.460,Modified,9.1,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2025-49630,2025-07-10T17:15:48.050,2026-06-17T09:31:34.740,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2025-49812,2025-07-10T17:15:48.193,2026-06-17T09:31:56.917,Modified,7.4,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2025-53020,2025-07-10T17:15:48.337,2026-06-17T09:37:29.237,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2025-55753,2025-12-05T11:15:51.890,2026-10-18T15:10:00.097,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2025-58098,2025-12-05T14:15:49.153,2026-09-25T23:10:00.463,Analyzed,8.3,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2025-59775,2025-12-05T11:15:52.210,2026-09-25T23:10:00.463,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2025-65082,2025-12-05T11:15:52.497,2026-09-25T23:10:00.463,Analyzed,6.5,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2025-66200,2025-12-05T11:15:52.747,2026-10-18T14:10:00.110,Analyzed,5.4,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-24072,2026-05-04T13:16:00.297,2026-10-26T19:10:00.163,Analyzed,8.8,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-28780,2026-05-05T22:16:00.390,2026-09-14T13:17:54.970,Modified,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-29167,2026-06-08T16:16:37.967,2026-07-23T07:10:00.113,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-29168,2026-05-05T14:16:08.507,2026-10-26T00:10:00.150,Analyzed,7.3,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-29169,2026-05-04T15:16:03.720,2026-10-25T23:10:00.167,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-29170,2026-06-08T16:16:38.093,2026-07-23T07:10:00.113,Analyzed,6.1,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-33006,2026-05-04T15:16:03.977,2026-10-26T19:10:00.163,Analyzed,4.8,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-33007,2026-05-04T15:16:04.107,2026-10-26T19:10:00.163,Analyzed,5.3,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-33523,2026-05-04T15:16:04.227,2026-10-26T19:10:00.163,Analyzed,6.5,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-33857,2026-05-04T14:16:33.253,2026-10-26T19:10:00.163,Analyzed,5.3,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-34032,2026-05-04T14:16:33.447,2026-10-26T19:10:00.163,Analyzed,5.3,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-34059,2026-05-04T13:16:00.940,2026-10-26T19:10:00.163,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-34355,2026-06-08T16:16:38.387,2026-09-14T13:18:18.583,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-34356,2026-06-08T16:16:38.537,2026-07-23T07:10:00.113,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-42356,2026-10-01T16:17:43.790,2026-10-06T14:07:21.760,Analyzed,3.7,LOW,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-42528,2026-10-01T16:17:43.927,2026-10-06T14:07:28.370,Analyzed,4.3,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-42535,2026-06-08T16:16:39.127,2026-07-23T07:10:00.113,Analyzed,9.1,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-42536,2026-06-08T16:16:39.263,2026-09-14T13:18:36.300,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-43951,2026-06-08T16:16:40.087,2026-07-23T07:10:00.113,Analyzed,6.5,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-44119,2026-06-08T16:16:40.203,2026-07-23T07:10:00.113,Analyzed,5.5,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-44185,2026-06-08T16:16:40.327,2026-09-14T13:18:36.943,Modified,7.3,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-44186,2026-06-08T16:16:40.453,2026-07-23T07:10:00.113,Analyzed,7.3,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-44631,2026-06-08T16:16:40.583,2026-07-23T07:10:00.113,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-46729,2026-10-01T16:17:44.293,2026-10-08T00:47:12.233,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-48005,2026-10-01T17:17:25.480,2026-10-06T14:07:10.460,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-49975,2026-06-08T16:16:44.223,2026-08-19T12:18:28.650,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-56153,2026-10-01T17:17:26.487,2026-10-02T20:53:53.630,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-56154,2026-10-01T17:17:26.610,2026-10-05T13:33:38.377,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-56449,2026-10-01T17:17:26.733,2026-10-21T08:16:44.203,Modified,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-57941,2026-10-01T17:17:27.457,2026-10-05T13:29:16.297,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-58415,2026-10-01T17:17:29.260,2026-10-05T13:22:10.647,Analyzed,5.3,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-59685,2026-10-01T17:17:29.380,2026-10-05T13:21:03.353,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-59797,2026-10-01T17:17:29.527,2026-10-05T13:16:52.940,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-63045,2026-10-01T17:17:29.680,2026-10-05T13:15:35.283,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-63292,2026-10-01T17:17:29.803,2026-10-05T17:47:01.560,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-63686,2026-10-01T17:17:29.923,2026-10-05T17:46:24.750,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-63718,2026-10-01T17:17:30.040,2026-10-06T16:46:24.983,Analyzed,7.5,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-73636,2026-10-01T17:17:30.873,2026-10-05T17:45:24.813,Analyzed,8.1,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-73637,2026-10-01T17:17:31.000,2026-10-05T17:39:38.120,Analyzed,7.3,HIGH,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-79768,2026-10-01T17:17:31.910,2026-10-05T17:35:50.293,Analyzed,5.3,MEDIUM,,False,raw,True
+apache_old,Apache HTTP Server,old,2.4.49,CVE-2026-93546,2026-10-01T17:17:33.313,2026-10-05T16:05:53.007,Analyzed,8.8,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2006-20001,2023-01-17T20:15:11.177,2026-06-16T22:24:06.513,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2022-36760,2023-01-17T20:15:11.580,2026-06-17T04:53:56.180,Modified,9.0,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2022-37436,2023-01-17T20:15:11.670,2026-06-17T04:55:06.020,Modified,5.3,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2023-25690,2023-03-07T16:15:09.477,2026-06-17T05:41:44.507,Modified,9.8,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2023-27522,2023-03-07T16:15:09.613,2026-06-17T05:45:23.607,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2023-31122,2023-10-23T07:15:11.103,2026-06-17T05:56:18.907,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2023-38709,2024-04-04T20:15:08.047,2026-06-17T06:10:59.800,Modified,7.3,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2023-45802,2023-10-23T07:15:11.330,2026-06-17T06:29:33.053,Analyzed,5.9,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-24795,2024-04-04T20:15:08.663,2026-06-17T07:14:52.787,Analyzed,6.3,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-27316,2024-04-04T20:15:08.720,2026-06-17T07:19:38.200,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-38472,2024-07-01T19:15:04.563,2026-11-03T22:17:21.750,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-38473,2024-07-01T19:15:04.657,2026-06-17T07:40:21.093,Analyzed,8.1,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-38474,2024-07-01T19:15:04.760,2026-06-17T07:40:21.237,Modified,9.8,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-38475,2024-07-01T19:15:04.883,2026-06-17T07:40:21.380,Analyzed,9.1,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-38476,2024-07-01T19:15:04.977,2026-06-17T07:40:21.557,Modified,9.8,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-38477,2024-07-01T19:15:05.083,2026-06-17T07:40:21.713,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-39573,2024-07-01T19:15:05.760,2026-06-17T07:42:15.597,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-40898,2024-07-18T10:15:03.217,2026-06-17T07:46:49.050,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-42516,2025-07-10T17:15:45.343,2026-06-17T07:49:35.933,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-43204,2025-07-10T17:15:45.987,2026-06-17T07:50:36.103,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-43394,2025-07-10T17:15:46.133,2026-06-17T07:50:57.760,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2024-47252,2025-07-10T17:15:46.400,2026-06-17T07:56:47.053,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2025-23048,2025-07-10T17:15:46.553,2026-06-17T08:51:41.460,Modified,9.1,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2025-49630,2025-07-10T17:15:48.050,2026-06-17T09:31:34.740,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2025-49812,2025-07-10T17:15:48.193,2026-06-17T09:31:56.917,Modified,7.4,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2025-53020,2025-07-10T17:15:48.337,2026-06-17T09:37:29.237,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2025-55753,2025-12-05T11:15:51.890,2026-10-18T15:10:00.097,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2025-58098,2025-12-05T14:15:49.153,2026-09-25T23:10:00.463,Analyzed,8.3,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2025-59775,2025-12-05T11:15:52.210,2026-09-25T23:10:00.463,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2025-65082,2025-12-05T11:15:52.497,2026-09-25T23:10:00.463,Analyzed,6.5,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2025-66200,2025-12-05T11:15:52.747,2026-10-18T14:10:00.110,Analyzed,5.4,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-24072,2026-05-04T13:16:00.297,2026-10-26T19:10:00.163,Analyzed,8.8,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-28780,2026-05-05T22:16:00.390,2026-09-14T13:17:54.970,Modified,9.8,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-29167,2026-06-08T16:16:37.967,2026-07-23T07:10:00.113,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-29168,2026-05-05T14:16:08.507,2026-10-26T00:10:00.150,Analyzed,7.3,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-29169,2026-05-04T15:16:03.720,2026-10-25T23:10:00.167,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-29170,2026-06-08T16:16:38.093,2026-07-23T07:10:00.113,Analyzed,6.1,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-33006,2026-05-04T15:16:03.977,2026-10-26T19:10:00.163,Analyzed,4.8,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-33007,2026-05-04T15:16:04.107,2026-10-26T19:10:00.163,Analyzed,5.3,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-33523,2026-05-04T15:16:04.227,2026-10-26T19:10:00.163,Analyzed,6.5,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-33857,2026-05-04T14:16:33.253,2026-10-26T19:10:00.163,Analyzed,5.3,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-34032,2026-05-04T14:16:33.447,2026-10-26T19:10:00.163,Analyzed,5.3,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-34059,2026-05-04T13:16:00.940,2026-10-26T19:10:00.163,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-34355,2026-06-08T16:16:38.387,2026-09-14T13:18:18.583,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-34356,2026-06-08T16:16:38.537,2026-07-23T07:10:00.113,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-42356,2026-10-01T16:17:43.790,2026-10-06T14:07:21.760,Analyzed,3.7,LOW,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-42528,2026-10-01T16:17:43.927,2026-10-06T14:07:28.370,Analyzed,4.3,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-42535,2026-06-08T16:16:39.127,2026-07-23T07:10:00.113,Analyzed,9.1,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-42536,2026-06-08T16:16:39.263,2026-09-14T13:18:36.300,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-43951,2026-06-08T16:16:40.087,2026-07-23T07:10:00.113,Analyzed,6.5,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-44119,2026-06-08T16:16:40.203,2026-07-23T07:10:00.113,Analyzed,5.5,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-44185,2026-06-08T16:16:40.327,2026-09-14T13:18:36.943,Modified,7.3,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-44186,2026-06-08T16:16:40.453,2026-07-23T07:10:00.113,Analyzed,7.3,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-44631,2026-06-08T16:16:40.583,2026-07-23T07:10:00.113,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-46729,2026-10-01T16:17:44.293,2026-10-08T00:47:12.233,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-48005,2026-10-01T17:17:25.480,2026-10-06T14:07:10.460,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-49975,2026-06-08T16:16:44.223,2026-08-19T12:18:28.650,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-56153,2026-10-01T17:17:26.487,2026-10-02T20:53:53.630,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-56154,2026-10-01T17:17:26.610,2026-10-05T13:33:38.377,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-56449,2026-10-01T17:17:26.733,2026-10-21T08:16:44.203,Modified,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-57941,2026-10-01T17:17:27.457,2026-10-05T13:29:16.297,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-58415,2026-10-01T17:17:29.260,2026-10-05T13:22:10.647,Analyzed,5.3,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-59685,2026-10-01T17:17:29.380,2026-10-05T13:21:03.353,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-59797,2026-10-01T17:17:29.527,2026-10-05T13:16:52.940,Analyzed,9.8,CRITICAL,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-63045,2026-10-01T17:17:29.680,2026-10-05T13:15:35.283,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-63292,2026-10-01T17:17:29.803,2026-10-05T17:47:01.560,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-63686,2026-10-01T17:17:29.923,2026-10-05T17:46:24.750,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-63718,2026-10-01T17:17:30.040,2026-10-06T16:46:24.983,Analyzed,7.5,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-73636,2026-10-01T17:17:30.873,2026-10-05T17:45:24.813,Analyzed,8.1,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-73637,2026-10-01T17:17:31.000,2026-10-05T17:39:38.120,Analyzed,7.3,HIGH,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-79768,2026-10-01T17:17:31.910,2026-10-05T17:35:50.293,Analyzed,5.3,MEDIUM,,False,raw,True
+apache_mid,Apache HTTP Server,mid,2.4.54,CVE-2026-93546,2026-10-01T17:17:33.313,2026-10-05T16:05:53.007,Analyzed,8.8,HIGH,,False,raw,True
+nginx_old,nginx,old,1.18.0,CVE-2021-23017,2021-06-01T13:15:07.853,2026-06-17T03:38:13.130,Modified,7.7,HIGH,,False,f5:nginx,False
+nginx_old,nginx,old,1.18.0,CVE-2021-3618,2022-03-23T20:15:09.833,2026-06-17T04:05:27.083,Modified,7.4,HIGH,,False,f5:nginx,False
+nginx_old,nginx,old,1.18.0,CVE-2022-41741,2022-10-19T22:15:12.647,2026-06-17T05:03:44.713,Modified,7.0,HIGH,,False,f5:nginx,False
+nginx_old,nginx,old,1.18.0,CVE-2022-41742,2022-10-19T22:15:12.717,2026-06-17T05:03:44.843,Modified,7.1,HIGH,,False,f5:nginx,False
+nginx_old,nginx,old,1.18.0,CVE-2023-44487,2023-10-10T14:15:10.883,2026-08-11T19:37:30.880,Analyzed,7.5,HIGH,,False,f5:nginx,False
+nginx_old,nginx,old,1.18.0,CVE-2025-23419,2025-02-05T18:15:33.347,2026-06-17T08:54:13.083,Analyzed,4.3,MEDIUM,,False,f5:nginx,False
+nginx_mid,nginx,mid,1.22.1,CVE-2023-44487,2023-10-10T14:15:10.883,2026-08-11T19:37:30.880,Analyzed,7.5,HIGH,,False,f5:nginx,False
+nginx_mid,nginx,mid,1.22.1,CVE-2025-23419,2025-02-05T18:15:33.347,2026-06-17T08:54:13.083,Analyzed,4.3,MEDIUM,,False,f5:nginx,False
+mysql_old,MySQL,old,5.7.30,CVE-2019-14540,2019-09-15T22:15:10.277,2026-10-08T21:17:13.673,Modified,9.8,CRITICAL,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2019-7317,2019-02-04T08:29:00.447,2026-06-17T02:40:26.800,Modified,5.3,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14539,2020-07-15T18:15:14.677,2026-06-17T02:54:57.540,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14540,2020-07-15T18:15:14.787,2026-06-17T02:54:57.697,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14547,2020-07-15T18:15:17.160,2026-06-17T02:54:58.580,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14550,2020-07-15T18:15:18.147,2026-06-17T02:54:58.997,Modified,5.3,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14553,2020-07-15T18:15:18.987,2026-06-17T02:54:59.417,Modified,4.3,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14559,2020-07-15T18:15:21.050,2026-06-17T02:55:00.327,Modified,4.3,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14576,2020-07-15T18:15:23.677,2026-06-17T02:55:02.830,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14672,2020-10-21T15:15:15.030,2026-06-17T02:55:17.023,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14760,2020-10-21T15:15:16.797,2026-06-17T02:55:27.343,Modified,5.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14765,2020-10-21T15:15:17.123,2026-06-17T02:55:28.690,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14769,2020-10-21T15:15:17.467,2026-06-17T02:55:29.257,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14771,2020-10-21T15:15:17.593,2026-06-17T02:55:29.527,Modified,2.2,LOW,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14775,2020-10-21T15:15:17.890,2026-06-17T02:55:30.040,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14776,2020-10-21T15:15:17.953,2026-06-17T02:55:30.210,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14789,2020-10-21T15:15:19.093,2026-06-17T02:55:32.143,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14790,2020-10-21T15:15:19.170,2026-06-17T02:55:32.323,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14793,2020-10-21T15:15:19.407,2026-06-17T02:55:32.820,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14812,2020-10-21T15:15:20.780,2026-06-17T02:55:35.463,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14814,2020-10-21T15:15:20.907,2026-06-17T02:55:35.763,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14827,2020-10-21T15:15:21.813,2026-06-17T02:55:37.540,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14830,2020-10-21T15:15:22.017,2026-06-17T02:55:37.913,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14837,2020-10-21T15:15:22.467,2026-06-17T02:55:38.793,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14839,2020-10-21T15:15:22.577,2026-06-17T02:55:39.043,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14845,2020-10-21T15:15:22.937,2026-06-17T02:55:39.817,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14846,2020-10-21T15:15:22.983,2026-06-17T02:55:39.940,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14852,2020-10-21T15:15:23.357,2026-06-17T02:55:40.690,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14867,2020-10-21T15:15:24.313,2026-06-17T02:55:42.573,Modified,4.4,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-14869,2020-10-21T15:15:24.453,2026-06-17T02:55:42.830,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-15358,2020-06-27T12:15:11.187,2026-10-14T10:17:30.063,Modified,5.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-1967,2020-04-21T14:15:11.287,2026-10-08T21:17:24.923,Modified,7.5,HIGH,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2020-1971,2020-12-08T16:15:11.730,2026-06-17T03:02:44.770,Modified,5.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2001,2021-01-20T15:15:45.273,2026-06-17T03:48:35.260,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2010,2021-01-20T15:15:45.863,2026-06-17T03:48:36.473,Modified,4.2,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2011,2021-01-20T15:15:45.923,2026-06-17T03:48:36.620,Modified,5.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2014,2021-01-20T15:15:46.127,2026-06-17T03:48:37.040,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2022,2021-01-20T15:15:46.830,2026-06-17T03:48:38.123,Modified,4.4,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2032,2021-01-20T15:15:47.550,2026-06-17T03:48:39.510,Modified,4.3,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2060,2021-01-20T15:15:49.363,2026-06-17T03:48:42.887,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2146,2021-04-22T22:15:12.620,2026-06-17T03:48:54.523,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2154,2021-04-22T22:15:12.830,2026-06-17T03:48:55.437,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2160,2021-04-22T22:15:13.007,2026-06-17T03:48:56.220,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2162,2021-04-22T22:15:13.067,2026-06-17T03:48:56.560,Modified,4.3,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2166,2021-04-22T22:15:13.153,2026-06-17T03:48:57.050,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2169,2021-04-22T22:15:13.210,2026-06-17T03:48:57.340,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2171,2021-04-22T22:15:13.267,2026-06-17T03:48:57.630,Modified,4.4,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2174,2021-04-22T22:15:13.357,2026-06-17T03:48:58.043,Modified,4.4,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2178,2021-04-22T22:15:13.527,2026-06-17T03:48:58.427,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2179,2021-04-22T22:15:13.557,2026-06-17T03:48:58.570,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2180,2021-04-22T22:15:13.587,2026-06-17T03:48:58.753,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2194,2021-04-22T22:15:14.003,2026-06-17T03:49:00.663,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2202,2021-04-22T22:15:14.267,2026-06-17T03:49:01.727,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2226,2021-04-22T22:15:14.990,2026-06-17T03:49:04.820,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-22570,2022-01-26T14:15:08.067,2026-06-17T03:37:26.873,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-2356,2021-07-21T15:15:24.137,2026-06-17T03:49:20.557,Modified,5.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2021-35624,2021-10-20T11:17:13.893,2026-06-17T03:57:51.780,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21245,2022-01-19T12:15:10.143,2026-06-17T04:25:51.297,Modified,4.3,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21270,2022-01-19T12:15:11.370,2026-06-17T04:25:54.520,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21303,2022-01-19T12:15:12.917,2026-06-17T04:25:59.297,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21304,2022-01-19T12:15:12.967,2026-06-17T04:25:59.430,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21344,2022-01-19T12:15:14.787,2026-06-17T04:26:04.727,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21367,2022-01-19T12:15:15.863,2026-06-17T04:26:07.727,Modified,5.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21417,2022-04-19T21:15:14.687,2026-06-17T04:26:13.510,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21427,2022-04-19T21:15:15.210,2026-06-17T04:26:14.767,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21444,2022-04-19T21:15:15.853,2026-06-17T04:26:16.717,Modified,4.4,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21451,2022-04-19T21:15:16.240,2026-06-17T04:26:17.687,Modified,4.4,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21454,2022-04-19T21:15:16.397,2026-06-17T04:26:18.057,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21460,2022-04-19T21:15:16.660,2026-06-17T04:26:18.787,Modified,4.4,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21589,2022-10-18T21:15:11.133,2026-06-17T04:26:34.130,Modified,4.3,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21592,2022-10-18T21:15:11.303,2026-06-17T04:26:34.457,Modified,4.3,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21595,2022-10-18T21:15:11.473,2026-06-17T04:26:34.780,Modified,4.4,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21608,2022-10-18T21:15:12.197,2026-06-17T04:26:36.193,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2022-21617,2022-10-18T21:15:12.697,2026-06-17T04:26:37.167,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2023-21977,2023-04-18T20:15:17.010,2026-06-17T05:34:28.250,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2023-21980,2023-04-18T20:15:17.227,2026-06-17T05:34:28.670,Modified,7.1,HIGH,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2023-22007,2023-07-18T21:15:12.147,2026-06-17T05:34:32.237,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2023-22015,2023-10-17T22:15:11.587,2026-06-17T05:34:33.297,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2023-22026,2023-10-17T22:15:11.927,2026-06-17T05:34:34.780,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2023-22028,2023-10-17T22:15:12.003,2026-06-17T05:34:35.043,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_old,MySQL,old,5.7.30,CVE-2023-22084,2023-10-17T22:15:13.793,2026-06-17T05:34:42.610,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-21972,2023-04-18T20:15:16.783,2026-06-17T05:34:27.567,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-21976,2023-04-18T20:15:16.943,2026-06-17T05:34:28.117,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-21977,2023-04-18T20:15:17.010,2026-06-17T05:34:28.250,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-21980,2023-04-18T20:15:17.227,2026-06-17T05:34:28.670,Modified,7.1,HIGH,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-21982,2023-04-18T20:15:17.367,2026-06-17T05:34:28.930,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22007,2023-07-18T21:15:12.147,2026-06-17T05:34:32.237,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22032,2023-10-17T22:15:12.173,2026-06-17T05:34:35.437,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22059,2023-10-17T22:15:12.243,2026-06-17T05:34:39.290,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22064,2023-10-17T22:15:12.320,2026-06-17T05:34:39.830,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22065,2023-10-17T22:15:12.397,2026-06-17T05:34:39.957,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22066,2023-10-17T22:15:12.467,2026-06-17T05:34:40.087,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22068,2023-10-17T22:15:12.617,2026-06-17T05:34:40.357,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22070,2023-10-17T22:15:12.763,2026-06-17T05:34:40.613,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22078,2023-10-17T22:15:13.357,2026-06-17T05:34:41.787,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22079,2023-10-17T22:15:13.430,2026-06-17T05:34:41.920,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22084,2023-10-17T22:15:13.793,2026-06-17T05:34:42.610,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22092,2023-10-17T22:15:14.370,2026-06-17T05:34:43.747,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22097,2023-10-17T22:15:14.740,2026-06-17T05:34:44.417,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22103,2023-10-17T22:15:15.173,2026-06-17T05:34:45.210,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22104,2023-10-17T22:15:15.243,2026-06-17T05:34:45.340,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22110,2023-10-17T22:15:15.643,2026-06-17T05:34:46.160,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22111,2023-10-17T22:15:15.717,2026-06-17T05:34:47.393,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22112,2023-10-17T22:15:15.793,2026-06-17T05:34:47.520,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22113,2023-10-17T22:15:15.873,2026-06-17T05:34:47.723,Modified,2.7,LOW,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22114,2023-10-17T22:15:15.950,2026-06-17T05:34:47.860,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2023-22115,2023-10-17T22:15:16.033,2026-06-17T05:34:47.997,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-20961,2024-01-16T22:15:43.290,2026-06-17T07:08:15.383,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-20963,2024-01-16T22:15:43.487,2026-06-17T07:08:15.627,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-20965,2024-01-16T22:15:43.660,2026-06-17T07:08:15.857,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-20967,2024-01-16T22:15:43.837,2026-06-17T07:08:16.103,Modified,5.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-20969,2024-01-16T22:15:44.007,2026-06-17T07:08:16.347,Modified,5.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-20971,2024-01-16T22:15:44.177,2026-06-17T07:08:16.597,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-20973,2024-01-16T22:15:44.350,2026-06-17T07:08:16.847,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-20977,2024-01-16T22:15:44.687,2026-06-17T07:08:17.320,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-20981,2024-01-16T22:15:45.030,2026-06-17T07:08:17.790,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-20983,2024-01-16T22:15:45.200,2026-06-17T07:08:18.023,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-20985,2024-01-16T22:15:45.377,2026-06-17T07:08:18.247,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-20996,2024-07-16T23:15:11.403,2026-06-17T07:08:19.427,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21047,2024-04-16T22:15:21.643,2026-06-17T07:08:25.747,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21049,2024-04-16T22:15:21.990,2026-06-17T07:08:25.990,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21050,2024-04-16T22:15:22.157,2026-06-17T07:08:26.120,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21051,2024-04-16T22:15:22.330,2026-06-17T07:08:26.237,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21055,2024-04-16T22:15:23.010,2026-06-17T07:08:26.717,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21056,2024-04-16T22:15:23.183,2026-06-17T07:08:26.843,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21061,2024-04-16T22:15:24.080,2026-06-17T07:08:27.450,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21062,2024-04-16T22:15:24.247,2026-06-17T07:08:27.567,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21069,2024-04-16T22:15:25.473,2026-06-17T07:08:28.460,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21087,2024-04-16T22:15:28.640,2026-06-17T07:08:30.543,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21096,2024-04-16T22:15:30.207,2026-06-17T07:08:31.640,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21101,2024-04-16T22:15:31.087,2026-06-17T07:08:32.307,Modified,2.2,LOW,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21102,2024-04-16T22:15:31.270,2026-06-17T07:08:32.483,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21125,2024-07-16T23:15:11.990,2026-06-17T07:08:35.097,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21127,2024-07-16T23:15:12.370,2026-06-17T07:08:35.330,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21129,2024-07-16T23:15:12.783,2026-06-17T07:08:35.570,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21130,2024-07-16T23:15:13.020,2026-06-17T07:08:35.683,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21134,2024-07-16T23:15:13.870,2026-06-17T07:08:36.170,Modified,4.3,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21135,2024-07-16T23:15:14.057,2026-06-17T07:08:36.283,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21137,2024-07-16T23:15:14.437,2026-06-17T07:08:36.523,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21142,2024-07-16T23:15:15.407,2026-06-17T07:08:37.163,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21157,2024-07-16T23:15:18.153,2026-06-17T07:08:38.813,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21159,2024-07-16T23:15:18.517,2026-06-17T07:08:39.033,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21160,2024-07-16T23:15:18.740,2026-06-17T07:08:39.147,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21162,2024-07-16T23:15:19.113,2026-06-17T07:08:39.370,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21163,2024-07-16T23:15:19.300,2026-06-17T07:08:39.480,Modified,5.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21165,2024-07-16T23:15:19.700,2026-06-17T07:08:39.713,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21166,2024-07-16T23:15:19.880,2026-06-17T07:08:39.830,Modified,5.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21171,2024-07-16T23:15:20.790,2026-06-17T07:08:40.407,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21173,2024-07-16T23:15:20.973,2026-06-17T07:08:40.640,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21193,2024-10-15T20:15:06.533,2026-06-17T07:08:42.740,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21194,2024-10-15T20:15:06.733,2026-06-17T07:08:42.850,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21196,2024-10-15T20:15:07.113,2026-06-17T07:08:43.080,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21197,2024-10-15T20:15:07.307,2026-06-17T07:08:43.210,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21198,2024-10-15T20:15:07.503,2026-06-17T07:08:43.323,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21199,2024-10-15T20:15:07.707,2026-06-17T07:08:43.437,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21200,2024-10-15T20:15:07.910,2026-06-17T07:08:43.567,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21201,2024-10-15T20:15:08.130,2026-06-17T07:08:43.770,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21203,2024-10-15T20:15:08.490,2026-06-17T07:08:44.747,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21207,2024-10-15T20:15:09.243,2026-06-17T07:08:45.220,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21212,2024-10-15T20:15:10.237,2026-06-17T07:08:45.837,Modified,4.4,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21213,2024-10-15T20:15:10.417,2026-06-17T07:08:45.957,Modified,4.2,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21218,2024-10-15T20:15:11.387,2026-06-17T07:08:46.523,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21219,2024-10-15T20:15:11.573,2026-06-17T07:08:46.640,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21230,2024-10-15T20:15:11.757,2026-06-17T07:08:46.757,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21231,2024-10-15T20:15:11.943,2026-06-17T07:08:46.877,Modified,3.1,LOW,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21236,2024-10-15T20:15:12.810,2026-06-17T07:08:47.463,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21237,2024-10-15T20:15:12.983,2026-06-17T07:08:47.587,Modified,2.2,LOW,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21238,2024-10-15T20:15:13.160,2026-06-17T07:08:47.693,Modified,5.3,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21239,2024-10-15T20:15:13.350,2026-06-17T07:08:47.813,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21241,2024-10-15T20:15:13.547,2026-06-17T07:08:47.923,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2024-21247,2024-10-15T20:15:14.513,2026-06-17T07:08:48.610,Modified,3.8,LOW,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50076,2025-07-15T20:15:43.193,2026-06-17T09:34:36.130,Analyzed,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50077,2025-07-15T20:15:43.320,2026-06-17T09:34:36.237,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50078,2025-07-15T20:15:43.447,2026-06-17T09:34:36.360,Analyzed,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50079,2025-07-15T20:15:43.580,2026-06-17T09:34:36.470,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50080,2025-07-15T20:15:43.703,2026-06-17T09:34:36.590,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50081,2025-07-15T20:15:43.840,2026-06-17T09:34:36.707,Analyzed,3.1,LOW,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50082,2025-07-15T20:15:43.983,2026-06-17T09:34:36.830,Analyzed,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50083,2025-07-15T20:15:44.107,2026-06-17T09:34:36.937,Modified,6.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50084,2025-07-15T20:15:44.233,2026-06-17T09:34:37.170,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50085,2025-07-15T20:15:44.353,2026-06-17T09:34:37.377,Analyzed,5.5,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50086,2025-07-15T20:15:44.500,2026-06-17T09:34:37.500,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50087,2025-07-15T20:15:44.630,2026-06-17T09:34:37.613,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50088,2025-07-15T20:15:44.767,2026-06-17T09:34:37.750,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50091,2025-07-15T20:15:45.150,2026-06-17T09:34:38.090,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50092,2025-07-15T20:15:45.290,2026-06-17T09:34:38.213,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50093,2025-07-15T20:15:45.413,2026-06-17T09:34:38.317,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50096,2025-07-15T20:15:45.777,2026-06-17T09:34:38.650,Analyzed,4.4,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50097,2025-07-15T20:15:45.900,2026-06-17T09:34:38.760,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50098,2025-07-15T20:15:46.020,2026-06-17T09:34:38.870,Modified,2.7,LOW,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50099,2025-07-15T20:15:46.147,2026-06-17T09:34:38.983,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50100,2025-07-15T20:15:46.267,2026-06-17T09:34:39.093,Modified,2.2,LOW,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50101,2025-07-15T20:15:46.390,2026-06-17T09:34:39.207,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50102,2025-07-15T20:15:46.510,2026-06-17T09:34:39.323,Modified,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2025-50104,2025-07-15T20:15:46.753,2026-06-17T09:34:39.547,Analyzed,2.7,LOW,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2026-21964,2026-01-20T22:15:59.350,2026-06-17T10:19:14.763,Analyzed,4.9,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2026-34317,2026-04-21T21:16:37.183,2026-10-26T21:10:00.170,Analyzed,5.0,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2026-34318,2026-04-21T21:16:37.327,2026-10-26T21:10:00.170,Analyzed,5.8,MEDIUM,,False,oracle:mysql,False
+mysql_mid,MySQL,mid,8.0.32,CVE-2026-34319,2026-04-21T21:16:37.487,2026-10-26T21:10:00.170,Analyzed,5.0,MEDIUM,,False,oracle:mysql,False
+redis_old,Redis,old,6.0.5,CVE-2021-31294,2023-07-15T23:15:09.203,2026-06-17T03:51:32.180,Modified,5.9,MEDIUM,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2021-32626,2021-10-04T18:15:08.140,2026-06-17T03:53:17.947,Modified,7.5,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2021-32627,2021-10-04T18:15:08.353,2026-06-17T03:53:18.127,Modified,7.5,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2021-32628,2021-10-04T18:15:08.577,2026-06-17T03:53:18.290,Modified,7.5,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2021-32672,2021-10-04T18:15:08.780,2026-06-17T03:53:23.540,Modified,5.3,MEDIUM,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2021-32675,2021-10-04T18:15:08.923,2026-06-17T03:53:23.953,Modified,7.5,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2021-32687,2021-10-04T18:15:08.980,2026-06-17T03:53:25.510,Modified,7.5,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2021-32762,2021-10-04T18:15:09.043,2026-06-17T03:53:34.707,Modified,7.5,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2021-41099,2021-10-04T18:15:09.493,2026-06-17T04:07:52.427,Modified,7.5,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2022-24735,2022-04-27T20:15:09.730,2026-06-17T04:32:24.043,Modified,3.9,LOW,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2022-24736,2022-04-27T20:15:09.857,2026-06-17T04:32:24.237,Modified,3.3,LOW,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2022-24834,2023-07-13T15:15:08.817,2026-06-17T04:32:37.480,Modified,7.0,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2022-35977,2023-01-20T19:15:14.470,2026-06-17T04:52:38.387,Modified,5.5,MEDIUM,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2022-36021,2023-03-01T16:15:09.400,2026-06-17T04:52:45.480,Modified,5.5,MEDIUM,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2022-3647,2022-10-21T18:15:10.183,2026-06-17T04:59:56.703,Modified,3.1,LOW,disputed,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2023-25155,2023-03-02T04:15:10.807,2026-06-17T05:40:47.777,Modified,5.5,MEDIUM,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2023-28856,2023-04-18T21:15:09.313,2026-06-17T05:48:55.577,Modified,5.5,MEDIUM,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2023-45145,2023-10-18T21:15:09.560,2026-06-17T06:28:18.790,Modified,3.6,LOW,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2024-31228,2024-10-07T20:15:05.277,2026-06-17T07:28:01.287,Modified,5.5,MEDIUM,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2024-31449,2024-10-07T20:15:05.507,2026-11-04T00:17:18.600,Analyzed,7.0,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2025-21605,2025-04-23T16:15:34.770,2026-06-17T08:43:50.390,Modified,7.5,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2025-32023,2025-07-07T16:15:22.830,2026-06-17T09:11:20.273,Modified,7.0,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2025-46817,2025-10-03T18:15:35.527,2026-10-19T17:10:00.173,Analyzed,7.0,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2025-46818,2025-10-03T19:15:43.330,2026-10-19T17:10:00.173,Analyzed,6.0,MEDIUM,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2025-46819,2025-10-03T19:15:43.490,2026-10-19T17:10:00.173,Analyzed,6.3,MEDIUM,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2025-48367,2025-07-07T16:15:24.063,2026-06-17T09:29:33.337,Analyzed,7.5,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2025-49844,2025-10-03T20:15:32.823,2026-10-19T16:10:00.260,Modified,9.9,CRITICAL,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2026-23631,2026-05-05T17:17:03.503,2026-07-25T11:10:00.100,Modified,8.1,HIGH,,False,raw,True
+redis_old,Redis,old,6.0.5,CVE-2026-25243,2026-05-05T17:17:03.667,2026-07-25T11:10:00.100,Modified,8.8,HIGH,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2022-24834,2023-07-13T15:15:08.817,2026-06-17T04:32:37.480,Modified,7.0,HIGH,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2022-35977,2023-01-20T19:15:14.470,2026-06-17T04:52:38.387,Modified,5.5,MEDIUM,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2022-36021,2023-03-01T16:15:09.400,2026-06-17T04:52:45.480,Modified,5.5,MEDIUM,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2022-3647,2022-10-21T18:15:10.183,2026-06-17T04:59:56.703,Modified,3.1,LOW,disputed,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2023-22458,2023-01-20T19:15:17.917,2026-06-17T05:35:29.883,Modified,5.5,MEDIUM,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2023-25155,2023-03-02T04:15:10.807,2026-06-17T05:40:47.777,Modified,5.5,MEDIUM,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2023-28856,2023-04-18T21:15:09.313,2026-06-17T05:48:55.577,Modified,5.5,MEDIUM,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2023-36824,2023-07-11T17:15:13.223,2026-06-17T06:07:09.310,Analyzed,7.4,HIGH,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2023-41053,2023-09-06T21:15:14.137,2026-06-17T06:20:19.283,Modified,3.3,LOW,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2023-45145,2023-10-18T21:15:09.560,2026-06-17T06:28:18.790,Modified,3.6,LOW,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2024-31227,2024-10-07T20:15:05.050,2026-06-17T07:28:01.180,Analyzed,4.4,MEDIUM,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2024-51741,2025-01-06T22:15:09.827,2026-06-17T08:06:13.863,Analyzed,4.4,MEDIUM,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2025-21605,2025-04-23T16:15:34.770,2026-06-17T08:43:50.390,Modified,7.5,HIGH,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2025-27151,2025-05-29T09:15:25.980,2026-06-17T09:03:06.450,Analyzed,4.7,MEDIUM,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2025-46817,2025-10-03T18:15:35.527,2026-10-19T17:10:00.173,Analyzed,7.0,HIGH,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2025-46818,2025-10-03T19:15:43.330,2026-10-19T17:10:00.173,Analyzed,6.0,MEDIUM,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2025-46819,2025-10-03T19:15:43.490,2026-10-19T17:10:00.173,Analyzed,6.3,MEDIUM,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2025-48367,2025-07-07T16:15:24.063,2026-06-17T09:29:33.337,Analyzed,7.5,HIGH,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2025-49844,2025-10-03T20:15:32.823,2026-10-19T16:10:00.260,Modified,9.9,CRITICAL,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2026-23631,2026-05-05T17:17:03.503,2026-07-25T11:10:00.100,Modified,8.1,HIGH,,False,raw,True
+redis_mid,Redis,mid,7.0.5,CVE-2026-25243,2026-05-05T17:17:03.667,2026-07-25T11:10:00.100,Modified,8.8,HIGH,,False,raw,True
+openssh_old,OpenSSH,old,8.4,CVE-2007-2768,2007-05-21T20:30:00.000,2026-06-16T22:40:16.857,Modified,,,,True,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2008-3844,2008-08-27T20:41:00.000,2026-06-16T22:56:39.340,Modified,,,,True,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2016-20012,2021-09-15T20:15:07.310,2026-06-17T00:43:05.063,Modified,5.3,MEDIUM,disputed,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2020-14145,2020-06-29T18:15:11.940,2026-10-14T10:17:29.537,Modified,5.9,MEDIUM,,False,raw,True
+openssh_old,OpenSSH,old,8.4,CVE-2021-28041,2021-03-05T21:15:13.200,2026-10-14T12:17:10.697,Modified,7.1,HIGH,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2021-36368,2022-03-13T00:15:07.937,2026-06-17T03:58:45.340,Modified,3.7,LOW,disputed,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2021-41617,2021-09-26T19:15:07.263,2026-10-14T12:17:15.920,Modified,7.0,HIGH,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2023-38408,2023-07-20T03:15:10.170,2026-10-15T00:16:34.667,Modified,9.8,CRITICAL,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2023-48795,2023-12-18T16:15:10.897,2026-10-15T01:17:10.937,Modified,5.9,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2023-51385,2023-12-18T19:15:08.773,2026-10-15T01:17:12.563,Modified,6.5,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2023-51767,2023-12-24T07:15:07.410,2026-10-15T01:17:12.797,Modified,7.0,HIGH,disputed,True,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2025-26465,2025-02-18T19:15:29.230,2026-11-05T16:17:14.577,Modified,6.8,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2025-32728,2025-04-10T02:15:30.873,2026-10-15T02:17:48.267,Modified,4.3,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-106552,2026-10-06T21:17:18.917,2026-10-13T15:26:59.587,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-106553,2026-10-06T21:17:19.067,2026-10-13T15:26:43.823,Analyzed,2.2,LOW,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-106555,2026-10-06T21:17:19.213,2026-10-13T14:59:09.973,Analyzed,2.2,LOW,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-106582,2026-10-06T21:17:19.370,2026-10-13T14:57:12.573,Analyzed,3.7,LOW,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-106583,2026-10-07T00:17:20.743,2026-10-15T19:17:18.523,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-106584,2026-10-06T21:17:19.520,2026-10-13T14:40:04.283,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-106585,2026-10-06T21:17:19.663,2026-10-15T19:17:18.680,Analyzed,6.5,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-106586,2026-10-06T21:17:19.803,2026-10-13T14:39:21.643,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-106587,2026-10-06T22:17:06.620,2026-10-09T16:39:23.107,Analyzed,3.6,LOW,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-35385,2026-04-02T17:16:27.450,2026-09-01T13:19:01.153,Modified,7.5,HIGH,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-35387,2026-04-02T17:16:27.790,2026-07-24T21:10:00.143,Analyzed,3.1,LOW,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-35388,2026-04-02T17:16:27.947,2026-07-24T21:10:00.143,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-35414,2026-04-02T18:16:34.690,2026-07-24T21:10:00.143,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-59995,2026-07-08T01:16:28.390,2026-10-25T20:10:00.147,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-59996,2026-07-08T01:16:28.557,2026-10-25T20:10:00.147,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-59997,2026-07-08T01:16:28.727,2026-10-25T20:10:00.147,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-59998,2026-07-08T01:16:28.870,2026-10-25T20:10:00.147,Analyzed,4.8,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-59999,2026-07-08T01:16:29.010,2026-10-25T20:10:00.147,Analyzed,5.9,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-60000,2026-07-08T01:16:29.153,2026-10-25T20:10:00.147,Analyzed,3.7,LOW,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-60001,2026-07-08T01:16:29.290,2026-10-25T20:10:00.147,Analyzed,6.5,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-60002,2026-07-08T01:16:29.430,2026-10-25T20:10:00.147,Analyzed,7.7,HIGH,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-73281,2026-08-11T20:18:49.690,2026-10-24T15:10:00.190,Analyzed,3.5,LOW,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-73282,2026-08-11T20:18:49.830,2026-10-24T15:10:00.190,Analyzed,4.8,MEDIUM,,False,raw;update=p1,True
+openssh_old,OpenSSH,old,8.4,CVE-2026-73283,2026-08-11T20:18:49.960,2026-10-24T15:10:00.190,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2007-2768,2007-05-21T20:30:00.000,2026-06-16T22:40:16.857,Modified,,,,True,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2008-3844,2008-08-27T20:41:00.000,2026-06-16T22:56:39.340,Modified,,,,True,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2023-51767,2023-12-24T07:15:07.410,2026-10-15T01:17:12.797,Modified,7.0,HIGH,disputed,True,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2024-6387,2024-07-01T13:15:06.467,2026-10-15T03:17:04.790,Modified,8.1,HIGH,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2025-26465,2025-02-18T19:15:29.230,2026-11-05T16:17:14.577,Modified,6.8,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2025-26466,2025-02-28T22:15:40.080,2026-11-05T16:17:14.897,Modified,5.9,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2025-32728,2025-04-10T02:15:30.873,2026-10-15T02:17:48.267,Modified,4.3,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-106552,2026-10-06T21:17:18.917,2026-10-13T15:26:59.587,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-106553,2026-10-06T21:17:19.067,2026-10-13T15:26:43.823,Analyzed,2.2,LOW,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-106555,2026-10-06T21:17:19.213,2026-10-13T14:59:09.973,Analyzed,2.2,LOW,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-106582,2026-10-06T21:17:19.370,2026-10-13T14:57:12.573,Analyzed,3.7,LOW,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-106583,2026-10-07T00:17:20.743,2026-10-15T19:17:18.523,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-106584,2026-10-06T21:17:19.520,2026-10-13T14:40:04.283,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-106585,2026-10-06T21:17:19.663,2026-10-15T19:17:18.680,Analyzed,6.5,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-106586,2026-10-06T21:17:19.803,2026-10-13T14:39:21.643,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-106587,2026-10-06T22:17:06.620,2026-10-09T16:39:23.107,Analyzed,3.6,LOW,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-35385,2026-04-02T17:16:27.450,2026-09-01T13:19:01.153,Modified,7.5,HIGH,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-35387,2026-04-02T17:16:27.790,2026-07-24T21:10:00.143,Analyzed,3.1,LOW,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-35388,2026-04-02T17:16:27.947,2026-07-24T21:10:00.143,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-35414,2026-04-02T18:16:34.690,2026-07-24T21:10:00.143,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-59995,2026-07-08T01:16:28.390,2026-10-25T20:10:00.147,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-59996,2026-07-08T01:16:28.557,2026-10-25T20:10:00.147,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-59997,2026-07-08T01:16:28.727,2026-10-25T20:10:00.147,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-59998,2026-07-08T01:16:28.870,2026-10-25T20:10:00.147,Analyzed,4.8,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-59999,2026-07-08T01:16:29.010,2026-10-25T20:10:00.147,Analyzed,5.9,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-60000,2026-07-08T01:16:29.153,2026-10-25T20:10:00.147,Analyzed,3.7,LOW,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-60001,2026-07-08T01:16:29.290,2026-10-25T20:10:00.147,Analyzed,6.5,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-60002,2026-07-08T01:16:29.430,2026-10-25T20:10:00.147,Analyzed,7.7,HIGH,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-73281,2026-08-11T20:18:49.690,2026-10-24T15:10:00.190,Analyzed,3.5,LOW,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-73282,2026-08-11T20:18:49.830,2026-10-24T15:10:00.190,Analyzed,4.8,MEDIUM,,False,raw;update=p1,True
+openssh_mid,OpenSSH,mid,9.6,CVE-2026-73283,2026-08-11T20:18:49.960,2026-10-24T15:10:00.190,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2007-2768,2007-05-21T20:30:00.000,2026-06-16T22:40:16.857,Modified,,,,True,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2008-3844,2008-08-27T20:41:00.000,2026-06-16T22:56:39.340,Modified,,,,True,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2023-51767,2023-12-24T07:15:07.410,2026-10-15T01:17:12.797,Modified,7.0,HIGH,disputed,True,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-106552,2026-10-06T21:17:18.917,2026-10-13T15:26:59.587,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-106553,2026-10-06T21:17:19.067,2026-10-13T15:26:43.823,Analyzed,2.2,LOW,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-106555,2026-10-06T21:17:19.213,2026-10-13T14:59:09.973,Analyzed,2.2,LOW,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-106582,2026-10-06T21:17:19.370,2026-10-13T14:57:12.573,Analyzed,3.7,LOW,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-106583,2026-10-07T00:17:20.743,2026-10-15T19:17:18.523,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-106584,2026-10-06T21:17:19.520,2026-10-13T14:40:04.283,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-106585,2026-10-06T21:17:19.663,2026-10-15T19:17:18.680,Analyzed,6.5,MEDIUM,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-106586,2026-10-06T21:17:19.803,2026-10-13T14:39:21.643,Analyzed,2.5,LOW,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-106587,2026-10-06T22:17:06.620,2026-10-09T16:39:23.107,Analyzed,3.6,LOW,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-59995,2026-07-08T01:16:28.390,2026-10-25T20:10:00.147,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-59996,2026-07-08T01:16:28.557,2026-10-25T20:10:00.147,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-59997,2026-07-08T01:16:28.727,2026-10-25T20:10:00.147,Analyzed,4.2,MEDIUM,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-59998,2026-07-08T01:16:28.870,2026-10-25T20:10:00.147,Analyzed,4.8,MEDIUM,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-59999,2026-07-08T01:16:29.010,2026-10-25T20:10:00.147,Analyzed,5.9,MEDIUM,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-60000,2026-07-08T01:16:29.153,2026-10-25T20:10:00.147,Analyzed,3.7,LOW,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-60001,2026-07-08T01:16:29.290,2026-10-25T20:10:00.147,Analyzed,6.5,MEDIUM,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-60002,2026-07-08T01:16:29.430,2026-10-25T20:10:00.147,Analyzed,7.7,HIGH,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-73281,2026-08-11T20:18:49.690,2026-10-24T15:10:00.190,Analyzed,3.5,LOW,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-73282,2026-08-11T20:18:49.830,2026-10-24T15:10:00.190,Analyzed,4.8,MEDIUM,,False,raw;update=p1,True
+openssh_latest,OpenSSH,latest,10.3,CVE-2026-73283,2026-08-11T20:18:49.960,2026-10-24T15:10:00.190,Analyzed,2.5,LOW,,False,raw;update=p1,True

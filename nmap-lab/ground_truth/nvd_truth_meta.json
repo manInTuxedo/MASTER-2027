@@ -1,0 +1,56 @@
+{
+  "script": "build_nvd_truth.py",
+  "script_version": "1.1",
+  "query_started_utc": "2026-11-06T20:51:03+00:00",
+  "query_finished_utc": "2026-11-06T20:51:41+00:00",
+  "nvd_response_timestamps": {
+    "first": "2026-11-06T20:51:04.529",
+    "last": "2026-11-06T20:51:41.410"
+  },
+  "raw_reply_retrieval_times_utc": {
+    "first": "2026-11-06T20:51:04+00:00",
+    "last": "2026-11-06T20:51:41+00:00"
+  },
+  "nmap_dataset_file": "results\\nmap_results.json",
+  "nmap_dataset_sha256": "7b4f4909c5857eeac06f01ddaca4a75eb7a732f1bec740fc6ccebac66e2f8b13",
+  "api_key_used": true,
+  "api_key_rejected_by_nvd": false,
+  "network_requests_this_run": 54,
+  "cache_hits_this_run": 0,
+  "base_url": "https://services.nvd.nist.gov/rest/json/cves/2.0",
+  "page_size": 2000,
+  "primary_method": "cpeName with isVulnerable and noRejected",
+  "cross_check_method": "virtualMatchString with noRejected",
+  "vendor_aliases": {
+    "igor_sysoev:nginx": [
+      "f5:nginx",
+      "nginx:nginx"
+    ],
+    "mysql:mysql": [
+      "oracle:mysql"
+    ]
+  },
+  "update_variants": {
+    "openbsd:openssh": [
+      "p1"
+    ]
+  },
+  "sanity_checks_from_author_memory": [
+    {
+      "service_id": "apache_old",
+      "cve_id": "CVE-2021-41773",
+      "result": "PASS"
+    },
+    {
+      "service_id": "nginx_old",
+      "cve_id": "CVE-2021-23017",
+      "result": "PASS"
+    },
+    {
+      "service_id": "openssh_mid",
+      "cve_id": "CVE-2024-6387",
+      "result": "PASS"
+    }
+  ],
+  "notice": "This product uses the NVD API but is not endorsed or certified by the NVD."
+}

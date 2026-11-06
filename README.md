@@ -19,7 +19,7 @@ The lab is designed to produce repeatable service/version observations that can 
 
 ## 2. Current Implementation Status
 
-The current implemented phase is the **Docker-based service lab and Nmap data-collection pipeline** (dataset v2, 15 services).
+The currently implemented phases are the **Docker-based service lab and Nmap data-collection pipeline** (dataset v2, 15 services) and the **first build of the NVD ground-truth table** (2026-11-06).
 
 The lab defines fifteen services: five product families, each represented by an older, intermediate, and latest version.
 
@@ -59,6 +59,25 @@ In the reported run (2026-11-05, Nmap 7.993), Nmap detected all fifteen services
 
 These are observations from the run described by the project author. For reproducibility, the dataset records the Nmap version, scan command, scan timestamp, and a Docker image digest for each service (see `image_digest`).
 
+### NVD ground-truth table (first build, 2026-11-06)
+
+`build_nvd_truth.py` queried the NVD CVE API for each of the fifteen detected product/versions. NVD data was retrieved on 2026-11-06 (NVD response timestamp 20:21 UTC). The table was built from the `nmap_results.json` file with SHA-256 `7b4f4909c5857eeac06f01ddaca4a75eb7a732f1bec740fc6ccebac66e2f8b13`, and contains 508 (service, CVE) rows. The number of applicable CVEs per service, and how many of them are found when Nmap's CPE is used exactly as printed (the unmodified baseline lookup), are:
+
+| Product | Old: truth / raw CPE | Mid: truth / raw CPE | Latest: truth / raw CPE |
+|---|---|---|---|
+| Apache HTTP Server | 88 / 88 | 72 / 72 | 0 / 0 |
+| Nginx | 6 / 0 | 2 / 0 | 0 / 0 |
+| MySQL | 81 / 0 | 118 / 0 | 0 / 0 |
+| Redis | 29 / 29 | 21 / 21 | 0 / 0 |
+| OpenSSH | 37 / 37 | 31 / 31 | 23 / 23 |
+
+Observations:
+
+- For nginx and MySQL, a lookup that uses Nmap's CPE unchanged returns nothing, because NVD records these products under different vendor names (`f5:nginx` and `oracle:mysql`). The ground truth therefore queries each service under every known alias and merges the results; the `found_by` column records which name found each CVE.
+- The latest Apache, nginx, MySQL, and Redis versions have no applicable CVEs in NVD at the query date, so they act as clean controls for this date only.
+- Three sanity checks on well-known CVEs (Apache 2.4.49, nginx 1.18.0, OpenSSH 9.6) were found as expected.
+- **Under review:** for all three OpenSSH versions, three CVEs (CVE-2007-2768, CVE-2008-3844, CVE-2023-51767) were found by the primary query method but not by the cross-check method. The latest OpenSSH version also has 23 applicable CVEs, so it is not a clean control. The truth table therefore includes two review columns: `cve_tags` (for example `disputed`) and `unbounded_version_match` (NVD attaches the CVE to the product with no version limits). How these entries are counted will be fixed in the experiment protocol.
+
 Notes on specific products:
 
 - **Redis.** In preliminary testing with Nmap 7.94, plain service detection (`-sV`) identified the service as Redis but did not report a version. The Redis versions in this dataset were obtained by also running Nmap's own `redis-info` script. The manifest column `nse_script` records which services use an additional script.
@@ -77,6 +96,8 @@ The current pipeline is:
 6. **Image digest recording:** if the Docker CLI is available, the collector records the image digest for each service.
 7. **Dataset export:** structured records are written to JSON and CSV for inspection and downstream experiments.
 
+The NVD ground-truth stage is a separate script (`build_nvd_truth.py`). It reads `nmap_results.json`, queries the NVD CVE API (primary method `cpeName` with `isVulnerable`, cross-check with `virtualMatchString`), queries each service under known vendor aliases, caches every raw reply, and writes the truth table together with metadata (query date, SHA-256 of the Nmap dataset, settings).
+
 Nmap is used here for host-port and service/version discovery. Nmap service detection does **not** independently prove that a service is vulnerable and does not itself provide the study's final CVE ground truth.
 
 ## 4. Repository Components
@@ -90,6 +111,12 @@ Nmap is used here for host-port and service/version discovery. Nmap service dete
 | `nmap-lab/results/nmap_results.json` | Main structured Nmap dataset. |
 | `nmap-lab/results/nmap_results.csv` | Flat dataset suitable for spreadsheet inspection. |
 | `nmap-lab/results/raw_xml/` | Raw per-service Nmap XML evidence. |
+| `nmap-lab/build_nvd_truth.py` | Queries NVD for each service, merges vendor aliases, and builds the ground-truth table. |
+| `nmap-lab/ground_truth/nvd_truth.csv` | Ground truth: one row per (service, CVE), with CVSS, NVD status, tags, and which query found it. |
+| `nmap-lab/ground_truth/nvd_truth_summary.csv` | Per-service counts, method used, and review notes. |
+| `nmap-lab/ground_truth/nvd_crosscheck_differences.csv` | CVEs on which the two NVD query methods disagree. |
+| `nmap-lab/ground_truth/nvd_truth_meta.json` | Query date, Nmap dataset SHA-256, settings, and sanity checks. |
+| `nmap-lab/ground_truth/nvd_raw/` | Raw NVD replies kept as evidence and used as a cache. |
 
 The collector also records useful metadata such as the Nmap version, scan command, scan time, elapsed time, detected service/version, CPE values (including a primary CPE 2.3 value for NVD lookup), image digest, a model-input text field, and whether a detected version matches the manifest's expected version.
 
@@ -97,7 +124,7 @@ The collector also records useful metadata such as the Nmap version, scan comman
 
 The broader research experiment is intended to proceed as follows:
 
-1. Build and validate a ground-truth list of applicable CVEs for each tested product/version using NVD data, and record the date and time of the query together with a hash of the Nmap dataset it was built from.
+1. Build and validate a ground-truth list of applicable CVEs for each tested product/version using NVD data, and record the date and time of the query together with a hash of the Nmap dataset it was built from. *(First build implemented on 2026-11-06; review of the OpenSSH entries is in progress.)*
 2. Provide the Nmap-derived service observations to three locally hosted small LLMs served through Ollama: `llama3.2:3b`, `phi4-mini`, and `qwen3.5:4b`. Model digests will be recorded in the experiment protocol.
 3. Evaluate multiple prompt conditions:
    - Direct CVE identification request.
@@ -111,7 +138,7 @@ The broader research experiment is intended to proceed as follows:
 
 The prompts, JSON output format, model settings, and metric definitions will be fixed in an experiment protocol before any model is evaluated.
 
-The Docker/Nmap collection stage is implemented as described above. The local-LLM evaluation, NVD ground-truth construction, automated grading, and baseline comparison should be treated as subsequent research stages unless separately implemented and documented in the repository.
+The Docker/Nmap collection stage and the first build of the NVD ground-truth table are implemented as described above. The experiment protocol, local-LLM evaluation, automated grading, and baseline comparison should be treated as subsequent research stages unless separately implemented and documented in the repository.
 
 ## 6. Evaluation Metrics
 
@@ -126,6 +153,8 @@ The planned evaluation includes:
 - **Response time:** time required to produce a response.
 
 Some CVEs exist in NVD but have no applicability data (for example, entries that are still awaiting analysis), so they cannot be judged applicable or inapplicable. These are planned to be reported as a separate category rather than counted as real-but-wrong.
+
+Ground-truth sizes range from 0 to 118 CVEs per service. For services with an empty truth set, precision and recall are undefined, so only rates that do not depend on the truth set (for example fabricated-CVE rate and abstention rate) apply to them.
 
 Metric definitions and denominators should be fixed in the experiment protocol before evaluating models, and reported separately where categories overlap or differ.
 
@@ -162,6 +191,18 @@ nmap-lab/
         └── openssh_latest.xml
 ```
 
+After running `build_nvd_truth.py`, the ground-truth outputs are:
+
+```
+nmap-lab/
+└── ground_truth/
+    ├── nvd_truth.csv
+    ├── nvd_truth_summary.csv
+    ├── nvd_crosscheck_differences.csv
+    ├── nvd_truth_meta.json
+    └── nvd_raw/
+```
+
 The JSON file is the primary structured dataset. The CSV file is a convenient tabular representation. The raw XML files preserve the original Nmap output and should be retained as experimental evidence.
 
 ## 9. Known Limitations
@@ -170,7 +211,9 @@ The JSON file is the primary structured dataset. The CSV file is a convenient ta
 - **Vendor naming differences.** The CPE names that Nmap reports do not always match the names NVD uses. For example, Nmap reports MySQL under `mysql:mysql` while NVD records Oracle MySQL under `oracle:mysql`, and Nmap reports nginx under `igor_sysoev:nginx` while NVD also uses `f5:nginx`. A baseline that uses Nmap's CPE unchanged may therefore miss CVEs, and the ground-truth construction has to account for these aliases.
 - **Version granularity.** The OpenSSH banner does not include the portable `p1` suffix, and some products report only the version string the service chooses to expose.
 - **Group labels.** `latest` services may still have CVEs recorded in NVD. NVD data, not the group label, defines the ground truth.
-- **NVD changes over time.** NVD records are updated continuously, so the ground truth is valid for the recorded query date.
+- **NVD changes over time.** NVD records are updated continuously, so the ground truth is valid for the recorded query date. Recently published CVEs may not yet have applicability data, so a clean result for a very recent version reflects NVD at that date.
+- **All-versions entries.** Some NVD entries attach a CVE to a product without any version limits (some are tagged as disputed). They match every version, including very new ones, and are flagged in the truth table rather than silently removed.
+- **Unequal truth-set sizes.** Services range from 0 to 118 applicable CVEs, which affects how recall can be interpreted across services.
 
 ## 10. Data Sources
 

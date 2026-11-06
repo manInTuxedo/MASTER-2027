@@ -90,9 +90,9 @@ The `ollama list` output shows each model's ID, which will be recorded in the ex
 
 ### Current collector
 
-`collect_nmap.py` uses Python standard-library modules for CSV handling, JSON serialization, XML parsing, subprocess execution, file handling, regular expressions, and timestamps. It does not require `requests`, `pandas`, or `matplotlib` to perform the current Nmap collection step.
+`collect_nmap.py` uses Python standard-library modules for CSV handling, JSON serialization, XML parsing, subprocess execution, file handling, regular expressions, and timestamps. It does not require any third-party package.
 
-The project author's environment also installed these packages for downstream data handling and analysis:
+`build_nvd_truth.py` (the NVD ground-truth stage) additionally requires `requests`. The project author's environment also installed `pandas` and `matplotlib` for downstream data handling and analysis:
 
 ```
 python -m pip install requests pandas matplotlib
@@ -107,7 +107,7 @@ python -m pip install --upgrade pip
 python -m pip install requests pandas matplotlib
 ```
 
-If only the current collector is being run, the third-party package installation can be skipped. The virtual environment directory (`venv/`) should not be committed to the repository.
+If only `collect_nmap.py` is being run, the third-party package installation can be skipped. The virtual environment directory (`venv/`) should not be committed to the repository.
 
 ## 4. Repository Setup
 
@@ -334,6 +334,10 @@ docker compose logs
 
 Confirm that the relevant host port in `lab_manifest.csv` matches the Compose port mapping. Wait for MySQL initialization before scanning.
 
+### NVD key problems
+
+`message: Invalid apiKey.` with HTTP 404 means NVD does not recognize the key. Check that the key has 36 characters in five groups, was copied from the activation page (not retyped), was activated, and that the terminal was opened after `setx`. `build_nvd_truth.py` continues without a key if the key is rejected.
+
 ### A Redis service shows no version
 
 Plain `-sV` identifies Redis but may not report its version. Confirm that the manifest row for that service has `redis-info` in the `nse_script` column, and that the Redis container was started with protected mode disabled (as in `docker-compose.yml`), because protected mode refuses requests that arrive through Docker's port mapping.
@@ -350,17 +354,31 @@ Fifteen images, the OpenSSH build layers, and the local model files need several
 
 The Docker/Nmap collection phase needs only the software in Sections 2 to 5. The later research stages additionally need the following.
 
-### NVD API key
+### NVD API key and ground-truth stage
 
 The ground-truth stage queries the NVD API. A key is free and is requested at `https://nvd.nist.gov/developers/request-an-api-key`. NVD sends a single-use activation link to the email address entered in the request. The key is shown only once, when the link is opened, and the link expires after seven days.
 
-Store the key in an environment variable, not in a file in the repository:
+Copy and paste the key rather than typing it. A valid key has 36 characters in five groups (8-4-4-4-12). Store it in an environment variable, not in a file in the repository:
 
 ```
 setx NVD_API_KEY "your-key-here"
 ```
 
-Open a new terminal afterwards so the variable is available. Keys should not be shared or committed to the repository. Without a key, the public rate limit is much lower, so key-less runs are slower.
+`setx` takes effect only in terminals opened afterwards. To use the key in the current terminal as well, run `set NVD_API_KEY=your-key-here` (without quotes). To check the key without printing it:
+
+```
+python -c "import os;k=os.environ['NVD_API_KEY'];print(len(k),[len(p) for p in k.split('-')])"
+```
+
+The expected output is `36 [8, 4, 4, 4, 12]`. Keys should not be shared or committed to the repository.
+
+Run the ground-truth stage from the `nmap-lab` directory, after `collect_nmap.py` has produced `results/nmap_results.json`:
+
+```
+python build_nvd_truth.py
+```
+
+With a key it takes about a minute for the fifteen services (54 requests in the reported run); without a key, or if NVD rejects the key, the script continues at the slower public rate (about six seconds per request). Every raw NVD reply is cached in `ground_truth/nvd_raw/`, so re-running the script does not contact NVD again unless `--refresh` is given. The script prints the NVD data date to record, the SHA-256 of the Nmap dataset, and any services that need review. The outputs are listed in `README.md`.
 
 ### Other stages
 
