@@ -3,13 +3,15 @@
 collect_nmap.py - collect Nmap service-detection data for the Nmap-to-CVE study.
 
 What it does
-  1. Reads lab_manifest.csv (one row per Docker service: id, role, image, port, expected version).
+  1. Reads lab_manifest.csv (one row per Docker service: id, role, image, port, expected version,
+     and an optional nse_script column for products whose version plain -sV cannot read, e.g. Redis).
   2. Runs `nmap -sV` against each service port and saves the raw Nmap XML.
   3. Converts every result into a clean record and writes:
        results/nmap_results.json   (main dataset, hand this one to the professor)
        results/nmap_results.csv    (same data, flat, opens in Excel)
        results/raw_xml/<id>.xml    (untouched Nmap output, as evidence)
-  4. Prints a summary and flags any service where Nmap's detected version differs
+  4. Records the Docker image digest of every service (reproducibility), if Docker is available.
+  5. Prints a summary and flags any service where Nmap's detected version differs
      from the version we intended to run.
 
 Why XML and not JSON from Nmap directly: Nmap has no official JSON output.
@@ -73,20 +75,51 @@ def cpe22_to_23(cpe: str):
 
 
 # ----------------------------------------------------------------------------
+# Docker image digest (so the exact image can be reproduced later)
+# ----------------------------------------------------------------------------
+def get_image_digest(image):
+    """
+    Returns the registry digest (repo@sha256:...) for pulled images, or "local-build:sha256:..."
+    (the image ID) for images built locally, or None if Docker or the image is unavailable.
+    """
+    if not image or not shutil.which("docker"):
+        return None
+    try:
+        proc = subprocess.run(
+            ["docker", "image", "inspect", "--format", "{{json .RepoDigests}}|{{.Id}}", image],
+            capture_output=True, text=True, timeout=30,
+        )
+        if proc.returncode != 0:
+            return None
+        digests_json, _, image_id = proc.stdout.strip().partition("|")
+        digests = json.loads(digests_json) if digests_json else []
+        if digests:
+            return digests[0]
+        return f"local-build:{image_id}" if image_id else None
+    except (subprocess.TimeoutExpired, ValueError, OSError):
+        return None
+
+
+# ----------------------------------------------------------------------------
 # Nmap running and parsing
 # ----------------------------------------------------------------------------
-def run_nmap(nmap_path, host, port, xml_path, intensity, timeout):
+def run_nmap(nmap_path, host, port, xml_path, intensity, timeout, nse_script=""):
     """
     -sV : service/version detection (the whole point)
     -sT : plain TCP connect scan; works without admin rights and on localhost (also on Windows)
     -Pn : do not ping first, just scan the port
     -n  : no DNS lookups
+    --script <name> (only when the manifest asks for it): Nmap's own script for that product
     """
     cmd = [
         nmap_path, "-sV", "-sT", "-Pn", "-n",
         "--version-intensity", str(intensity),
         "-p", str(port), "-oX", xml_path, host,
     ]
+    if nse_script:
+        # e.g. redis-info: an Nmap script that makes -sV report the version for products
+        # whose version the plain probe does not read.
+        cmd[1:1] = ["--script", nse_script]
     try:
         proc = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
         ok = proc.returncode == 0 and os.path.exists(xml_path)
@@ -105,7 +138,7 @@ def version_matches(expected, detected):
     return re.search(pattern, detected) is not None
 
 
-def parse_nmap_xml(xml_path, entry, host_arg, command):
+def parse_nmap_xml(xml_path, entry, host_arg, command, image_digest=None):
     """Turn one Nmap XML file into a list of records (one per port found)."""
     root = ET.parse(xml_path).getroot()
     finished = root.find("runstats/finished")
@@ -146,7 +179,9 @@ def parse_nmap_xml(xml_path, entry, host_arg, command):
                 "product_family": entry["product_family"],
                 "role": entry["role"],
                 "docker_image": entry["docker_image"],
+                "image_digest": image_digest,
                 "expected_version": entry["expected_version"] or None,
+                "nse_script": entry.get("nse_script") or None,
                 "host": host_arg,
                 "port": portnum,
                 "protocol": proto,
@@ -180,6 +215,8 @@ def read_manifest(path):
         if missing:
             sys.exit(f"Manifest {path} is missing columns: {', '.join(sorted(missing))}")
         rows = [{k: (v or "").strip() for k, v in r.items()} for r in reader]
+        for r in rows:
+            r.setdefault("nse_script", "")
     return [r for r in rows if r["id"]]
 
 
@@ -205,12 +242,13 @@ def main():
     for e in entries:
         xml_path = os.path.join(xml_dir, f"{e['id']}.xml")
         print(f"[scan] {e['id']:<14} port {e['host_port']:<6} ...", end=" ", flush=True)
-        ok, cmd, err = run_nmap(nmap_path, args.host, e["host_port"], xml_path, args.intensity, args.timeout)
+        ok, cmd, err = run_nmap(nmap_path, args.host, e["host_port"], xml_path, args.intensity, args.timeout,
+                                e.get("nse_script", ""))
         if not ok:
             print("FAILED")
             failures.append({"id": e["id"], "error": err or "nmap returned an error"})
             continue
-        recs = parse_nmap_xml(xml_path, e, args.host, cmd)
+        recs = parse_nmap_xml(xml_path, e, args.host, cmd, get_image_digest(e["docker_image"]))
         if not recs:
             print("no port data")
             failures.append({"id": e["id"], "error": "no port element in XML (host down or port filtered)"})
@@ -231,6 +269,8 @@ def main():
         "field_notes": {
             "cpe": "CPE 2.2 string exactly as Nmap printed it",
             "cpe23": "same CPE converted to 2.3 form, the form the NVD API expects",
+            "image_digest": "Docker image digest (repo@sha256:...) or local-build:<image id> for images built from a Dockerfile; null if Docker was unavailable",
+            "nse_script": "Nmap script used in addition to -sV for this service (null = plain -sV only)",
             "cpe23_primary": "the application CPE (2.3 form) to look up in NVD; null if Nmap gave no CPE",
             "version_match": "true/false if the detected version equals the intended Docker version, null if no intended version was set",
             "llm_input_text": "the one-line text that will be given to the language model",
@@ -244,7 +284,8 @@ def main():
 
     csv_path = os.path.join(args.out_dir, "nmap_results.csv")
     flat_cols = [
-        "id", "product_family", "role", "docker_image", "expected_version", "host", "port", "protocol",
+        "id", "product_family", "role", "docker_image", "image_digest", "expected_version", "nse_script",
+        "host", "port", "protocol",
         "state", "service_name", "product", "detected_version", "extrainfo", "detection_method",
         "detection_confidence", "cpe", "cpe23", "cpe23_primary", "nmap_service_string", "llm_input_text", "version_match",
     ]

@@ -1,10 +1,16 @@
-id,product_family,role,docker_image,expected_version,host_port
-apache_old,Apache HTTP Server,old,httpd:2.4.49,2.4.49,8001
-apache_mid,Apache HTTP Server,mid,httpd:2.4.54,2.4.54,8002
-apache_latest,Apache HTTP Server,latest,httpd:2.4,,8003
-nginx_old,nginx,old,nginx:1.18.0,1.18.0,8004
-nginx_mid,nginx,mid,nginx:1.22.1,1.22.1,8005
-nginx_latest,nginx,latest,nginx:stable,,8006
-mysql_old,MySQL,old,mysql:5.7.30,5.7.30,8007
-mysql_mid,MySQL,mid,mysql:8.0.32,8.0.32,8008
-mysql_latest,MySQL,latest,mysql:8.4,,8009
+id,product_family,role,docker_image,expected_version,host_port,nse_script
+apache_old,Apache HTTP Server,old,httpd:2.4.49,2.4.49,8001,
+apache_mid,Apache HTTP Server,mid,httpd:2.4.54,2.4.54,8002,
+apache_latest,Apache HTTP Server,latest,httpd:2.4.69,2.4.69,8003,
+nginx_old,nginx,old,nginx:1.18.0,1.18.0,8004,
+nginx_mid,nginx,mid,nginx:1.22.1,1.22.1,8005,
+nginx_latest,nginx,latest,nginx:1.30.6,1.30.6,8006,
+mysql_old,MySQL,old,mysql:5.7.30,5.7.30,8007,
+mysql_mid,MySQL,mid,mysql:8.0.32,8.0.32,8008,
+mysql_latest,MySQL,latest,mysql:8.4.13,8.4.13,8009,
+redis_old,Redis,old,redis:6.0.5,6.0.5,8010,redis-info
+redis_mid,Redis,mid,redis:7.0.5,7.0.5,8011,redis-info
+redis_latest,Redis,latest,redis:8,,8012,redis-info
+openssh_old,OpenSSH,old,lab-openssh:8.4p1,8.4,8013,
+openssh_mid,OpenSSH,mid,lab-openssh:9.6p1,9.6,8014,
+openssh_latest,OpenSSH,latest,lab-openssh:10.3p1,10.3,8015,

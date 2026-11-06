@@ -1,7 +1,8 @@
-# Phase 1 lab: 3 products x 3 versions (old, mid, latest) = 9 services.
+# Lab: 5 products x 3 versions (old, mid, latest) = 15 services.
 # Every port is bound to 127.0.0.1, so nothing is reachable from your network.
 # Tags are suggestions: run "docker compose pull" and swap any tag that does not exist
-# (see hub.docker.com/_/httpd , /_/nginx , /_/mysql for the tag lists).
+# (tag lists: hub.docker.com/_/httpd , /_/nginx , /_/mysql , /_/redis).
+# OpenSSH has no official image, so it is built from the upstream source (see openssh/Dockerfile).
 name: nmap-cve-lab
 
 services:
@@ -13,7 +14,7 @@ services:
     image: httpd:2.4.54
     ports: ["127.0.0.1:8002:80"]
   apache_latest:
-    image: httpd:2.4
+    image: httpd:2.4.69
     ports: ["127.0.0.1:8003:80"]
 
   # ---- nginx ----
@@ -24,7 +25,7 @@ services:
     image: nginx:1.22.1
     ports: ["127.0.0.1:8005:80"]
   nginx_latest:
-    image: nginx:stable
+    image: nginx:1.30.6
     ports: ["127.0.0.1:8006:80"]
 
   # ---- MySQL (takes 20-40 s to finish starting; the password is fake and lab-only) ----
@@ -37,6 +38,41 @@ services:
     environment: { MYSQL_ROOT_PASSWORD: lab_only_password }
     ports: ["127.0.0.1:8008:3306"]
   mysql_latest:
-    image: mysql:8.4
+    image: mysql:8.4.13
     environment: { MYSQL_ROOT_PASSWORD: lab_only_password }
     ports: ["127.0.0.1:8009:3306"]
+
+  # ---- Redis (protected mode off: through Docker's port mapping the scan does not look like
+  #      localhost, and protected mode would refuse it before it reports a version) ----
+  redis_old:
+    image: redis:6.0.5
+    command: ["redis-server", "--protected-mode", "no"]
+    ports: ["127.0.0.1:8010:6379"]
+  redis_mid:
+    image: redis:7.0.5
+    command: ["redis-server", "--protected-mode", "no"]
+    ports: ["127.0.0.1:8011:6379"]
+  redis_latest:
+    image: redis:8
+    command: ["redis-server", "--protected-mode", "no"]
+    ports: ["127.0.0.1:8012:6379"]
+
+  # ---- OpenSSH (built from upstream source; first build takes a few minutes) ----
+  openssh_old:
+    build:
+      context: ./openssh
+      args: { OPENSSH_VERSION: 8.4p1 }
+    image: lab-openssh:8.4p1
+    ports: ["127.0.0.1:8013:22"]
+  openssh_mid:
+    build:
+      context: ./openssh
+      args: { OPENSSH_VERSION: 9.6p1 }
+    image: lab-openssh:9.6p1
+    ports: ["127.0.0.1:8014:22"]
+  openssh_latest:
+    build:
+      context: ./openssh
+      args: { OPENSSH_VERSION: 10.3p1 }
+    image: lab-openssh:10.3p1
+    ports: ["127.0.0.1:8015:22"]

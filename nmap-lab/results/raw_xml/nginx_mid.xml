@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE nmaprun>
 <?xml-stylesheet href="file:///D:/Application/nmap.xsl" type="text/xsl"?>
-<!-- Nmap 7.993 scan initiated Wed Nov  4 18:44:22 2026 as: D:\\Application\\nmap.EXE -sV -sT -Pn -n -&#45;version-intensity 7 -p 8005 -oX results\\raw_xml\\nginx_mid.xml 127.0.0.1 -->
-<nmaprun scanner="nmap" args="D:\\Application\\nmap.EXE -sV -sT -Pn -n -&#45;version-intensity 7 -p 8005 -oX results\\raw_xml\\nginx_mid.xml 127.0.0.1" start="1793810662" startstr="Wed Nov  4 18:44:22 2026" version="7.993" xmloutputversion="1.05">
+<!-- Nmap 7.993 scan initiated Thu Nov  5 17:11:22 2026 as: D:\\Application\\nmap.EXE -sV -sT -Pn -n -&#45;version-intensity 7 -p 8005 -oX results\\raw_xml\\nginx_mid.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="D:\\Application\\nmap.EXE -sV -sT -Pn -n -&#45;version-intensity 7 -p 8005 -oX results\\raw_xml\\nginx_mid.xml 127.0.0.1" start="1793891482" startstr="Thu Nov  5 17:11:22 2026" version="7.993" xmloutputversion="1.05">
 <scaninfo type="connect" protocol="tcp" numservices="1" services="8005"/>
 <verbose level="0"/>
 <debugging level="0"/>
-<host starttime="1793810663" endtime="1793810669"><status state="up" reason="user-set" reason_ttl="0"/>
+<host starttime="1793891483" endtime="1793891489"><status state="up" reason="user-set" reason_ttl="0"/>
 <address addr="127.0.0.1" addrtype="ipv4"/>
 <hostnames>
 </hostnames>
 <ports><port protocol="tcp" portid="8005"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.22.1" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.22.1</cpe></service></port>
 </ports>
-<times srtt="1000" rttvar="5000" to="100000"/>
+<times srtt="0" rttvar="5000" to="100000"/>
 </host>
-<runstats><finished time="1793810669" timestr="Wed Nov  4 18:44:29 2026" summary="Nmap done at Wed Nov  4 18:44:29 2026; 1 IP address (1 host up) scanned in 6.40 seconds" elapsed="6.40" exit="success"/><hosts up="1" down="0" total="1"/>
+<runstats><finished time="1793891489" timestr="Thu Nov  5 17:11:29 2026" summary="Nmap done at Thu Nov  5 17:11:29 2026; 1 IP address (1 host up) scanned in 6.24 seconds" elapsed="6.24" exit="success"/><hosts up="1" down="0" total="1"/>
 </runstats>
 </nmaprun>

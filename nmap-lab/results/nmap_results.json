@@ -2,15 +2,17 @@
   "dataset": {
     "name": "nmap_collected_data",
     "purpose": "Nmap service-detection results for the Nmap-to-CVE hallucination study",
-    "created_utc": "2026-11-04T16:44:37+00:00",
+    "created_utc": "2026-11-05T15:12:06+00:00",
     "nmap_version": "7.993",
     "target_host": "127.0.0.1",
-    "services_in_manifest": 9,
-    "records": 9,
+    "services_in_manifest": 15,
+    "records": 15,
     "failed_services": [],
     "field_notes": {
       "cpe": "CPE 2.2 string exactly as Nmap printed it",
       "cpe23": "same CPE converted to 2.3 form, the form the NVD API expects",
+      "image_digest": "Docker image digest (repo@sha256:...) or local-build:<image id> for images built from a Dockerfile; null if Docker was unavailable",
+      "nse_script": "Nmap script used in addition to -sV for this service (null = plain -sV only)",
       "cpe23_primary": "the application CPE (2.3 form) to look up in NVD; null if Nmap gave no CPE",
       "version_match": "true/false if the detected version equals the intended Docker version, null if no intended version was set",
       "llm_input_text": "the one-line text that will be given to the language model"
@@ -22,7 +24,9 @@
       "product_family": "Apache HTTP Server",
       "role": "old",
       "docker_image": "httpd:2.4.49",
+      "image_digest": "httpd@sha256:dcba0d12e2362fb0c50ec524ae8aa1cca4a4ba7216617a57e7bbca20767e79cc",
       "expected_version": "2.4.49",
+      "nse_script": null,
       "host": "127.0.0.1",
       "port": 8001,
       "protocol": "tcp",
@@ -47,8 +51,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8001 -oX results\\raw_xml\\apache_old.xml 127.0.0.1",
-        "start_time_utc": "2026-11-04T16:43:55+00:00",
-        "elapsed_seconds": 6.86
+        "start_time_utc": "2026-11-05T15:10:57+00:00",
+        "elapsed_seconds": 6.3
       }
     },
     {
@@ -56,7 +60,9 @@
       "product_family": "Apache HTTP Server",
       "role": "mid",
       "docker_image": "httpd:2.4.54",
+      "image_digest": "httpd@sha256:ee2117e77c35d3884c33e18398520c8817879b3b15d9faca93652eb3794e8950",
       "expected_version": "2.4.54",
+      "nse_script": null,
       "host": "127.0.0.1",
       "port": 8002,
       "protocol": "tcp",
@@ -81,16 +87,18 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8002 -oX results\\raw_xml\\apache_mid.xml 127.0.0.1",
-        "start_time_utc": "2026-11-04T16:44:03+00:00",
-        "elapsed_seconds": 6.78
+        "start_time_utc": "2026-11-05T15:11:03+00:00",
+        "elapsed_seconds": 6.27
       }
     },
     {
       "id": "apache_latest",
       "product_family": "Apache HTTP Server",
       "role": "latest",
-      "docker_image": "httpd:2.4",
-      "expected_version": null,
+      "docker_image": "httpd:2.4.69",
+      "image_digest": "httpd@sha256:f6a86043744215e4be90cf8804375d90022a711d892c9aa2d7085c089ee2cb54",
+      "expected_version": "2.4.69",
+      "nse_script": null,
       "host": "127.0.0.1",
       "port": 8003,
       "protocol": "tcp",
@@ -111,12 +119,12 @@
       "cpe23_primary": "cpe:2.3:a:apache:http_server:2.4.69:*:*:*:*:*:*:*",
       "nmap_service_string": "Apache httpd 2.4.69 ((Unix))",
       "llm_input_text": "8003/tcp open http Apache httpd 2.4.69 ((Unix))",
-      "version_match": null,
+      "version_match": true,
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8003 -oX results\\raw_xml\\apache_latest.xml 127.0.0.1",
-        "start_time_utc": "2026-11-04T16:44:09+00:00",
-        "elapsed_seconds": 6.47
+        "start_time_utc": "2026-11-05T15:11:10+00:00",
+        "elapsed_seconds": 6.26
       }
     },
     {
@@ -124,7 +132,9 @@
       "product_family": "nginx",
       "role": "old",
       "docker_image": "nginx:1.18.0",
+      "image_digest": "nginx@sha256:e90ac5331fe095cea01b121a3627174b2e33e06e83720e9a934c7b8ccc9c55a0",
       "expected_version": "1.18.0",
+      "nse_script": null,
       "host": "127.0.0.1",
       "port": 8004,
       "protocol": "tcp",
@@ -149,8 +159,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8004 -oX results\\raw_xml\\nginx_old.xml 127.0.0.1",
-        "start_time_utc": "2026-11-04T16:44:16+00:00",
-        "elapsed_seconds": 6.37
+        "start_time_utc": "2026-11-05T15:11:16+00:00",
+        "elapsed_seconds": 6.26
       }
     },
     {
@@ -158,7 +168,9 @@
       "product_family": "nginx",
       "role": "mid",
       "docker_image": "nginx:1.22.1",
+      "image_digest": "nginx@sha256:fc5f5fb7574755c306aaf88456ebfbe0b006420a184d52b923d2f0197108f6b7",
       "expected_version": "1.22.1",
+      "nse_script": null,
       "host": "127.0.0.1",
       "port": 8005,
       "protocol": "tcp",
@@ -183,16 +195,18 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8005 -oX results\\raw_xml\\nginx_mid.xml 127.0.0.1",
-        "start_time_utc": "2026-11-04T16:44:22+00:00",
-        "elapsed_seconds": 6.4
+        "start_time_utc": "2026-11-05T15:11:22+00:00",
+        "elapsed_seconds": 6.24
       }
     },
     {
       "id": "nginx_latest",
       "product_family": "nginx",
       "role": "latest",
-      "docker_image": "nginx:stable",
-      "expected_version": null,
+      "docker_image": "nginx:1.30.6",
+      "image_digest": "nginx@sha256:f12e4e280502f79dae4488c9f677ab3ebe8a7079818bbfbf3242f236bac64d34",
+      "expected_version": "1.30.6",
+      "nse_script": null,
       "host": "127.0.0.1",
       "port": 8006,
       "protocol": "tcp",
@@ -213,12 +227,12 @@
       "cpe23_primary": "cpe:2.3:a:igor_sysoev:nginx:1.30.6:*:*:*:*:*:*:*",
       "nmap_service_string": "nginx 1.30.6",
       "llm_input_text": "8006/tcp open http nginx 1.30.6",
-      "version_match": null,
+      "version_match": true,
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8006 -oX results\\raw_xml\\nginx_latest.xml 127.0.0.1",
-        "start_time_utc": "2026-11-04T16:44:29+00:00",
-        "elapsed_seconds": 6.44
+        "start_time_utc": "2026-11-05T15:11:29+00:00",
+        "elapsed_seconds": 6.25
       }
     },
     {
@@ -226,7 +240,9 @@
       "product_family": "MySQL",
       "role": "old",
       "docker_image": "mysql:5.7.30",
+      "image_digest": "mysql@sha256:32f9d9a069f7a735e28fd44ea944d53c61f990ba71460c5c183e610854ca4854",
       "expected_version": "5.7.30",
+      "nse_script": null,
       "host": "127.0.0.1",
       "port": 8007,
       "protocol": "tcp",
@@ -251,8 +267,8 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8007 -oX results\\raw_xml\\mysql_old.xml 127.0.0.1",
-        "start_time_utc": "2026-11-04T16:44:36+00:00",
-        "elapsed_seconds": 0.37
+        "start_time_utc": "2026-11-05T15:11:35+00:00",
+        "elapsed_seconds": 0.22
       }
     },
     {
@@ -260,7 +276,9 @@
       "product_family": "MySQL",
       "role": "mid",
       "docker_image": "mysql:8.0.32",
+      "image_digest": "mysql@sha256:f496c25da703053a6e0717f1d52092205775304ea57535cc9fcaa6f35867800b",
       "expected_version": "8.0.32",
+      "nse_script": null,
       "host": "127.0.0.1",
       "port": 8008,
       "protocol": "tcp",
@@ -285,16 +303,18 @@
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8008 -oX results\\raw_xml\\mysql_mid.xml 127.0.0.1",
-        "start_time_utc": "2026-11-04T16:44:36+00:00",
-        "elapsed_seconds": 0.4
+        "start_time_utc": "2026-11-05T15:11:35+00:00",
+        "elapsed_seconds": 0.22
       }
     },
     {
       "id": "mysql_latest",
       "product_family": "MySQL",
       "role": "latest",
-      "docker_image": "mysql:8.4",
-      "expected_version": null,
+      "docker_image": "mysql:8.4.13",
+      "image_digest": "mysql@sha256:a81d043930e51745522bd5c430961cf8286f0a23f0a9a2a6e0108f7ea71b0902",
+      "expected_version": "8.4.13",
+      "nse_script": null,
       "host": "127.0.0.1",
       "port": 8009,
       "protocol": "tcp",
@@ -315,12 +335,228 @@
       "cpe23_primary": "cpe:2.3:a:mysql:mysql:8.4.13:*:*:*:*:*:*:*",
       "nmap_service_string": "MySQL 8.4.13",
       "llm_input_text": "8009/tcp open mysql MySQL 8.4.13",
-      "version_match": null,
+      "version_match": true,
       "scan": {
         "nmap_version": "7.993",
         "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8009 -oX results\\raw_xml\\mysql_latest.xml 127.0.0.1",
-        "start_time_utc": "2026-11-04T16:44:36+00:00",
-        "elapsed_seconds": 0.34
+        "start_time_utc": "2026-11-05T15:11:36+00:00",
+        "elapsed_seconds": 0.22
+      }
+    },
+    {
+      "id": "redis_old",
+      "product_family": "Redis",
+      "role": "old",
+      "docker_image": "redis:6.0.5",
+      "image_digest": "redis@sha256:800f2587bf3376cb01e6307afe599ddce9439deafbd4fb8562829da96085c9c5",
+      "expected_version": "6.0.5",
+      "nse_script": "redis-info",
+      "host": "127.0.0.1",
+      "port": 8010,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "redis",
+      "product": "Redis key-value store",
+      "detected_version": "6.0.5",
+      "extrainfo": "64 bits",
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:redis:redis:6.0.5"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:redis:redis:6.0.5:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:redis:redis:6.0.5:*:*:*:*:*:*:*",
+      "nmap_service_string": "Redis key-value store 6.0.5 (64 bits)",
+      "llm_input_text": "8010/tcp open redis Redis key-value store 6.0.5 (64 bits)",
+      "version_match": true,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE --script redis-info -sV -sT -Pn -n --version-intensity 7 -p 8010 -oX results\\raw_xml\\redis_old.xml 127.0.0.1",
+        "start_time_utc": "2026-11-05T15:11:36+00:00",
+        "elapsed_seconds": 6.26
+      }
+    },
+    {
+      "id": "redis_mid",
+      "product_family": "Redis",
+      "role": "mid",
+      "docker_image": "redis:7.0.5",
+      "image_digest": "redis@sha256:dfeb5451fce377ab47c5bb6b6826592eea534279354bbfc3890c0b5e9b57c763",
+      "expected_version": "7.0.5",
+      "nse_script": "redis-info",
+      "host": "127.0.0.1",
+      "port": 8011,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "redis",
+      "product": "Redis key-value store",
+      "detected_version": "7.0.5",
+      "extrainfo": "64 bits",
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:redis:redis:7.0.5"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:redis:redis:7.0.5:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:redis:redis:7.0.5:*:*:*:*:*:*:*",
+      "nmap_service_string": "Redis key-value store 7.0.5 (64 bits)",
+      "llm_input_text": "8011/tcp open redis Redis key-value store 7.0.5 (64 bits)",
+      "version_match": true,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE --script redis-info -sV -sT -Pn -n --version-intensity 7 -p 8011 -oX results\\raw_xml\\redis_mid.xml 127.0.0.1",
+        "start_time_utc": "2026-11-05T15:11:42+00:00",
+        "elapsed_seconds": 11.27
+      }
+    },
+    {
+      "id": "redis_latest",
+      "product_family": "Redis",
+      "role": "latest",
+      "docker_image": "redis:8",
+      "image_digest": "redis@sha256:f245f4c83b84a9e9a0588da1c9456e579455310f0945d5db52cd2ba27f2000cc",
+      "expected_version": null,
+      "nse_script": "redis-info",
+      "host": "127.0.0.1",
+      "port": 8012,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "redis",
+      "product": "Redis key-value store",
+      "detected_version": "8.10.3",
+      "extrainfo": "64 bits",
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:redis:redis:8.10.3"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:redis:redis:8.10.3:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:redis:redis:8.10.3:*:*:*:*:*:*:*",
+      "nmap_service_string": "Redis key-value store 8.10.3 (64 bits)",
+      "llm_input_text": "8012/tcp open redis Redis key-value store 8.10.3 (64 bits)",
+      "version_match": null,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE --script redis-info -sV -sT -Pn -n --version-intensity 7 -p 8012 -oX results\\raw_xml\\redis_latest.xml 127.0.0.1",
+        "start_time_utc": "2026-11-05T15:11:54+00:00",
+        "elapsed_seconds": 11.28
+      }
+    },
+    {
+      "id": "openssh_old",
+      "product_family": "OpenSSH",
+      "role": "old",
+      "docker_image": "lab-openssh:8.4p1",
+      "image_digest": "local-build:sha256:f8c51e0012d22493aa9b96646d0a9c8a6a77781fa50593f3894f8d8caee565a2",
+      "expected_version": "8.4",
+      "nse_script": null,
+      "host": "127.0.0.1",
+      "port": 8013,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "ssh",
+      "product": "OpenSSH",
+      "detected_version": "8.4",
+      "extrainfo": "protocol 2.0",
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:openbsd:openssh:8.4"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:openbsd:openssh:8.4:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:openbsd:openssh:8.4:*:*:*:*:*:*:*",
+      "nmap_service_string": "OpenSSH 8.4 (protocol 2.0)",
+      "llm_input_text": "8013/tcp open ssh OpenSSH 8.4 (protocol 2.0)",
+      "version_match": true,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8013 -oX results\\raw_xml\\openssh_old.xml 127.0.0.1",
+        "start_time_utc": "2026-11-05T15:12:05+00:00",
+        "elapsed_seconds": 0.22
+      }
+    },
+    {
+      "id": "openssh_mid",
+      "product_family": "OpenSSH",
+      "role": "mid",
+      "docker_image": "lab-openssh:9.6p1",
+      "image_digest": "local-build:sha256:c19f4ab53ed4303635b72ad5c8b50902a3c45c3acfaec748cc0201e9937c8043",
+      "expected_version": "9.6",
+      "nse_script": null,
+      "host": "127.0.0.1",
+      "port": 8014,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "ssh",
+      "product": "OpenSSH",
+      "detected_version": "9.6",
+      "extrainfo": "protocol 2.0",
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:openbsd:openssh:9.6"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:openbsd:openssh:9.6:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:openbsd:openssh:9.6:*:*:*:*:*:*:*",
+      "nmap_service_string": "OpenSSH 9.6 (protocol 2.0)",
+      "llm_input_text": "8014/tcp open ssh OpenSSH 9.6 (protocol 2.0)",
+      "version_match": true,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8014 -oX results\\raw_xml\\openssh_mid.xml 127.0.0.1",
+        "start_time_utc": "2026-11-05T15:12:06+00:00",
+        "elapsed_seconds": 0.22
+      }
+    },
+    {
+      "id": "openssh_latest",
+      "product_family": "OpenSSH",
+      "role": "latest",
+      "docker_image": "lab-openssh:10.3p1",
+      "image_digest": "local-build:sha256:5f711d5d7e1275c1c28a378bde461a4e031dbb2b03437a385ba6edbb0cc3e8e6",
+      "expected_version": "10.3",
+      "nse_script": null,
+      "host": "127.0.0.1",
+      "port": 8015,
+      "protocol": "tcp",
+      "state": "open",
+      "service_name": "ssh",
+      "product": "OpenSSH",
+      "detected_version": "10.3",
+      "extrainfo": "protocol 2.0",
+      "ostype": null,
+      "detection_method": "probed",
+      "detection_confidence": 10,
+      "cpe": [
+        "cpe:/a:openbsd:openssh:10.3"
+      ],
+      "cpe23": [
+        "cpe:2.3:a:openbsd:openssh:10.3:*:*:*:*:*:*:*"
+      ],
+      "cpe23_primary": "cpe:2.3:a:openbsd:openssh:10.3:*:*:*:*:*:*:*",
+      "nmap_service_string": "OpenSSH 10.3 (protocol 2.0)",
+      "llm_input_text": "8015/tcp open ssh OpenSSH 10.3 (protocol 2.0)",
+      "version_match": true,
+      "scan": {
+        "nmap_version": "7.993",
+        "command": "D:\\Application\\nmap.EXE -sV -sT -Pn -n --version-intensity 7 -p 8015 -oX results\\raw_xml\\openssh_latest.xml 127.0.0.1",
+        "start_time_utc": "2026-11-05T15:12:06+00:00",
+        "elapsed_seconds": 0.24
       }
     }
   ]

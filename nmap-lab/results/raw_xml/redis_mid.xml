@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///D:/Application/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.993 scan initiated Thu Nov  5 17:11:42 2026 as: D:\\Application\\nmap.EXE -&#45;script redis-info -sV -sT -Pn -n -&#45;version-intensity 7 -p 8011 -oX results\\raw_xml\\redis_mid.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="D:\\Application\\nmap.EXE -&#45;script redis-info -sV -sT -Pn -n -&#45;version-intensity 7 -p 8011 -oX results\\raw_xml\\redis_mid.xml 127.0.0.1" start="1793891502" startstr="Thu Nov  5 17:11:42 2026" version="7.993" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="8011"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1793891503" endtime="1793891514"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="8011"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="redis" product="Redis key-value store" version="7.0.5" extrainfo="64 bits" method="probed" conf="10"><cpe>cpe:/a:redis:redis:7.0.5</cpe></service><script id="redis-info" output="&#xa;  Version: 7.0.5&#xa;  Operating System: Linux 6.18.54.1-microsoft-standard-WSL2 x86_64&#xa;  Architecture: 64 bits&#xa;  Process ID: 1&#xa;  Used CPU (sys): 0.275034&#xa;  Used CPU (user): 0.314539&#xa;  Connected clients: 1&#xa;  Connected slaves: 0&#xa;  Used memory: 1002.89K&#xa;  Role: master&#xa;  Bind addresses: &#xa;    *&#xa;    -::*&#xa;  Client connections: &#xa;    172.18.0.1"><elem key="Version">7.0.5</elem>
+<elem key="Operating System">Linux 6.18.54.1-microsoft-standard-WSL2 x86_64</elem>
+<elem key="Architecture">64 bits</elem>
+<elem key="Process ID">1</elem>
+<elem key="Used CPU (sys)">0.275034</elem>
+<elem key="Used CPU (user)">0.314539</elem>
+<elem key="Connected clients">1</elem>
+<elem key="Connected slaves">0</elem>
+<elem key="Used memory">1002.89K</elem>
+<elem key="Role">master</elem>
+<table key="Bind addresses">
+<elem>*</elem>
+<elem>-::*</elem>
+</table>
+<table key="Client connections">
+<elem>172.18.0.1</elem>
+</table>
+</script></port>
+</ports>
+<times srtt="0" rttvar="5000" to="100000"/>
+</host>
+<runstats><finished time="1793891514" timestr="Thu Nov  5 17:11:54 2026" summary="Nmap done at Thu Nov  5 17:11:54 2026; 1 IP address (1 host up) scanned in 11.27 seconds" elapsed="11.27" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
