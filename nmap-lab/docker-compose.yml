@@ -53,7 +53,7 @@ services:
     command: ["redis-server", "--protected-mode", "no"]
     ports: ["127.0.0.1:8011:6379"]
   redis_latest:
-    image: redis:8
+    image: redis:8.10.3
     command: ["redis-server", "--protected-mode", "no"]
     ports: ["127.0.0.1:8012:6379"]
 
