@@ -34,7 +34,7 @@ import time
 
 import requests
 
-PROTOCOL_VERSION = "0.1-draft"
+PROTOCOL_VERSION = "1.0"
 DEFAULT_MODELS = ["llama3.2:3b", "phi4-mini", "qwen3.5:4b"]
 THINK_OFF_MODELS = {"qwen3.5:4b"}  # these models are sent "think": false
 RUNS = [("t0", 0.0, 42), ("t07_r1", 0.7, 1001), ("t07_r2", 0.7, 1002), ("t07_r3", 0.7, 1003)]

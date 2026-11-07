@@ -74,6 +74,20 @@
       "planned_now": 18,
       "completed_now": 12,
       "errors_now": 0
+    },
+    {
+      "started_utc": "2026-11-07T07:45:04+00:00",
+      "planned_now": 4,
+      "completed_now": 4,
+      "errors_now": 0,
+      "finished_utc": "2026-11-07T07:46:03+00:00"
+    },
+    {
+      "started_utc": "2026-11-07T11:50:54+00:00",
+      "planned_now": 0,
+      "completed_now": 0,
+      "errors_now": 0,
+      "finished_utc": "2026-11-07T11:50:54+00:00"
     }
   ]
 }

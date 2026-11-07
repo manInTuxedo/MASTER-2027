@@ -1,8 +1,8 @@
-# Experiment Protocol (draft v0.1)
+# Experiment Protocol (v1.0)
 
-**Status: DRAFT. Not frozen.** The prompts, output format, run settings, and grading rules below are proposed for approval. Once approved, they are frozen and tagged `protocol-v1`. Any change after the first full-run call requires a new output folder and a new protocol version, because results produced with different prompts or settings cannot be mixed.
+**Status: FROZEN for the full run (v1.0, 2026-11-07).** The professor approved the prompts and JSON format, the candidate lists for prompt (c), the run settings, and the incomplete-input test, and decided how to treat the disputed OpenSSH entries (D1). The version is tagged `protocol-v1`. Any change after the first full-run call requires a new output folder and a new protocol version, because results produced with different prompts or settings cannot be mixed.
 
-Items that need a decision are collected in Section 11.
+Section 11 lists the decisions and their status.
 
 ## 1. Purpose
 
@@ -89,16 +89,19 @@ Each cited CVE is normalized (upper case, duplicates within an answer removed) a
 
 1. The identifier is malformed (does not match `CVE-YYYY-NNNN...`), or NVD has no record of it: **fabricated**.
 2. NVD records it as rejected: **rejected** (reported separately; included in the overall rate of incorrect citations but not in the fabricated rate).
-3. It is in the ground-truth set of the service: **correct**.
-4. It exists in NVD but is not in the ground-truth set:
+3. It is one of the NVD entries that apply to all versions of the product or are tagged disputed (flagged in the truth table; the professor named three OpenSSH entries, CVE-2007-2768, CVE-2008-3844, and CVE-2023-51767): **disputed**. It is counted as neither correct nor wrong and is reported separately. The grader lists every flagged entry so the list can be checked against these three.
+4. It is in the ground-truth set of the service: **correct**.
+5. It exists in NVD but is not in the ground-truth set:
    - NVD has no applicability data for it (for example it is still awaiting analysis): **real, unscored**.
    - Otherwise: **real but wrong**.
+
+The ground-truth set used for grading is the set of **version-specific** NVD entries for the exact detected version (D1).
 
 **Missing** CVEs are the ground-truth CVEs that the answer does not cite. They are counted for recall, not as a label on a citation.
 
 For the incomplete-input condition there is no ground-truth set. A cited CVE is labeled only as fabricated, rejected, or real (an unsupported claim), and abstention is the expected answer.
 
-A CVE that the models see in the prompt (c) list but select is graded in the same way as above.
+A CVE selected from the prompt (c) list is graded in the same way.
 
 ## 10. Metrics
 
@@ -106,10 +109,11 @@ Metrics are computed per model, per prompt, and per run type (the `t0` run, and 
 
 | Metric | Definition | When undefined |
 |---|---|---|
-| Fabricated rate | fabricated citations / all citations | no citations |
-| Real-but-wrong rate | real-but-wrong citations / all citations | no citations |
-| Precision | correct citations / all citations | no citations |
-| Recall | correct citations / size of the ground-truth set | empty ground-truth set |
+| Fabricated rate | fabricated citations / all citations except disputed | no such citations |
+| Real-but-wrong rate | real-but-wrong citations / all citations except disputed | no such citations |
+| Precision | correct citations / all citations except disputed | no such citations |
+| Disputed citations | number of disputed citations (reported separately, not part of the rates above) | never |
+| Recall | correct citations / size of the version-specific ground-truth set | empty ground-truth set |
 | Abstention rate | answers with `not_sure` true / all answers | never |
 | Invalid-output rate | unparseable or truncated answers / all answers | never |
 | Stability | for each service and condition, the mean pairwise Jaccard similarity of the CVE sets across the three `t07` runs (two empty sets count as 1) | fewer than two valid runs |
@@ -119,17 +123,19 @@ Services with an empty ground-truth set (the latest versions of Apache, nginx, M
 
 **Baselines.** (1) Raw CPE baseline: Nmap's CPE exactly as printed, looked up in NVD (`found_by_raw` in the truth table). (2) Corrected baseline: the CPE looked up under the known vendor aliases, which is the ground truth itself and therefore an upper bound, not a competitor. Both baselines return only real NVD records, so they have no fabricated citations by construction.
 
-## 11. Decisions pending
+## 11. Decisions
 
-| # | Decision | Proposed default |
+| # | Decision | Status |
 |---|---|---|
-| D1 | How to count NVD entries that apply to all versions of a product, or that are tagged disputed | Report both: primary ground truth = version-specific entries only; secondary = all entries |
-| D2 | Recall reporting | All applicable CVEs, plus a second recall on critical-severity CVEs only (CVSS v3 score 9.0 or higher) |
-| D3 | Rejected and real-but-unscored citations | Separate labels as in Section 9 |
-| D4 | Aggregation | Pooled citations within each model, prompt, and run type, plus per-service tables |
-| D5 | Prompt (c) design | 10 candidates, up to 5 real, about half of the decoys from the same family, descriptions shown |
-| D6 | Incomplete-input condition | 3 Redis services, prompts (a) and (b), 72 calls |
-| D7 | Run settings | 3 models; temperature 0 plus three repeats at 0.7; thinking off for `qwen3.5:4b`; no thinking-mode comparison |
+| D1 | NVD entries that apply to all versions or are disputed | **Decided by the professor (2026-11-07):** version-specific entries are the primary ground truth; a cited entry of the disputed kind is labeled disputed, counted as neither correct nor wrong, and reported separately |
+| D2 | Recall reporting | Default in force until the professor objects: recall on all version-specific CVEs, plus a second recall on critical-severity CVEs only (CVSS v3 score 9.0 or higher) |
+| D3 | Rejected and real-but-unscored citations | Default in force: separate labels as in Section 9 |
+| D4 | Aggregation | Default in force: pooled citations within each model, prompt, and run type, plus per-service tables |
+| D5 | Prompt (c) design | Approved 2026-11-07 |
+| D6 | Incomplete-input condition | Approved 2026-11-07 |
+| D7 | Run settings | Approved 2026-11-07 |
+
+D2 to D4 affect only the grading and reporting, not the runs.
 
 ## 12. What is saved
 
