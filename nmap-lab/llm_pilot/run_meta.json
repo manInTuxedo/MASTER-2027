@@ -1,0 +1,79 @@
+{
+  "protocol_version": "0.1-draft",
+  "file_hashes": {
+    "system": "752023218f21c1ca1a756e5980bbfa5ae785d814d725585d2014baa4e1990708",
+    "a": "671adf3e1b7ce9566bba395e9cb84d4205f9fda009e2ce896dda5b5f8b92568b",
+    "b": "30d07dcd4f94819d44f072ebe410add0342581d1c4690f5654cfb66bc75564ba",
+    "c": "ef1906e4f797014707ec70b8655b7e1e76ac84d84fff73281f46b284cacfa796",
+    "schema": "d91fc2a4de426553295df0a55ad732d37da187525e94d956ec26b667b41471be",
+    "shortlists": "8c40ba5408c3fdd743d7849bea7525c8046ea998c01d96070b865c0c746f8b75",
+    "nmap_json": "7b4f4909c5857eeac06f01ddaca4a75eb7a732f1bec740fc6ccebac66e2f8b13"
+  },
+  "models": {
+    "llama3.2:3b": {
+      "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+      "size_bytes": 2019393189
+    },
+    "phi4-mini": {
+      "digest": "78fad5d182a7c33065e153a5f8ba210754207ba9d91973f57dffa7f487363753",
+      "size_bytes": 2491876774
+    },
+    "qwen3.5:4b": {
+      "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "size_bytes": 3324173934
+    }
+  },
+  "gpu_fit": {
+    "llama3.2:3b": {
+      "size_bytes": 2910469486,
+      "size_vram_bytes": 2335094865,
+      "gpu_percent": 80
+    },
+    "phi4-mini": {
+      "size_bytes": 3643948398,
+      "size_vram_bytes": 2323078184,
+      "gpu_percent": 64
+    },
+    "qwen3.5:4b": {
+      "size_bytes": 3729522683,
+      "size_vram_bytes": 1799188641,
+      "gpu_percent": 48
+    }
+  },
+  "ollama_version": "0.33.3",
+  "settings": {
+    "num_ctx": 4096,
+    "num_predict": 1024,
+    "format": "JSON schema (prompts/schema.json)",
+    "runs": {
+      "t0": {
+        "temperature": 0.0,
+        "seed": 42
+      },
+      "t07_r1": {
+        "temperature": 0.7,
+        "seed": 1001
+      },
+      "t07_r2": {
+        "temperature": 0.7,
+        "seed": 1002
+      },
+      "t07_r3": {
+        "temperature": 0.7,
+        "seed": 1003
+      }
+    },
+    "think_off_models": [
+      "qwen3.5:4b"
+    ],
+    "keep_alive": "15m"
+  },
+  "sessions": [
+    {
+      "started_utc": "2026-11-07T07:37:28+00:00",
+      "planned_now": 18,
+      "completed_now": 12,
+      "errors_now": 0
+    }
+  ]
+}
