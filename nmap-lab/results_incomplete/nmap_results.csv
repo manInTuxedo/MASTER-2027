@@ -1,0 +1,4 @@
+﻿id,product_family,role,docker_image,image_digest,expected_version,nse_script,host,port,protocol,state,service_name,product,detected_version,extrainfo,detection_method,detection_confidence,cpe,cpe23,cpe23_primary,nmap_service_string,llm_input_text,version_match
+redis_old_noversion,Redis,old,redis:6.0.5,redis@sha256:800f2587bf3376cb01e6307afe599ddce9439deafbd4fb8562829da96085c9c5,,,127.0.0.1,8010,tcp,closed,xmpp,,,,table,3,,,,,8010/tcp closed xmpp,
+redis_mid_noversion,Redis,mid,redis:7.0.5,redis@sha256:dfeb5451fce377ab47c5bb6b6826592eea534279354bbfc3890c0b5e9b57c763,,,127.0.0.1,8011,tcp,closed,,,,,,,,,,,8011/tcp closed unknown,
+redis_latest_noversion,Redis,latest,redis:8.10.3,redis@sha256:f245f4c83b84a9e9a0588da1c9456e579455310f0945d5db52cd2ba27f2000cc,,,127.0.0.1,8012,tcp,closed,,,,,,,,,,,8012/tcp closed unknown,

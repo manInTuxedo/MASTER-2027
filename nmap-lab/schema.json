@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "product": {"type": "string"},
+    "version": {"type": "string"},
+    "not_sure": {"type": "boolean"},
+    "cves": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cve_id": {"type": "string"},
+          "confidence": {"type": "string", "enum": ["high", "medium", "low"]}
+        },
+        "required": ["cve_id", "confidence"]
+      }
+    }
+  },
+  "required": ["product", "version", "not_sure", "cves"]
+}

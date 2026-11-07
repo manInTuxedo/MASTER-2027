@@ -1,0 +1,5 @@
+Nmap scan result:
+{scan_result}
+
+List the known CVE identifiers that affect this exact product and version.
+Only list a CVE if you are confident that it exists and affects this exact version. Do not invent CVE numbers. If you are not sure, or the scan result does not identify the product and version, set "not_sure" to true and return an empty list.

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///D:/Application/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.993 scan initiated Sat Nov  7 09:21:12 2026 as: D:\\Application\\nmap.EXE -sV -sT -Pn -n -&#45;version-intensity 7 -p 8010 -oX results_incomplete\\raw_xml\\redis_old_noversion.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="D:\\Application\\nmap.EXE -sV -sT -Pn -n -&#45;version-intensity 7 -p 8010 -oX results_incomplete\\raw_xml\\redis_old_noversion.xml 127.0.0.1" start="1794036072" startstr="Sat Nov  7 09:21:12 2026" version="7.993" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="8010"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1794036073" endtime="1794036073"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="8010"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="xmpp" method="table" conf="3"/></port>
+</ports>
+<times srtt="0" rttvar="5000" to="100000"/>
+</host>
+<runstats><finished time="1794036073" timestr="Sat Nov  7 09:21:13 2026" summary="Nmap done at Sat Nov  7 09:21:13 2026; 1 IP address (1 host up) scanned in 1.49 seconds" elapsed="1.49" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

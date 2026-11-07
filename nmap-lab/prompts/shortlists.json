@@ -1,0 +1,1003 @@
+{
+  "meta": {
+    "created_utc": "2026-11-07T07:18:17+00:00",
+    "seed": 42,
+    "list_size": 10,
+    "max_true_per_list": 5,
+    "truth_file": "ground_truth\\nvd_truth.csv",
+    "truth_file_sha256": "2cf89ac550a2a8037f8690902fcfe0c59a1a69d2555cc86cea132af4c16025ec",
+    "rule": "true items: unambiguous NVD entries for this exact version (not all-versions, not disputed); decoys: about half same family other version, rest other products; none applies to the service"
+  },
+  "shortlists": {
+    "apache_latest": {
+      "service_id": "apache_latest",
+      "product_family": "Apache HTTP Server",
+      "items": [
+        {
+          "cve_id": "CVE-2024-21157",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB)."
+        },
+        {
+          "cve_id": "CVE-2023-25155",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Redis is an in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2026-63045",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Improper validation of FTP PASV reply address in mod_proxy_ftp in Apache Software Foundation Apache HTTP Server through 2.4.68 on all platforms allows, in forward proxy configurations, an untrusted FTP server to cause the proxy to open a..."
+        },
+        {
+          "cve_id": "CVE-2025-55753",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "An integer overflow in the case of failed ACME certificate renewal leads, after a number of failures (~30 days in default configurations), to the backoff timer becoming 0."
+        },
+        {
+          "cve_id": "CVE-2023-45802",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "When a HTTP/2 stream was reset (RST frame) by a client, there was a time window were the request's memory resources were not reclaimed immediately."
+        },
+        {
+          "cve_id": "CVE-2024-21166",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB)."
+        },
+        {
+          "cve_id": "CVE-2026-34032",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Improper Null Termination, Out-of-bounds Read vulnerability in Apache HTTP Server."
+        },
+        {
+          "cve_id": "CVE-2026-59797",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Improper Privilege Management vulnerability in Apache HTTP Server's mod_ssl via SSLRequire and file-related expressions."
+        },
+        {
+          "cve_id": "CVE-2021-2169",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2024-21061",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Audit Plug-in)."
+        }
+      ]
+    },
+    "apache_mid": {
+      "service_id": "apache_mid",
+      "product_family": "Apache HTTP Server",
+      "items": [
+        {
+          "cve_id": "CVE-2023-45802",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "When a HTTP/2 stream was reset (RST frame) by a client, there was a time window were the request's memory resources were not reclaimed immediately."
+        },
+        {
+          "cve_id": "CVE-2026-34059",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Buffer Over-read vulnerability in Apache HTTP Server."
+        },
+        {
+          "cve_id": "CVE-2024-42516",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "HTTP response splitting in the core of Apache HTTP Server allows an attacker who can manipulate the Content-Type response headers of applications hosted or proxied by the server can split the HTTP response."
+        },
+        {
+          "cve_id": "CVE-2026-44186",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in the mod_proxy_ftp module in Apache HTTP Server with an attacker controlled backend FTP server."
+        },
+        {
+          "cve_id": "CVE-2023-22110",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2022-22719",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "A carefully crafted request body can cause a read to a random memory area which could cause the process to crash."
+        },
+        {
+          "cve_id": "CVE-2026-79768",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Path equivalence: '/./' (single dot directory) vulnerability in Apache HTTP Server's mod_userdir module when configured with absolute non-wildcard UserDir directive (the 2nd form in https://httpd.apache.org/docs/2.4/mod/mod_userdir.html#..."
+        },
+        {
+          "cve_id": "CVE-2021-44224",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "A crafted URI sent to httpd configured as a forward proxy (ProxyRequests on) can cause a crash (NULL pointer dereference) or, for configurations mixing forward and reverse proxy declarations, can allow for requests to be directed to a de..."
+        },
+        {
+          "cve_id": "CVE-2022-26377",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling') vulnerability in mod_proxy_ajp of Apache HTTP Server allows an attacker to smuggle requests to the AJP server it forwards requests to."
+        },
+        {
+          "cve_id": "CVE-2020-14539",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        }
+      ]
+    },
+    "apache_old": {
+      "service_id": "apache_old",
+      "product_family": "Apache HTTP Server",
+      "items": [
+        {
+          "cve_id": "CVE-2026-60000",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "sshd in OpenSSH before 10.4 allows remote attackers to cause a denial of service (resource consumption from excessive authentication attempts) because MaxAuthTries was mishandled for GSSAPIAuthentication."
+        },
+        {
+          "cve_id": "CVE-2021-41524",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "While fuzzing the 2.4.49 httpd, a new null pointer dereference was detected during HTTP/2 request processing, allowing an external source to DoS the server."
+        },
+        {
+          "cve_id": "CVE-2026-44631",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Buffer Underwrite vulnerability in Apache HTTP Server on crafted regular expressions in the configuration."
+        },
+        {
+          "cve_id": "CVE-2021-42013",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "It was found that the fix for CVE-2021-41773 in Apache HTTP Server 2.4.50 was insufficient."
+        },
+        {
+          "cve_id": "CVE-2024-21096",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Client: mysqldump)."
+        },
+        {
+          "cve_id": "CVE-2026-59997",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "internal-sftp in sshd in OpenSSH before 10.4 recognizes only the first 9 command-line arguments, which can be important if a later command-line argument would have helped to ensure the intended security properties of an SFTP connection."
+        },
+        {
+          "cve_id": "CVE-2020-14550",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Client product of Oracle MySQL (component: C API)."
+        },
+        {
+          "cve_id": "CVE-2026-42536",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Heap-based Buffer Overflow vulnerability in Apache HTTP Server with mod_xml2enc, xml2StartParse, and untrusted content This issue affects Apache HTTP Server: from 2.4.0 through 2.4.67."
+        },
+        {
+          "cve_id": "CVE-2024-38477",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "null pointer dereference in mod_proxy in Apache HTTP Server 2.4.59 and earlier allows an attacker to crash the server via a malicious request."
+        },
+        {
+          "cve_id": "CVE-2020-14553",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Pluggable Auth)."
+        }
+      ]
+    },
+    "mysql_latest": {
+      "service_id": "mysql_latest",
+      "product_family": "MySQL",
+      "items": [
+        {
+          "cve_id": "CVE-2020-14539",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2023-22059",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2021-32762",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Redis is an open source, in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2023-22007",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Replication)."
+        },
+        {
+          "cve_id": "CVE-2020-14845",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2026-73283",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "In sshd in OpenSSH before 10.5, the restrict keyword (in authorized_keys) was supposed to be applicable to tunnel forwarding but was not."
+        },
+        {
+          "cve_id": "CVE-2026-42536",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Heap-based Buffer Overflow vulnerability in Apache HTTP Server with mod_xml2enc, xml2StartParse, and untrusted content This issue affects Apache HTTP Server: from 2.4.0 through 2.4.67."
+        },
+        {
+          "cve_id": "CVE-2022-23943",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Out-of-bounds Write vulnerability in mod_sed of Apache HTTP Server allows an attacker to overwrite heap memory with possibly attacker provided data."
+        },
+        {
+          "cve_id": "CVE-2023-21976",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2021-41099",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Redis is an open source, in-memory database that persists on disk."
+        }
+      ]
+    },
+    "mysql_mid": {
+      "service_id": "mysql_mid",
+      "product_family": "MySQL",
+      "items": [
+        {
+          "cve_id": "CVE-2025-58098",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Apache HTTP Server 2.4.65 and earlier with Server Side Includes (SSI) enabled and mod_cgid (but not mod_cgi) passes the shell-escaped query string to #exec cmd=\"...\" directives."
+        },
+        {
+          "cve_id": "CVE-2021-2179",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Group Replication Plugin)."
+        },
+        {
+          "cve_id": "CVE-2024-21061",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Audit Plug-in)."
+        },
+        {
+          "cve_id": "CVE-2020-15358",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "In SQLite before 3.32.3, select.c mishandles query-flattener optimization, leading to a multiSelectOrderBy heap overflow because of misuse of transitive properties for constant propagation."
+        },
+        {
+          "cve_id": "CVE-2022-21460",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Logging)."
+        },
+        {
+          "cve_id": "CVE-2023-22078",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2024-38475",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Improper escaping of output in mod_rewrite in Apache HTTP Server 2.4.59 and earlier allows an attacker to map URLs to filesystem locations that are permitted to be served by the server but are not intentionally/directly reachable by any..."
+        },
+        {
+          "cve_id": "CVE-2024-20961",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2024-21213",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB)."
+        },
+        {
+          "cve_id": "CVE-2024-21201",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        }
+      ]
+    },
+    "mysql_old": {
+      "service_id": "mysql_old",
+      "product_family": "MySQL",
+      "items": [
+        {
+          "cve_id": "CVE-2007-2768",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "OpenSSH, when using OPIE (One-Time Passwords in Everything) for PAM, allows remote attackers to determine the existence of certain user accounts, which displays a different response if the user account exists and is configured to use one..."
+        },
+        {
+          "cve_id": "CVE-2021-28041",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "ssh-agent in OpenSSH before 8.5 has a double free that may be relevant in a few less-common scenarios, such as unconstrained agent-socket access on a legacy operating system, or the forwarding of an agent to an attacker-controlled host."
+        },
+        {
+          "cve_id": "CVE-2020-14869",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Security: LDAP Auth)."
+        },
+        {
+          "cve_id": "CVE-2020-14839",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2024-21163",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2024-21196",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: X Plugin)."
+        },
+        {
+          "cve_id": "CVE-2025-50101",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2019-14540",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "A Polymorphic Typing issue was discovered in FasterXML jackson-databind before 2.9.10."
+        },
+        {
+          "cve_id": "CVE-2020-14830",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2021-2166",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: DML)."
+        }
+      ]
+    },
+    "nginx_latest": {
+      "service_id": "nginx_latest",
+      "product_family": "nginx",
+      "items": [
+        {
+          "cve_id": "CVE-2021-32687",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Redis is an open source, in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2022-41741",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_mp4_module that might allow..."
+        },
+        {
+          "cve_id": "CVE-2020-14812",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Locking)."
+        },
+        {
+          "cve_id": "CVE-2025-23419",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "When multiple server blocks are configured to share the same IP address and port, an attacker can use session resumption to bypass client certificate authentication requirements on these servers."
+        },
+        {
+          "cve_id": "CVE-2023-44487",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "The HTTP/2 protocol allows a denial of service (server resource consumption) because request cancellation can reset many streams quickly, as exploited in the wild in August through October 2023."
+        },
+        {
+          "cve_id": "CVE-2021-3618",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "ALPACA is an application layer protocol content confusion attack, exploiting TLS servers implementing different protocols but using compatible certificates, such as multi-domain or wildcard certificates."
+        },
+        {
+          "cve_id": "CVE-2022-41742",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_mp4_module that might allow..."
+        },
+        {
+          "cve_id": "CVE-2025-50096",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB)."
+        },
+        {
+          "cve_id": "CVE-2026-60001",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "sshd in OpenSSH before 10.4 does not always honor the minimum authentication delay."
+        },
+        {
+          "cve_id": "CVE-2026-59998",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "sshd in OpenSSH before 10.4 has an undocumented security-relevant behavior: GSSAPIStrictAcceptorCheck has no value if the server is in Windows Active Directory."
+        }
+      ]
+    },
+    "nginx_mid": {
+      "service_id": "nginx_mid",
+      "product_family": "nginx",
+      "items": [
+        {
+          "cve_id": "CVE-2026-33006",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "A timing attack against mod_auth_digest in Apache HTTP Server 2.4.66 allows a bypass of Digest authentication by a remote attacker."
+        },
+        {
+          "cve_id": "CVE-2024-21049",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: DML)."
+        },
+        {
+          "cve_id": "CVE-2022-41742",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_mp4_module that might allow..."
+        },
+        {
+          "cve_id": "CVE-2023-44487",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "The HTTP/2 protocol allows a denial of service (server resource consumption) because request cancellation can reset many streams quickly, as exploited in the wild in August through October 2023."
+        },
+        {
+          "cve_id": "CVE-2021-3618",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "ALPACA is an application layer protocol content confusion attack, exploiting TLS servers implementing different protocols but using compatible certificates, such as multi-domain or wildcard certificates."
+        },
+        {
+          "cve_id": "CVE-2022-41741",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_mp4_module that might allow..."
+        },
+        {
+          "cve_id": "CVE-2024-21102",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Thread Pooling)."
+        },
+        {
+          "cve_id": "CVE-2021-23017",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "A security issue in nginx resolver was identified, which might allow an attacker who is able to forge UDP packets from the DNS server to cause 1-byte memory overwrite, resulting in worker process crash or potential other impact."
+        },
+        {
+          "cve_id": "CVE-2024-20969",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: DDL)."
+        },
+        {
+          "cve_id": "CVE-2025-23419",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "When multiple server blocks are configured to share the same IP address and port, an attacker can use session resumption to bypass client certificate authentication requirements on these servers."
+        }
+      ]
+    },
+    "nginx_old": {
+      "service_id": "nginx_old",
+      "product_family": "nginx",
+      "items": [
+        {
+          "cve_id": "CVE-2021-23017",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "A security issue in nginx resolver was identified, which might allow an attacker who is able to forge UDP packets from the DNS server to cause 1-byte memory overwrite, resulting in worker process crash or potential other impact."
+        },
+        {
+          "cve_id": "CVE-2020-14775",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB)."
+        },
+        {
+          "cve_id": "CVE-2021-3618",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "ALPACA is an application layer protocol content confusion attack, exploiting TLS servers implementing different protocols but using compatible certificates, such as multi-domain or wildcard certificates."
+        },
+        {
+          "cve_id": "CVE-2026-28780",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Heap-based Buffer Overflow vulnerability in mod_proxy_ajp of Apache HTTP Server."
+        },
+        {
+          "cve_id": "CVE-2023-51385",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "In ssh in OpenSSH before 9.6, OS command injection might occur if a user name or host name has shell metacharacters, and this name is referenced by an expansion token in certain situations."
+        },
+        {
+          "cve_id": "CVE-2024-21237",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Group Replication GCS)."
+        },
+        {
+          "cve_id": "CVE-2026-24072",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "An escalation of privilege bug in various modules in Apache HTTP 2.4.66 and earlier allows local .htaccess authors to read files with the privileges of the httpd user."
+        },
+        {
+          "cve_id": "CVE-2022-41741",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_mp4_module that might allow..."
+        },
+        {
+          "cve_id": "CVE-2022-41742",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_mp4_module that might allow..."
+        },
+        {
+          "cve_id": "CVE-2023-44487",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "The HTTP/2 protocol allows a denial of service (server resource consumption) because request cancellation can reset many streams quickly, as exploited in the wild in August through October 2023."
+        }
+      ]
+    },
+    "openssh_latest": {
+      "service_id": "openssh_latest",
+      "product_family": "OpenSSH",
+      "items": [
+        {
+          "cve_id": "CVE-2023-22059",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+        },
+        {
+          "cve_id": "CVE-2026-73281",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "In ssh-agent in OpenSSH before 10.5, some operations can occur remotely but were intended to occur only locally, including operations that add tokens or use keys."
+        },
+        {
+          "cve_id": "CVE-2026-106582",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "In sshd and ssh in OpenSSH before 10.6, an LZ77 dictionary coder can be used even though this is contraindicated by the arXiv 2609.07709 \"Crossing the Streams\" findings."
+        },
+        {
+          "cve_id": "CVE-2026-35388",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "OpenSSH before 10.3 omits connection multiplexing confirmation for proxy-mode multiplexing sessions."
+        },
+        {
+          "cve_id": "CVE-2026-59995",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "sftp in OpenSSH before 10.4 does not properly constrain the location of downloaded files when \"sftp server:/path .\" is used with an attacker-controlled server."
+        },
+        {
+          "cve_id": "CVE-2026-106583",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "In ssh in OpenSSH before 10.6, a $ or \\ character can occur in a command-line username, leading to injection."
+        },
+        {
+          "cve_id": "CVE-2026-35414",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "OpenSSH before 10.3 mishandles the authorized_keys principals option in uncommon scenarios involving a principals list in conjunction with a Certificate Authority that makes certain use of comma characters."
+        },
+        {
+          "cve_id": "CVE-2026-59999",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "In sshd in OpenSSH before 10.4, DisableForwarding=yes was supposed to take precedence over PermitTunnel=yes, but did not."
+        },
+        {
+          "cve_id": "CVE-2022-21460",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Logging)."
+        },
+        {
+          "cve_id": "CVE-2023-38408",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "The PKCS#11 feature in ssh-agent in OpenSSH before 9.3p2 has an insufficiently trustworthy search path, leading to remote code execution if an agent is forwarded to an attacker-controlled system."
+        }
+      ]
+    },
+    "openssh_mid": {
+      "service_id": "openssh_mid",
+      "product_family": "OpenSSH",
+      "items": [
+        {
+          "cve_id": "CVE-2023-51385",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "In ssh in OpenSSH before 9.6, OS command injection might occur if a user name or host name has shell metacharacters, and this name is referenced by an expansion token in certain situations."
+        },
+        {
+          "cve_id": "CVE-2026-35385",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "In OpenSSH before 10.3, a file downloaded by scp may be installed setuid or setgid, an outcome contrary to some users' expectations, if the download is performed as root with -O (legacy scp protocol) and without -p (preserve mode)."
+        },
+        {
+          "cve_id": "CVE-2024-21247",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Client product of Oracle MySQL (component: Client: mysqldump)."
+        },
+        {
+          "cve_id": "CVE-2025-26465",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "A vulnerability was found in OpenSSH when the VerifyHostKeyDNS option is enabled."
+        },
+        {
+          "cve_id": "CVE-2026-106583",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "In ssh in OpenSSH before 10.6, a $ or \\ character can occur in a command-line username, leading to injection."
+        },
+        {
+          "cve_id": "CVE-2023-38408",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "The PKCS#11 feature in ssh-agent in OpenSSH before 9.3p2 has an insufficiently trustworthy search path, leading to remote code execution if an agent is forwarded to an attacker-controlled system."
+        },
+        {
+          "cve_id": "CVE-2020-14775",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB)."
+        },
+        {
+          "cve_id": "CVE-2023-48795",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "The SSH transport protocol with certain OpenSSH extensions, found in OpenSSH before 9.6 and other products, allows remote attackers to bypass integrity checks such that some packets are omitted (from the extension negotiation message), a..."
+        },
+        {
+          "cve_id": "CVE-2026-73281",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "In ssh-agent in OpenSSH before 10.5, some operations can occur remotely but were intended to occur only locally, including operations that add tokens or use keys."
+        },
+        {
+          "cve_id": "CVE-2026-73283",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "In sshd in OpenSSH before 10.5, the restrict keyword (in authorized_keys) was supposed to be applicable to tunnel forwarding but was not."
+        }
+      ]
+    },
+    "openssh_old": {
+      "service_id": "openssh_old",
+      "product_family": "OpenSSH",
+      "items": [
+        {
+          "cve_id": "CVE-2026-34032",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Improper Null Termination, Out-of-bounds Read vulnerability in Apache HTTP Server."
+        },
+        {
+          "cve_id": "CVE-2025-49630",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "In certain proxy configurations, a denial of service attack against Apache HTTP Server versions 2.4.26 through to 2.4.63 can be triggered by untrusted clients causing an assertion in mod_proxy_http2."
+        },
+        {
+          "cve_id": "CVE-2024-6387",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "A security regression (CVE-2006-5051) was discovered in OpenSSH's server (sshd)."
+        },
+        {
+          "cve_id": "CVE-2025-32728",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "In sshd in OpenSSH before 10.0, the DisableForwarding directive does not adhere to the documentation stating that it disables X11 and agent forwarding."
+        },
+        {
+          "cve_id": "CVE-2025-26465",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "A vulnerability was found in OpenSSH when the VerifyHostKeyDNS option is enabled."
+        },
+        {
+          "cve_id": "CVE-2026-73282",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "In ssh in OpenSSH before 10.5, a use-after-free for realloc data can occur if a certain pair of remote-forwarding operations are concurrent."
+        },
+        {
+          "cve_id": "CVE-2026-106553",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "In sshd in OpenSSH before 10.6, credentials can incorrectly persist after failure of a GSSAPIAuthentication authentication attempt."
+        },
+        {
+          "cve_id": "CVE-2022-21595",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: C API)."
+        },
+        {
+          "cve_id": "CVE-2026-59996",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "scp in OpenSSH before 10.4 may place a file in the parent directory of an intended directory when the copy occurs between two remote destinations."
+        },
+        {
+          "cve_id": "CVE-2025-26466",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "A flaw was found in the OpenSSH package."
+        }
+      ]
+    },
+    "redis_latest": {
+      "service_id": "redis_latest",
+      "product_family": "Redis",
+      "items": [
+        {
+          "cve_id": "CVE-2024-42516",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "HTTP response splitting in the core of Apache HTTP Server allows an attacker who can manipulate the Content-Type response headers of applications hosted or proxied by the server can split the HTTP response."
+        },
+        {
+          "cve_id": "CVE-2023-45145",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Redis is an in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2026-58415",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Internal state files accessible to external parties in mod_dav_fs in Apache Software Foundation Apache HTTP Server before 2.4.69 on all platforms allows a remote client to read WebDAV dead properties of resources it cannot author via a G..."
+        },
+        {
+          "cve_id": "CVE-2023-36824",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Redis is an in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2020-14775",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB)."
+        },
+        {
+          "cve_id": "CVE-2024-21213",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB)."
+        },
+        {
+          "cve_id": "CVE-2023-41053",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Redis is an in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2026-42528",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "A memory calculation bug in mod_dav in Apache httpd 2.4.67 and earlier allows an attacker with permission to create WebDAV locks to crash server child processes."
+        },
+        {
+          "cve_id": "CVE-2024-51741",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Redis is an open source, in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2022-35977",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Redis is an in-memory database that persists on disk."
+        }
+      ]
+    },
+    "redis_mid": {
+      "service_id": "redis_mid",
+      "product_family": "Redis",
+      "items": [
+        {
+          "cve_id": "CVE-2023-45145",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Redis is an in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2022-36021",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Redis is an in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2021-32628",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Redis is an open source, in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2020-14867",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: DDL)."
+        },
+        {
+          "cve_id": "CVE-2023-25155",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Redis is an in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2021-32675",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Redis is an open source, in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2023-22458",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Redis is an in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2025-46818",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Redis is an open source, in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2023-22007",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Replication)."
+        },
+        {
+          "cve_id": "CVE-2022-24736",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Redis is an in-memory database that persists on disk."
+        }
+      ]
+    },
+    "redis_old": {
+      "service_id": "redis_old",
+      "product_family": "Redis",
+      "items": [
+        {
+          "cve_id": "CVE-2024-51741",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Redis is an open source, in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2022-24834",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Redis is an in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2023-28856",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Redis is an open source, in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2023-41053",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Redis is an in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2026-56449",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "Out-of-bounds Write vulnerability in Apache HTTP Server's mod_proxy_html with crafted HTTP response bodies."
+        },
+        {
+          "cve_id": "CVE-2022-24735",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Redis is an in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2025-23419",
+          "is_true": false,
+          "decoy_type": "other_product",
+          "description": "When multiple server blocks are configured to share the same IP address and port, an attacker can use session resumption to bypass client certificate authentication requirements on these servers."
+        },
+        {
+          "cve_id": "CVE-2024-31227",
+          "is_true": false,
+          "decoy_type": "same_family_other_version",
+          "description": "Redis is an open source, in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2021-32687",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Redis is an open source, in-memory database that persists on disk."
+        },
+        {
+          "cve_id": "CVE-2021-32626",
+          "is_true": true,
+          "decoy_type": "true",
+          "description": "Redis is an open source, in-memory database that persists on disk."
+        }
+      ]
+    }
+  }
+}

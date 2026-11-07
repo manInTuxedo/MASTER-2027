@@ -1,0 +1,151 @@
+﻿service_id,cve_id,is_true,decoy_type,description
+apache_latest,CVE-2024-21157,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB).
+apache_latest,CVE-2023-25155,False,other_product,Redis is an in-memory database that persists on disk.
+apache_latest,CVE-2026-63045,False,same_family_other_version,"Improper validation of FTP PASV reply address in mod_proxy_ftp in Apache Software Foundation Apache HTTP Server through 2.4.68 on all platforms allows, in forward proxy configurations, an untrusted FTP server to cause the proxy to open a..."
+apache_latest,CVE-2025-55753,False,same_family_other_version,"An integer overflow in the case of failed ACME certificate renewal leads, after a number of failures (~30 days in default configurations), to the backoff timer becoming 0."
+apache_latest,CVE-2023-45802,False,same_family_other_version,"When a HTTP/2 stream was reset (RST frame) by a client, there was a time window were the request's memory resources were not reclaimed immediately."
+apache_latest,CVE-2024-21166,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB).
+apache_latest,CVE-2026-34032,False,same_family_other_version,"Improper Null Termination, Out-of-bounds Read vulnerability in Apache HTTP Server."
+apache_latest,CVE-2026-59797,False,same_family_other_version,Improper Privilege Management vulnerability in Apache HTTP Server's mod_ssl via SSLRequire and file-related expressions.
+apache_latest,CVE-2021-2169,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+apache_latest,CVE-2024-21061,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Audit Plug-in).
+apache_mid,CVE-2023-45802,True,true,"When a HTTP/2 stream was reset (RST frame) by a client, there was a time window were the request's memory resources were not reclaimed immediately."
+apache_mid,CVE-2026-34059,True,true,Buffer Over-read vulnerability in Apache HTTP Server.
+apache_mid,CVE-2024-42516,True,true,HTTP response splitting in the core of Apache HTTP Server allows an attacker who can manipulate the Content-Type response headers of applications hosted or proxied by the server can split the HTTP response.
+apache_mid,CVE-2026-44186,True,true,Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in the mod_proxy_ftp module in Apache HTTP Server with an attacker controlled backend FTP server.
+apache_mid,CVE-2023-22110,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+apache_mid,CVE-2022-22719,False,same_family_other_version,A carefully crafted request body can cause a read to a random memory area which could cause the process to crash.
+apache_mid,CVE-2026-79768,True,true,Path equivalence: '/./' (single dot directory) vulnerability in Apache HTTP Server's mod_userdir module when configured with absolute non-wildcard UserDir directive (the 2nd form in https://httpd.apache.org/docs/2.4/mod/mod_userdir.html#...
+apache_mid,CVE-2021-44224,False,same_family_other_version,"A crafted URI sent to httpd configured as a forward proxy (ProxyRequests on) can cause a crash (NULL pointer dereference) or, for configurations mixing forward and reverse proxy declarations, can allow for requests to be directed to a de..."
+apache_mid,CVE-2022-26377,False,same_family_other_version,Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling') vulnerability in mod_proxy_ajp of Apache HTTP Server allows an attacker to smuggle requests to the AJP server it forwards requests to.
+apache_mid,CVE-2020-14539,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+apache_old,CVE-2026-60000,False,other_product,sshd in OpenSSH before 10.4 allows remote attackers to cause a denial of service (resource consumption from excessive authentication attempts) because MaxAuthTries was mishandled for GSSAPIAuthentication.
+apache_old,CVE-2021-41524,True,true,"While fuzzing the 2.4.49 httpd, a new null pointer dereference was detected during HTTP/2 request processing, allowing an external source to DoS the server."
+apache_old,CVE-2026-44631,True,true,Buffer Underwrite vulnerability in Apache HTTP Server on crafted regular expressions in the configuration.
+apache_old,CVE-2021-42013,True,true,It was found that the fix for CVE-2021-41773 in Apache HTTP Server 2.4.50 was insufficient.
+apache_old,CVE-2024-21096,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Client: mysqldump).
+apache_old,CVE-2026-59997,False,other_product,"internal-sftp in sshd in OpenSSH before 10.4 recognizes only the first 9 command-line arguments, which can be important if a later command-line argument would have helped to ensure the intended security properties of an SFTP connection."
+apache_old,CVE-2020-14550,False,other_product,Vulnerability in the MySQL Client product of Oracle MySQL (component: C API).
+apache_old,CVE-2026-42536,True,true,"Heap-based Buffer Overflow vulnerability in Apache HTTP Server with mod_xml2enc, xml2StartParse, and untrusted content This issue affects Apache HTTP Server: from 2.4.0 through 2.4.67."
+apache_old,CVE-2024-38477,True,true,null pointer dereference in mod_proxy in Apache HTTP Server 2.4.59 and earlier allows an attacker to crash the server via a malicious request.
+apache_old,CVE-2020-14553,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Pluggable Auth).
+mysql_latest,CVE-2020-14539,False,same_family_other_version,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+mysql_latest,CVE-2023-22059,False,same_family_other_version,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+mysql_latest,CVE-2021-32762,False,other_product,"Redis is an open source, in-memory database that persists on disk."
+mysql_latest,CVE-2023-22007,False,same_family_other_version,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Replication).
+mysql_latest,CVE-2020-14845,False,same_family_other_version,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+mysql_latest,CVE-2026-73283,False,other_product,"In sshd in OpenSSH before 10.5, the restrict keyword (in authorized_keys) was supposed to be applicable to tunnel forwarding but was not."
+mysql_latest,CVE-2026-42536,False,other_product,"Heap-based Buffer Overflow vulnerability in Apache HTTP Server with mod_xml2enc, xml2StartParse, and untrusted content This issue affects Apache HTTP Server: from 2.4.0 through 2.4.67."
+mysql_latest,CVE-2022-23943,False,other_product,Out-of-bounds Write vulnerability in mod_sed of Apache HTTP Server allows an attacker to overwrite heap memory with possibly attacker provided data.
+mysql_latest,CVE-2023-21976,False,same_family_other_version,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+mysql_latest,CVE-2021-41099,False,other_product,"Redis is an open source, in-memory database that persists on disk."
+mysql_mid,CVE-2025-58098,False,other_product,"Apache HTTP Server 2.4.65 and earlier with Server Side Includes (SSI) enabled and mod_cgid (but not mod_cgi) passes the shell-escaped query string to #exec cmd=""..."" directives."
+mysql_mid,CVE-2021-2179,False,same_family_other_version,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Group Replication Plugin).
+mysql_mid,CVE-2024-21061,True,true,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Audit Plug-in).
+mysql_mid,CVE-2020-15358,False,same_family_other_version,"In SQLite before 3.32.3, select.c mishandles query-flattener optimization, leading to a multiSelectOrderBy heap overflow because of misuse of transitive properties for constant propagation."
+mysql_mid,CVE-2022-21460,False,same_family_other_version,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Logging).
+mysql_mid,CVE-2023-22078,True,true,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+mysql_mid,CVE-2024-38475,False,other_product,Improper escaping of output in mod_rewrite in Apache HTTP Server 2.4.59 and earlier allows an attacker to map URLs to filesystem locations that are permitted to be served by the server but are not intentionally/directly reachable by any...
+mysql_mid,CVE-2024-20961,True,true,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+mysql_mid,CVE-2024-21213,True,true,Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB).
+mysql_mid,CVE-2024-21201,True,true,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+mysql_old,CVE-2007-2768,False,other_product,"OpenSSH, when using OPIE (One-Time Passwords in Everything) for PAM, allows remote attackers to determine the existence of certain user accounts, which displays a different response if the user account exists and is configured to use one..."
+mysql_old,CVE-2021-28041,False,other_product,"ssh-agent in OpenSSH before 8.5 has a double free that may be relevant in a few less-common scenarios, such as unconstrained agent-socket access on a legacy operating system, or the forwarding of an agent to an attacker-controlled host."
+mysql_old,CVE-2020-14869,True,true,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Security: LDAP Auth).
+mysql_old,CVE-2020-14839,True,true,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+mysql_old,CVE-2024-21163,False,same_family_other_version,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+mysql_old,CVE-2024-21196,False,same_family_other_version,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: X Plugin).
+mysql_old,CVE-2025-50101,False,same_family_other_version,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+mysql_old,CVE-2019-14540,True,true,A Polymorphic Typing issue was discovered in FasterXML jackson-databind before 2.9.10.
+mysql_old,CVE-2020-14830,True,true,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+mysql_old,CVE-2021-2166,True,true,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: DML).
+nginx_latest,CVE-2021-32687,False,other_product,"Redis is an open source, in-memory database that persists on disk."
+nginx_latest,CVE-2022-41741,False,same_family_other_version,"NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_mp4_module that might allow..."
+nginx_latest,CVE-2020-14812,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Locking).
+nginx_latest,CVE-2025-23419,False,same_family_other_version,"When multiple server blocks are configured to share the same IP address and port, an attacker can use session resumption to bypass client certificate authentication requirements on these servers."
+nginx_latest,CVE-2023-44487,False,same_family_other_version,"The HTTP/2 protocol allows a denial of service (server resource consumption) because request cancellation can reset many streams quickly, as exploited in the wild in August through October 2023."
+nginx_latest,CVE-2021-3618,False,same_family_other_version,"ALPACA is an application layer protocol content confusion attack, exploiting TLS servers implementing different protocols but using compatible certificates, such as multi-domain or wildcard certificates."
+nginx_latest,CVE-2022-41742,False,same_family_other_version,"NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_mp4_module that might allow..."
+nginx_latest,CVE-2025-50096,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB).
+nginx_latest,CVE-2026-60001,False,other_product,sshd in OpenSSH before 10.4 does not always honor the minimum authentication delay.
+nginx_latest,CVE-2026-59998,False,other_product,sshd in OpenSSH before 10.4 has an undocumented security-relevant behavior: GSSAPIStrictAcceptorCheck has no value if the server is in Windows Active Directory.
+nginx_mid,CVE-2026-33006,False,other_product,A timing attack against mod_auth_digest in Apache HTTP Server 2.4.66 allows a bypass of Digest authentication by a remote attacker.
+nginx_mid,CVE-2024-21049,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: DML).
+nginx_mid,CVE-2022-41742,False,same_family_other_version,"NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_mp4_module that might allow..."
+nginx_mid,CVE-2023-44487,True,true,"The HTTP/2 protocol allows a denial of service (server resource consumption) because request cancellation can reset many streams quickly, as exploited in the wild in August through October 2023."
+nginx_mid,CVE-2021-3618,False,same_family_other_version,"ALPACA is an application layer protocol content confusion attack, exploiting TLS servers implementing different protocols but using compatible certificates, such as multi-domain or wildcard certificates."
+nginx_mid,CVE-2022-41741,False,same_family_other_version,"NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_mp4_module that might allow..."
+nginx_mid,CVE-2024-21102,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Thread Pooling).
+nginx_mid,CVE-2021-23017,False,same_family_other_version,"A security issue in nginx resolver was identified, which might allow an attacker who is able to forge UDP packets from the DNS server to cause 1-byte memory overwrite, resulting in worker process crash or potential other impact."
+nginx_mid,CVE-2024-20969,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: DDL).
+nginx_mid,CVE-2025-23419,True,true,"When multiple server blocks are configured to share the same IP address and port, an attacker can use session resumption to bypass client certificate authentication requirements on these servers."
+nginx_old,CVE-2021-23017,True,true,"A security issue in nginx resolver was identified, which might allow an attacker who is able to forge UDP packets from the DNS server to cause 1-byte memory overwrite, resulting in worker process crash or potential other impact."
+nginx_old,CVE-2020-14775,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB).
+nginx_old,CVE-2021-3618,True,true,"ALPACA is an application layer protocol content confusion attack, exploiting TLS servers implementing different protocols but using compatible certificates, such as multi-domain or wildcard certificates."
+nginx_old,CVE-2026-28780,False,other_product,Heap-based Buffer Overflow vulnerability in mod_proxy_ajp of Apache HTTP Server.
+nginx_old,CVE-2023-51385,False,other_product,"In ssh in OpenSSH before 9.6, OS command injection might occur if a user name or host name has shell metacharacters, and this name is referenced by an expansion token in certain situations."
+nginx_old,CVE-2024-21237,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Group Replication GCS).
+nginx_old,CVE-2026-24072,False,other_product,An escalation of privilege bug in various modules in Apache HTTP 2.4.66 and earlier allows local .htaccess authors to read files with the privileges of the httpd user.
+nginx_old,CVE-2022-41741,True,true,"NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_mp4_module that might allow..."
+nginx_old,CVE-2022-41742,True,true,"NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_mp4_module that might allow..."
+nginx_old,CVE-2023-44487,True,true,"The HTTP/2 protocol allows a denial of service (server resource consumption) because request cancellation can reset many streams quickly, as exploited in the wild in August through October 2023."
+openssh_latest,CVE-2023-22059,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer).
+openssh_latest,CVE-2026-73281,True,true,"In ssh-agent in OpenSSH before 10.5, some operations can occur remotely but were intended to occur only locally, including operations that add tokens or use keys."
+openssh_latest,CVE-2026-106582,True,true,"In sshd and ssh in OpenSSH before 10.6, an LZ77 dictionary coder can be used even though this is contraindicated by the arXiv 2609.07709 ""Crossing the Streams"" findings."
+openssh_latest,CVE-2026-35388,False,same_family_other_version,OpenSSH before 10.3 omits connection multiplexing confirmation for proxy-mode multiplexing sessions.
+openssh_latest,CVE-2026-59995,True,true,"sftp in OpenSSH before 10.4 does not properly constrain the location of downloaded files when ""sftp server:/path ."" is used with an attacker-controlled server."
+openssh_latest,CVE-2026-106583,True,true,"In ssh in OpenSSH before 10.6, a $ or \ character can occur in a command-line username, leading to injection."
+openssh_latest,CVE-2026-35414,False,same_family_other_version,OpenSSH before 10.3 mishandles the authorized_keys principals option in uncommon scenarios involving a principals list in conjunction with a Certificate Authority that makes certain use of comma characters.
+openssh_latest,CVE-2026-59999,True,true,"In sshd in OpenSSH before 10.4, DisableForwarding=yes was supposed to take precedence over PermitTunnel=yes, but did not."
+openssh_latest,CVE-2022-21460,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Logging).
+openssh_latest,CVE-2023-38408,False,same_family_other_version,"The PKCS#11 feature in ssh-agent in OpenSSH before 9.3p2 has an insufficiently trustworthy search path, leading to remote code execution if an agent is forwarded to an attacker-controlled system."
+openssh_mid,CVE-2023-51385,False,same_family_other_version,"In ssh in OpenSSH before 9.6, OS command injection might occur if a user name or host name has shell metacharacters, and this name is referenced by an expansion token in certain situations."
+openssh_mid,CVE-2026-35385,True,true,"In OpenSSH before 10.3, a file downloaded by scp may be installed setuid or setgid, an outcome contrary to some users' expectations, if the download is performed as root with -O (legacy scp protocol) and without -p (preserve mode)."
+openssh_mid,CVE-2024-21247,False,other_product,Vulnerability in the MySQL Client product of Oracle MySQL (component: Client: mysqldump).
+openssh_mid,CVE-2025-26465,True,true,A vulnerability was found in OpenSSH when the VerifyHostKeyDNS option is enabled.
+openssh_mid,CVE-2026-106583,True,true,"In ssh in OpenSSH before 10.6, a $ or \ character can occur in a command-line username, leading to injection."
+openssh_mid,CVE-2023-38408,False,same_family_other_version,"The PKCS#11 feature in ssh-agent in OpenSSH before 9.3p2 has an insufficiently trustworthy search path, leading to remote code execution if an agent is forwarded to an attacker-controlled system."
+openssh_mid,CVE-2020-14775,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB).
+openssh_mid,CVE-2023-48795,False,same_family_other_version,"The SSH transport protocol with certain OpenSSH extensions, found in OpenSSH before 9.6 and other products, allows remote attackers to bypass integrity checks such that some packets are omitted (from the extension negotiation message), a..."
+openssh_mid,CVE-2026-73281,True,true,"In ssh-agent in OpenSSH before 10.5, some operations can occur remotely but were intended to occur only locally, including operations that add tokens or use keys."
+openssh_mid,CVE-2026-73283,True,true,"In sshd in OpenSSH before 10.5, the restrict keyword (in authorized_keys) was supposed to be applicable to tunnel forwarding but was not."
+openssh_old,CVE-2026-34032,False,other_product,"Improper Null Termination, Out-of-bounds Read vulnerability in Apache HTTP Server."
+openssh_old,CVE-2025-49630,False,other_product,"In certain proxy configurations, a denial of service attack against Apache HTTP Server versions 2.4.26 through to 2.4.63 can be triggered by untrusted clients causing an assertion in mod_proxy_http2."
+openssh_old,CVE-2024-6387,False,same_family_other_version,A security regression (CVE-2006-5051) was discovered in OpenSSH's server (sshd).
+openssh_old,CVE-2025-32728,True,true,"In sshd in OpenSSH before 10.0, the DisableForwarding directive does not adhere to the documentation stating that it disables X11 and agent forwarding."
+openssh_old,CVE-2025-26465,True,true,A vulnerability was found in OpenSSH when the VerifyHostKeyDNS option is enabled.
+openssh_old,CVE-2026-73282,True,true,"In ssh in OpenSSH before 10.5, a use-after-free for realloc data can occur if a certain pair of remote-forwarding operations are concurrent."
+openssh_old,CVE-2026-106553,True,true,"In sshd in OpenSSH before 10.6, credentials can incorrectly persist after failure of a GSSAPIAuthentication authentication attempt."
+openssh_old,CVE-2022-21595,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: C API).
+openssh_old,CVE-2026-59996,True,true,scp in OpenSSH before 10.4 may place a file in the parent directory of an intended directory when the copy occurs between two remote destinations.
+openssh_old,CVE-2025-26466,False,same_family_other_version,A flaw was found in the OpenSSH package.
+redis_latest,CVE-2024-42516,False,other_product,HTTP response splitting in the core of Apache HTTP Server allows an attacker who can manipulate the Content-Type response headers of applications hosted or proxied by the server can split the HTTP response.
+redis_latest,CVE-2023-45145,False,same_family_other_version,Redis is an in-memory database that persists on disk.
+redis_latest,CVE-2026-58415,False,other_product,Internal state files accessible to external parties in mod_dav_fs in Apache Software Foundation Apache HTTP Server before 2.4.69 on all platforms allows a remote client to read WebDAV dead properties of resources it cannot author via a G...
+redis_latest,CVE-2023-36824,False,same_family_other_version,Redis is an in-memory database that persists on disk.
+redis_latest,CVE-2020-14775,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB).
+redis_latest,CVE-2024-21213,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB).
+redis_latest,CVE-2023-41053,False,same_family_other_version,Redis is an in-memory database that persists on disk.
+redis_latest,CVE-2026-42528,False,other_product,A memory calculation bug in mod_dav in Apache httpd 2.4.67 and earlier allows an attacker with permission to create WebDAV locks to crash server child processes.
+redis_latest,CVE-2024-51741,False,same_family_other_version,"Redis is an open source, in-memory database that persists on disk."
+redis_latest,CVE-2022-35977,False,same_family_other_version,Redis is an in-memory database that persists on disk.
+redis_mid,CVE-2023-45145,True,true,Redis is an in-memory database that persists on disk.
+redis_mid,CVE-2022-36021,True,true,Redis is an in-memory database that persists on disk.
+redis_mid,CVE-2021-32628,False,same_family_other_version,"Redis is an open source, in-memory database that persists on disk."
+redis_mid,CVE-2020-14867,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: DDL).
+redis_mid,CVE-2023-25155,True,true,Redis is an in-memory database that persists on disk.
+redis_mid,CVE-2021-32675,False,same_family_other_version,"Redis is an open source, in-memory database that persists on disk."
+redis_mid,CVE-2023-22458,True,true,Redis is an in-memory database that persists on disk.
+redis_mid,CVE-2025-46818,True,true,"Redis is an open source, in-memory database that persists on disk."
+redis_mid,CVE-2023-22007,False,other_product,Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Replication).
+redis_mid,CVE-2022-24736,False,same_family_other_version,Redis is an in-memory database that persists on disk.
+redis_old,CVE-2024-51741,False,same_family_other_version,"Redis is an open source, in-memory database that persists on disk."
+redis_old,CVE-2022-24834,True,true,Redis is an in-memory database that persists on disk.
+redis_old,CVE-2023-28856,True,true,"Redis is an open source, in-memory database that persists on disk."
+redis_old,CVE-2023-41053,False,same_family_other_version,Redis is an in-memory database that persists on disk.
+redis_old,CVE-2026-56449,False,other_product,Out-of-bounds Write vulnerability in Apache HTTP Server's mod_proxy_html with crafted HTTP response bodies.
+redis_old,CVE-2022-24735,True,true,Redis is an in-memory database that persists on disk.
+redis_old,CVE-2025-23419,False,other_product,"When multiple server blocks are configured to share the same IP address and port, an attacker can use session resumption to bypass client certificate authentication requirements on these servers."
+redis_old,CVE-2024-31227,False,same_family_other_version,"Redis is an open source, in-memory database that persists on disk."
+redis_old,CVE-2021-32687,True,true,"Redis is an open source, in-memory database that persists on disk."
+redis_old,CVE-2021-32626,True,true,"Redis is an open source, in-memory database that persists on disk."

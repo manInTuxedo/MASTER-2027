@@ -1,0 +1,4 @@
+Nmap scan result:
+{scan_result}
+
+List the known CVE identifiers that affect this exact product and version.

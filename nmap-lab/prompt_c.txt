@@ -1,0 +1,7 @@
+Nmap scan result:
+{scan_result}
+
+Candidate CVEs:
+{candidates}
+
+Select the candidate CVEs that affect this exact product and version. List only CVEs from the candidate list above. You may select none.

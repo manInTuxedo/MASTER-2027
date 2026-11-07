@@ -1,0 +1,4 @@
+id,product_family,role,docker_image,expected_version,host_port,nse_script
+redis_old_noversion,Redis,old,redis:6.0.5,,8010,
+redis_mid_noversion,Redis,mid,redis:7.0.5,,8011,
+redis_latest_noversion,Redis,latest,redis:8.10.3,,8012,
