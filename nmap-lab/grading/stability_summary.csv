@@ -1,0 +1,16 @@
+﻿model,prompt,condition,services,mean_jaccard
+llama3.2:3b,a,complete,15,0.0471
+llama3.2:3b,a,incomplete,3,0.0
+llama3.2:3b,b,complete,15,0.0291
+llama3.2:3b,b,incomplete,3,0.3333
+llama3.2:3b,c,complete,15,0.7174
+phi4-mini,a,complete,15,0.4667
+phi4-mini,a,incomplete,3,0.2222
+phi4-mini,b,complete,15,1.0
+phi4-mini,b,incomplete,3,1.0
+phi4-mini,c,complete,15,0.38
+qwen3.5:4b,a,complete,15,0.2963
+qwen3.5:4b,a,incomplete,3,0.7778
+qwen3.5:4b,b,complete,15,0.1617
+qwen3.5:4b,b,incomplete,3,1.0
+qwen3.5:4b,c,complete,15,0.4853

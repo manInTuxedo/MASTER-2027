@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Services scanned without a version. Abst.: answers that say not sure. Cites: answers that cite at least one CVE.}
+\label{tab:incomplete}
+\begin{tabular}{llrrrrr}
+\toprule
+Model & Prompt & Runs & Abst. & Cites & Fabr. n & Unsupp. n \\
+\midrule
+llama3.2:3b & (a) direct & t0 & 0.0\% & 100.0\% & 18 & 78 \\
+llama3.2:3b & (a) direct & t07 & 77.8\% & 66.7\% & 10 & 58 \\
+llama3.2:3b & (b) abstain & t0 & 100.0\% & 0.0\% & 0 & 0 \\
+llama3.2:3b & (b) abstain & t07 & 77.8\% & 44.4\% & 1 & 9 \\
+\midrule
+phi4-mini & (a) direct & t0 & 100.0\% & 0.0\% & 0 & 0 \\
+phi4-mini & (a) direct & t07 & 88.9\% & 44.4\% & 4 & 8 \\
+phi4-mini & (b) abstain & t0 & 100.0\% & 0.0\% & 0 & 0 \\
+phi4-mini & (b) abstain & t07 & 88.9\% & 0.0\% & 0 & 0 \\
+\midrule
+qwen3.5:4b & (a) direct & t0 & 100.0\% & 0.0\% & 0 & 0 \\
+qwen3.5:4b & (a) direct & t07 & 88.9\% & 11.1\% & 0 & 1 \\
+qwen3.5:4b & (b) abstain & t0 & 100.0\% & 0.0\% & 0 & 0 \\
+qwen3.5:4b & (b) abstain & t07 & 100.0\% & 0.0\% & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}

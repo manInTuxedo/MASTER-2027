@@ -380,9 +380,17 @@ python build_nvd_truth.py
 
 With a key it takes about a minute for the fifteen services (54 requests in the reported run); without a key, or if NVD rejects the key, the script continues at the slower public rate (about six seconds per request). Every raw NVD reply is cached in `ground_truth/nvd_raw/`, so re-running the script does not contact NVD again unless `--refresh` is given. The script prints the NVD data date to record, the SHA-256 of the Nmap dataset, and any services that need review. The outputs are listed in `README.md`.
 
-### Other stages
+### Model evaluation, grading, and results
 
-- Scripts for prompt execution, repeated trials, automated CVE grading, baseline comparison, and metric calculation.
-- An experiment protocol that fixes the prompts, JSON output format, model settings, and metric definitions before any model is evaluated.
+These stages run after the Docker/Nmap collection, in this order, from the `nmap-lab` directory. Stop the Docker lab first (`docker compose down`) and, if possible, quit Docker Desktop, so that memory is free for the models. The Ollama app must be running.
 
-Those components should be documented with their exact versions and configuration when they are implemented. They are not prerequisites for running `collect_nmap.py` as it currently exists.
+1. Candidate lists for prompt (c): `python make_shortlists.py`
+2. Optional input without a version: start the Redis containers, run `python collect_nmap.py --manifest lab_manifest_incomplete.csv --out-dir results_incomplete`, then stop them.
+3. Small trial (18 calls): `python run_models.py --services apache_old nginx_old --runs t0 --out-dir llm_pilot`, then `python summarize_runs.py llm_pilot --estimate`.
+4. Full run (612 calls, about one hour in the reported run): `python run_models.py --incomplete-json results_incomplete/nmap_results.json`. It can be stopped and started again with the same command. Check it with `python summarize_runs.py llm_runs`.
+5. Baselines: `python baseline_cpe.py`
+6. Grading: `python grade_runs.py --runs-dir llm_runs baseline`. It needs `requests` and the `NVD_API_KEY` variable. It looks up every cited CVE that is not already known (1,076 lookups in the reported run, about 15 to 25 minutes with a key); lookups are cached, so a second run is fast.
+7. Manual check sample: `python sample_for_review.py`, then check the listed CVEs on nvd.nist.gov and fill in `my_check`.
+8. Tables and charts: `python make_results.py`. It needs `matplotlib` for the charts.
+
+The prompts, schema, and candidate lists must not change between the start of the full run and the end of grading; the run script refuses to continue if they do. The experiment rules are in `PROTOCOL.md`.

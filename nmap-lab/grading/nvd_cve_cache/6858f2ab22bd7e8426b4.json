@@ -1,0 +1,1 @@
+{"url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-9012", "retrieved_utc": "2026-11-08T11:16:39+00:00", "http_status": 200, "message": null, "body": {"resultsPerPage": 0, "startIndex": 0, "totalResults": 0, "format": "NVD_CVE", "version": "2.0", "timestamp": "2026-11-08T11:16:37.620", "vulnerabilities": []}}

@@ -19,7 +19,7 @@ The lab is designed to produce repeatable service/version observations that can 
 
 ## 2. Current Implementation Status
 
-The currently implemented phases are the **Docker-based service lab and Nmap data-collection pipeline** (dataset v2, 15 services) and the **first build of the NVD ground-truth table** (2026-11-06).
+The currently implemented phases are the **Docker-based service lab and Nmap data-collection pipeline** (dataset v2, 15 services), the **NVD ground-truth table** (2026-11-06), the **full run of three local models** (2026-11-07), and the **first grading, non-AI baselines, and results tables** (2026-11-08).
 
 The lab defines fifteen services: five product families, each represented by an older, intermediate, and latest version.
 
@@ -84,6 +84,38 @@ Notes on specific products:
 - **OpenSSH.** There is no official OpenSSH image with selectable versions, so the three images are built from the upstream source tarballs (`nmap-lab/openssh/Dockerfile`). Distribution packages can carry security fixes without changing the reported version number, which would make NVD-based ground truth unreliable. The banner of an upstream source build reports the version without the portable suffix (for example `8.4` rather than `8.4p1`), so the manifest's expected versions are `8.4`, `9.6`, and `10.3`.
 - **Image digests.** For images pulled from a registry, `image_digest` holds the registry digest. For the locally built OpenSSH images it holds the local image ID.
 
+### LLM run and first grading
+
+**Run.** On 2026-11-07, three models (`llama3.2:3b`, `phi4-mini`, `qwen3.5:4b`) served by Ollama 0.33.3 answered 612 prompts (540 in the main condition and 72 for inputs without a version), with no failed call, in about 58 minutes. Model digests, GPU fit, settings, and a SHA-256 of every input file are recorded in `nmap-lab/llm_runs/run_meta.json`. The run followed protocol v1.0; the grading rules were refined to v1.1 after the run (see `PROTOCOL.md`).
+
+**Grading.** 642 answers were graded (the 612 model answers plus two non-AI baselines for each of the 15 services). The CVE ids of every answer, including answers with broken JSON, are extracted by regular expression; 1,439 distinct ids were checked against NVD. Each cited CVE is labeled correct, real but wrong, fabricated, rejected, real but not yet analysed, or neutral (disputed or all-versions NVD entries, and MySQL bundled-library CVEs).
+
+**Preliminary results** (temperature 0, the 15 services with a known version; rates exclude neutral citations; the neutral rules and the treatment of broken answers are under review):
+
+| Model | Prompt | CVEs cited | Precision | Recall | Fabricated | Real but wrong | Said "not sure" |
+|---|---|---|---|---|---|---|---|
+| llama3.2:3b | (a) direct | 508 | 0.00 | 0.00 | 34% | 61% | 0% |
+| llama3.2:3b | (b) abstain | 45 | 0.00 | 0.00 | 42% | 56% | 0% |
+| llama3.2:3b | (c) shortlist | 112 | 0.41 | 0.09 | 0% | 59% | 0% |
+| phi4-mini | (a) direct | 43 | 0.00 | 0.00 | 0% | 100% | 0% |
+| phi4-mini | (b) abstain | 0 | n/a | 0.00 | n/a | n/a | 0% |
+| phi4-mini | (c) shortlist | 12 | 0.33 | 0.01 | 0% | 67% | 87% |
+| qwen3.5:4b | (a) direct | 47 | 0.00 | 0.00 | 15% | 83% | 47% |
+| qwen3.5:4b | (b) abstain | 17 | 0.00 | 0.00 | 24% | 71% | 0% |
+| qwen3.5:4b | (c) shortlist | 80 | 0.40 | 0.07 | 0% | 60% | 0% |
+| Baseline: raw CPE lookup | - | 301 | 1.00 | 0.59 | 0% | 0% | - |
+| Baseline: corrected CPE lookup | - | 508 | 1.00 | 1.00 | 0% | 0% | - |
+
+Observations from these numbers:
+
+- At temperature 0, no cited CVE was correct for prompts (a) and (b) for any model.
+- Most cited CVEs that exist apply to other versions (real but wrong, 56% to 100%); invented identifiers were 0% to 42%.
+- With a candidate list (prompt c), no model cited a CVE outside the list; 33% to 41% of the selected candidates were correct, and recall was at most 0.09.
+- `phi4-mini` returned empty lists without saying "not sure" for prompt (b), and said "not sure" in 87% of its answers for prompt (c).
+- Without a version in the input, every model and prompt abstained in all three answers at temperature 0, except `llama3.2:3b` with prompt (a), which cited 113 CVEs for the three inputs.
+- `llama3.2:3b` produced much longer lists at temperature 0 with prompt (a): 508 CVEs in 15 answers, against 215 in 45 answers at temperature 0.7.
+- The raw CPE baseline finds nothing for nginx and MySQL because of vendor naming differences (recall 0.59). The corrected baseline equals the ground truth by construction and is an upper bound.
+
 ## 3. System Architecture
 
 The current pipeline is:
@@ -117,6 +149,18 @@ Nmap is used here for host-port and service/version discovery. Nmap service dete
 | `nmap-lab/ground_truth/nvd_crosscheck_differences.csv` | CVEs on which the two NVD query methods disagree. |
 | `nmap-lab/ground_truth/nvd_truth_meta.json` | Query date, Nmap dataset SHA-256, settings, and sanity checks. |
 | `nmap-lab/ground_truth/nvd_raw/` | Raw NVD replies kept as evidence and used as a cache. |
+| `PROTOCOL.md` | Experiment protocol (v1.1): models, prompts, output format, run matrix, grading rules, metrics, decisions. |
+| `nmap-lab/prompts/` | System message, the three prompts, the JSON schema, and the candidate lists for prompt (c). |
+| `nmap-lab/make_shortlists.py` | Builds the fixed candidate lists for prompt (c). |
+| `nmap-lab/run_models.py` | Runs the models through Ollama and saves every raw answer. |
+| `nmap-lab/summarize_runs.py` | Health summary of a run (valid answers, speed, GPU fit, time estimate). |
+| `nmap-lab/llm_runs/` | The 612 raw answers (`raw_calls.jsonl`) and the run record (`run_meta.json`). |
+| `nmap-lab/baseline_cpe.py` | Builds the two non-AI baselines (CPE lookup in NVD) in the same format as the models' answers. |
+| `nmap-lab/grade_runs.py` | Grades every cited CVE and computes the metrics. |
+| `nmap-lab/grading/` | Graded citations and answers, summaries, stability, the neutral-review list, and grading metadata. |
+| `nmap-lab/sample_for_review.py` | Draws a sample of graded citations for manual checking against NVD. |
+| `nmap-lab/make_results.py` | Produces the paper's tables (CSV and LaTeX) and charts. |
+| `nmap-lab/results_tables/` | The tables and figures. |
 
 The collector also records useful metadata such as the Nmap version, scan command, scan time, elapsed time, detected service/version, CPE values (including a primary CPE 2.3 value for NVD lookup), image digest, a model-input text field, and whether a detected version matches the manifest's expected version.
 
@@ -124,7 +168,7 @@ The collector also records useful metadata such as the Nmap version, scan comman
 
 The broader research experiment is intended to proceed as follows:
 
-1. Build and validate a ground-truth list of applicable CVEs for each tested product/version using NVD data, and record the date and time of the query together with a hash of the Nmap dataset it was built from. *(First build implemented on 2026-11-06; review of the OpenSSH entries is in progress.)*
+1. Build and validate a ground-truth list of applicable CVEs for each tested product/version using NVD data, and record the date and time of the query together with a hash of the Nmap dataset it was built from. *(Implemented on 2026-11-06.)*
 2. Provide the Nmap-derived service observations to three locally hosted small LLMs served through Ollama: `llama3.2:3b`, `phi4-mini`, and `qwen3.5:4b`. Model digests will be recorded in the experiment protocol.
 3. Evaluate multiple prompt conditions:
    - Direct CVE identification request.
@@ -136,9 +180,9 @@ The broader research experiment is intended to proceed as follows:
 7. Calculate and report the evaluation metrics.
 8. Optionally, test incomplete input: for example, Redis scanned without the `redis-info` script so that no version is reported, to examine how models handle missing information.
 
-The prompts, JSON output format, model settings, and metric definitions will be fixed in an experiment protocol before any model is evaluated.
+The prompts, JSON output format, model settings, and metric definitions are fixed in `PROTOCOL.md` (version 1.0 before the run; version 1.1 refines the grading rules after the run).
 
-The Docker/Nmap collection stage and the first build of the NVD ground-truth table are implemented as described above. The experiment protocol, local-LLM evaluation, automated grading, and baseline comparison should be treated as subsequent research stages unless separately implemented and documented in the repository.
+All stages up to the first grading, the baselines, and the results tables are implemented as described above. The remaining work is a manual check of a sample of the graded citations, the review of the neutral rules with the professor, and writing the paper.
 
 ## 6. Evaluation Metrics
 
@@ -153,6 +197,8 @@ The planned evaluation includes:
 - **Response time:** time required to produce a response.
 
 Some CVEs exist in NVD but have no applicability data (for example, entries that are still awaiting analysis), so they cannot be judged applicable or inapplicable. These are planned to be reported as a separate category rather than counted as real-but-wrong.
+
+The graded results also report neutral citations (counted as neither correct nor wrong), the missing CVEs, the share of answers that cite nothing, and, for services with no applicable CVE, the share of answers that correctly cite nothing (see `PROTOCOL.md`, Sections 9 and 10).
 
 Ground-truth sizes range from 0 to 118 CVEs per service. For services with an empty truth set, precision and recall are undefined, so only rates that do not depend on the truth set (for example fabricated-CVE rate and abstention rate) apply to them.
 
@@ -203,6 +249,18 @@ nmap-lab/
     └── nvd_raw/
 ```
 
+After the run, baselines, grading, and results scripts, these folders are added:
+
+```
+nmap-lab/
+├── prompts/                (prompts, schema, shortlists.json, shortlists_preview.csv)
+├── llm_runs/               (raw_calls.jsonl, run_meta.json)
+├── baseline/               (raw_calls.jsonl)
+├── grading/                (graded_citations.csv, graded_calls.csv, summary_*.csv, stability*.csv,
+│                            neutral_review.csv, grading_meta.json, nvd_cve_cache/)
+└── results_tables/         (table1 ... table6 as CSV and LaTeX, figures/)
+```
+
 The JSON file is the primary structured dataset. The CSV file is a convenient tabular representation. The raw XML files preserve the original Nmap output and should be retained as experimental evidence.
 
 ## 9. Known Limitations
@@ -213,6 +271,8 @@ The JSON file is the primary structured dataset. The CSV file is a convenient ta
 - **Group labels.** `latest` services may still have CVEs recorded in NVD. NVD data, not the group label, defines the ground truth.
 - **NVD changes over time.** NVD records are updated continuously, so the ground truth is valid for the recorded query date. Recently published CVEs may not yet have applicability data, so a clean result for a very recent version reflects NVD at that date.
 - **All-versions entries.** Some NVD entries attach a CVE to a product without any version limits (some are tagged as disputed). They match every version, including very new ones, and are flagged in the truth table rather than silently removed.
+- **Broken answers.** Answers with broken or cut-off JSON are graded by extracting CVE ids with a regular expression. They can contain long repetitive lists that dominate the pooled counts of some model and prompt combinations. The tables report the average number of CVEs per answer, and a sensitivity table uses valid answers only.
+- **Neutral rules.** MySQL bundled-library CVEs are recognised from a fixed list of library names in the NVD description or affected products. Every CVE treated as neutral is listed in `grading/neutral_review.csv` for review.
 - **Unequal truth-set sizes.** Services range from 0 to 118 applicable CVEs, which affects how recall can be interpreted across services.
 
 ## 10. Data Sources

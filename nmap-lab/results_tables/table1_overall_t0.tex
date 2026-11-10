@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Temperature-0 run on the 15 services with a known version. Cited/ans: average number of CVEs per answer. Fabr.: share of cited CVEs that do not exist; Wrong: share that exist but do not apply. Neutral citations are excluded.}
+\label{tab:overall-t0}
+\begin{tabular}{llrrrrrr}
+\toprule
+Model & Prompt & Cited/ans & Prec. & Rec. & Fabr. & Wrong & Abst. \\
+\midrule
+llama3.2:3b & (a) direct & 33.9 & 0.00 & 0.00 & 34.2\% & 60.8\% & 0.0\% \\
+llama3.2:3b & (b) abstain & 3.0 & 0.00 & 0.00 & 42.2\% & 55.6\% & 0.0\% \\
+llama3.2:3b & (c) shortlist & 7.5 & 0.41 & 0.09 & 0.0\% & 58.9\% & 0.0\% \\
+\midrule
+phi4-mini & (a) direct & 2.9 & 0.00 & 0.00 & 0.0\% & 100.0\% & 0.0\% \\
+phi4-mini & (b) abstain & 0.0 & -- & 0.00 & -- & -- & 0.0\% \\
+phi4-mini & (c) shortlist & 0.8 & 0.33 & 0.01 & 0.0\% & 66.7\% & 86.7\% \\
+\midrule
+qwen3.5:4b & (a) direct & 3.1 & 0.00 & 0.00 & 14.9\% & 83.0\% & 46.7\% \\
+qwen3.5:4b & (b) abstain & 1.1 & 0.00 & 0.00 & 23.5\% & 70.6\% & 0.0\% \\
+qwen3.5:4b & (c) shortlist & 5.3 & 0.40 & 0.07 & 0.0\% & 60.0\% & 0.0\% \\
+\midrule
+Baseline: raw CPE & - & 20.1 & 1.00 & 0.59 & 0.0\% & 0.0\% & 0.0\% \\
+\midrule
+Baseline: corrected CPE & - & 33.9 & 1.00 & 1.00 & 0.0\% & 0.0\% & 0.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}

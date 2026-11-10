@@ -1,0 +1,49 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Temperature-0 run by version role. Clean ok: share of answers on a service with no applicable CVEs that correctly cite nothing.}
+\label{tab:by-role}
+\begin{tabular}{llrrrrrr}
+\toprule
+Model & Prompt & Role & Prec. & Rec. & Fabr. & Wrong & Clean ok \\
+\midrule
+llama3.2:3b & (a) direct & old & 0.00 & 0.00 & 38.1\% & 58.9\% & -- \\
+llama3.2:3b & (a) direct & mid & 0.00 & 0.00 & 32.7\% & 64.2\% & -- \\
+llama3.2:3b & (a) direct & latest & 0.00 & 0.00 & 30.8\% & 59.6\% & 0.0\% \\
+llama3.2:3b & (b) abstain & old & 0.00 & 0.00 & 20.0\% & 73.3\% & -- \\
+llama3.2:3b & (b) abstain & mid & 0.00 & 0.00 & 46.7\% & 53.3\% & -- \\
+llama3.2:3b & (b) abstain & latest & 0.00 & 0.00 & 60.0\% & 40.0\% & 0.0\% \\
+llama3.2:3b & (c) shortlist & old & 0.58 & 0.09 & 0.0\% & 42.1\% & -- \\
+llama3.2:3b & (c) shortlist & mid & 0.48 & 0.08 & 0.0\% & 52.4\% & -- \\
+llama3.2:3b & (c) shortlist & latest & 0.12 & 0.20 & 0.0\% & 87.5\% & 0.0\% \\
+\midrule
+phi4-mini & (a) direct & old & 0.00 & 0.00 & 0.0\% & 100.0\% & -- \\
+phi4-mini & (a) direct & mid & -- & 0.00 & -- & -- & -- \\
+phi4-mini & (a) direct & latest & 0.00 & 0.00 & 0.0\% & 100.0\% & 100.0\% \\
+phi4-mini & (b) abstain & old & -- & 0.00 & -- & -- & -- \\
+phi4-mini & (b) abstain & mid & -- & 0.00 & -- & -- & -- \\
+phi4-mini & (b) abstain & latest & -- & 0.00 & -- & -- & 100.0\% \\
+phi4-mini & (c) shortlist & old & 0.57 & 0.02 & 0.0\% & 42.9\% & -- \\
+phi4-mini & (c) shortlist & mid & 0.00 & 0.00 & 0.0\% & 100.0\% & -- \\
+phi4-mini & (c) shortlist & latest & 0.00 & 0.00 & 0.0\% & 100.0\% & 75.0\% \\
+\midrule
+qwen3.5:4b & (a) direct & old & 0.00 & 0.00 & 33.3\% & 66.7\% & -- \\
+qwen3.5:4b & (a) direct & mid & 0.00 & 0.00 & 12.2\% & 85.4\% & -- \\
+qwen3.5:4b & (a) direct & latest & -- & 0.00 & -- & -- & 100.0\% \\
+qwen3.5:4b & (b) abstain & old & 0.00 & 0.00 & 25.0\% & 75.0\% & -- \\
+qwen3.5:4b & (b) abstain & mid & 0.00 & 0.00 & 33.3\% & 66.7\% & -- \\
+qwen3.5:4b & (b) abstain & latest & 0.00 & 0.00 & 0.0\% & 50.0\% & 75.0\% \\
+qwen3.5:4b & (c) shortlist & old & 0.68 & 0.06 & 0.0\% & 31.6\% & -- \\
+qwen3.5:4b & (c) shortlist & mid & 0.52 & 0.07 & 0.0\% & 48.4\% & -- \\
+qwen3.5:4b & (c) shortlist & latest & 0.10 & 0.15 & 0.0\% & 90.0\% & 0.0\% \\
+\midrule
+Baseline: raw CPE & - & old & 1.00 & 0.64 & 0.0\% & 0.0\% & -- \\
+Baseline: raw CPE & - & mid & 1.00 & 0.50 & 0.0\% & 0.0\% & -- \\
+Baseline: raw CPE & - & latest & 1.00 & 1.00 & 0.0\% & 0.0\% & 100.0\% \\
+\midrule
+Baseline: corrected CPE & - & old & 1.00 & 1.00 & 0.0\% & 0.0\% & -- \\
+Baseline: corrected CPE & - & mid & 1.00 & 1.00 & 0.0\% & 0.0\% & -- \\
+Baseline: corrected CPE & - & latest & 1.00 & 1.00 & 0.0\% & 0.0\% & 100.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}

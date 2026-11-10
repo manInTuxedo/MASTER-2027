@@ -1,0 +1,7 @@
+﻿model,prompt,run_type,selected,selected_true_answers,selected_same_family_decoys,selected_other_product_decoys,cited_outside_list
+llama3.2:3b,c,t0,112,46,40,26,0
+llama3.2:3b,c,t07,305,125,99,81,0
+phi4-mini,c,t0,12,4,8,0,0
+phi4-mini,c,t07,59,22,33,4,0
+qwen3.5:4b,c,t0,80,32,35,13,0
+qwen3.5:4b,c,t07,174,75,75,24,0
