@@ -1,0 +1,15 @@
+# Python virtual environment and caches
+venv/
+__pycache__/
+*.pyc
+ 
+# Secrets: never commit API keys
+.env
+*api_key*
+*apikey*
+ 
+# OS / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+ 

@@ -41,7 +41,7 @@ The lab defines fifteen services: five product families, each represented by an 
 | OpenSSH | Mid | `lab-openssh:9.6p1` (built locally) | 8014 |
 | OpenSSH | Latest | `lab-openssh:10.3p1` (built locally) | 8015 |
 
-The `old`, `mid`, and `latest` labels are experimental group labels. They do not, by themselves, establish that an image is vulnerable or secure. Applicability must be checked against authoritative vulnerability data and the exact detected product/version.
+The `old`, `mid`, and `latest` labels are experimental group labels. For OpenSSH, `latest` means 10.3p1, which is not the newest release: NVD records include a CVE fixed in OpenSSH 10.5. It is therefore a recent version, not a clean control. They do not, by themselves, establish that an image is vulnerable or secure. Applicability must be checked against authoritative vulnerability data and the exact detected product/version.
 
 The `latest` images were first run with mutable tags (`httpd:2.4`, `nginx:stable`, `mysql:8.4`, `redis:8`) and then pinned to the exact versions that Nmap detected in that run.
 
@@ -74,7 +74,7 @@ These are observations from the run described by the project author. For reprodu
 Observations:
 
 - For nginx and MySQL, a lookup that uses Nmap's CPE unchanged returns nothing, because NVD records these products under different vendor names (`f5:nginx` and `oracle:mysql`). The ground truth therefore queries each service under every known alias and merges the results; the `found_by` column records which name found each CVE.
-- The latest Apache, nginx, MySQL, and Redis versions have no applicable CVEs in NVD at the query date, so they act as clean controls for this date only.
+- The latest Apache, nginx, MySQL, and Redis versions have no applicable CVEs in NVD at the query date, so they act as clean controls for this date only. The OpenSSH `latest` version (10.3p1) is affected by newer CVEs, because releases up to 10.5 or later exist.
 - Three sanity checks on well-known CVEs (Apache 2.4.49, nginx 1.18.0, OpenSSH 9.6) were found as expected.
 - **Under review:** for all three OpenSSH versions, three CVEs (CVE-2007-2768, CVE-2008-3844, CVE-2023-51767) were found by the primary query method but not by the cross-check method. The latest OpenSSH version also has 23 applicable CVEs, so it is not a clean control. The truth table therefore includes two review columns: `cve_tags` (for example `disputed`) and `unbounded_version_match` (NVD attaches the CVE to the product with no version limits). How these entries are counted will be fixed in the experiment protocol.
 
