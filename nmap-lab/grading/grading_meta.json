@@ -1,11 +1,10 @@
 {
-  "graded_utc": "2026-11-10T12:41:18+00:00",
+  "graded_utc": "2026-11-14T23:03:05+00:00",
   "protocol": "PROTOCOL.md v1.1 (grading rules)",
-  "answers_graded": 642,
-  "citations_graded": 2989,
+  "answers_graded": 612,
+  "citations_graded": 2180,
   "raw_calls_sha256": {
-    "llm_runs\\raw_calls.jsonl": "2bb880bccdf094eb6dedb76f9498fd0dbc35338d9fb9fdeffe3d17f446b2b2e9",
-    "baseline\\raw_calls.jsonl": "91641fcd5024f6d413460248b941f14a02ba9afce1cde111d8c20e025f5dc8cb"
+    "llm_runs\\raw_calls.jsonl": "2bb880bccdf094eb6dedb76f9498fd0dbc35338d9fb9fdeffe3d17f446b2b2e9"
   },
   "truth_csv_sha256": "2cf89ac550a2a8037f8690902fcfe0c59a1a69d2555cc86cea132af4c16025ec",
   "nvd_lookups_for_cited_cves": 275,
@@ -45,7 +44,10 @@
     "libcbor",
     "libfido2",
     "wolfssl",
-    "yassl"
+    "yassl",
+    "libpng",
+    "sqlite",
+    "jackson-databind"
   ],
   "mysql_bundled_products": [
     "boost:boost",
@@ -63,12 +65,13 @@
     "zlib:zlib"
   ],
   "mysql_truth_entries_made_neutral": {
-    "mysql_old": 3
+    "mysql_old": 6
   },
   "critical_cvss_threshold": 9.0,
   "notes": [
     "CVE ids are extracted by regular expression from the raw text of every answer, including invalid JSON; in an answer cut off by the length limit, an id touching the end of the text is ignored.",
-    "Rates use all citations except neutral ones as the denominator; recall uses all answers on services with a non-empty effective ground truth; abstention rate = not_sure true / all answers.",
+    "Rates use the non-neutral citations as the denominator (neutral and real_unscored citations are left out); rejected ids are counted with fabricated ones in fabricated_rate; recall uses all answers on services with a non-empty effective ground truth; abstention rate = not_sure true / all answers.",
+    "Stability = mean pairwise Jaccard similarity of the CVE sets of the three temperature-0.7 runs, computed over the runs that cite at least one CVE.",
     "Effective ground truth = version-specific NVD entries, minus MySQL bundled-library entries (neutral).",
     "Duplicate CVEs within one answer are counted once."
   ],

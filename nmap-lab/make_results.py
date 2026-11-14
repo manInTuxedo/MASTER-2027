@@ -8,6 +8,7 @@ Writes : results_tables/*.csv        the full tables
          results_tables/figures/     3 charts as PNG and PDF (needs matplotlib)
 
 Tables (the complete condition = the 15 services with a known version):
+  paper_table_iv             Table IV of the paper (same columns, integer percentages), to compare with the draft
   table1_overall_t0          per model and prompt, the temperature-0 run
   table2_overall_t07         per model and prompt, the three temperature-0.7 runs pooled, with stability
   table3_by_role_t0          per model, prompt and role (old / mid / latest), temperature 0
@@ -167,6 +168,24 @@ def main():
                    "selected_other_product_decoys", "cited_outside_list"], t5)
     write_csv(os.path.join(args.out_dir, "table6_sensitivity_valid_only.csv"), full_cols, t6)
 
+    # Table IV of the paper: same columns, integer percentages, temperature 0
+    def pct_int(v):
+        return "-" if v in ("", None) else int(100 * float(v) + 0.5)
+
+    paper_names = {"llama3.2:3b": "Llama 3.2", "phi4-mini": "Phi-4-mini", "qwen3.5:4b": "Qwen3.5",
+                   "baseline_raw_cpe": "Raw CPE", "baseline_corrected_cpe": "Corrected CPE"}
+    paper4 = []
+    for r in t1:
+        clean_rows = [x for x in t0 if x["model"] == r["model"] and x["prompt"] == r["prompt"] and x["clean_service"] is True]
+        paper4.append({"Model": paper_names.get(r["model"], r["model"]),
+                       "Prompt": "(%s)" % r["prompt"] if r["prompt"] != "-" else "-",
+                       "Cit.": r["judged_citations"], "Prec.": pct_int(r["precision"]), "Rec.": pct_int(r["recall"]),
+                       "Fab.": pct_int(r["fabricated_rate"]), "RBW": pct_int(r["real_but_wrong_rate"]),
+                       "Abst.": pct_int(r["abstention_rate"]) if not r["model"].startswith("baseline") else "-",
+                       "Clean": pct_int(r["clean_service_ok_rate"])})
+    write_csv(os.path.join(args.out_dir, "paper_table_iv.csv"),
+              ["Model", "Prompt", "Cit.", "Prec.", "Rec.", "Fab.", "RBW", "Abst.", "Clean"], paper4)
+
     main_cols = [("model", "Model"), ("prompt", "Prompt"), ("avg_cited_per_answer", "Cited/ans"), ("precision", "Prec."),
                  ("recall", "Rec."), ("fabricated_rate", "Fabr."), ("real_but_wrong_rate", "Wrong"),
                  ("abstention_rate", "Abst.")]
@@ -253,6 +272,10 @@ def main():
             plt.close(fig)
 
     print(f"Tables and figures written to {args.out_dir}/")
+    print("\nPaper Table IV (temperature 0), same columns as the paper:")
+    print(f"{'Model':<15}{'Prompt':<8}{'Cit.':>6}{'Prec.':>7}{'Rec.':>6}{'Fab.':>6}{'RBW':>6}{'Abst.':>7}{'Clean':>7}")
+    for r in paper4:
+        print(f"{r['Model']:<15}{r['Prompt']:<8}{r['Cit.']:>6}{r['Prec.']:>7}{r['Rec.']:>6}{r['Fab.']:>6}{r['RBW']:>6}{r['Abst.']:>7}{r['Clean']:>7}")
     print("\nTemperature-0 overall (complete condition):")
     print(f"{'model':<24}{'p':<3}{'prec':>6}{'rec':>6}{'fabr%':>7}{'wrong%':>8}{'abst%':>7}")
     for r in t1:

@@ -27,7 +27,7 @@ Labels, for each distinct cited CVE of an answer (checked in this order):
                      mysql_bundled_library    : for MySQL services, CVEs of a third-party library that MySQL bundles
                                                 (zlib, OpenSSL, ...), recognised from the NVD record; see BUNDLED_* below
   correct          in the version-specific ground truth of the service
-  real_unscored    exists, but NVD has no applicability analysis for it yet
+  real_unscored    exists, but NVD has no applicability analysis for it yet (left out of the rates, like neutral)
   real_but_wrong   exists, analysed, but not in the ground truth of the service
 Incomplete-input answers (no version in the scan line) have no ground truth: a cited CVE is fabricated, rejected, or
 real_unsupported.
@@ -67,7 +67,8 @@ CVE_ANY = re.compile(r"CVE-\d{4}-\d{4,}", re.I)
 # CPE products include one of these vendor:product names, is neutral when cited for a MySQL service.
 # Edit the lists if the professor wants a different set.
 BUNDLED_WORDS = ["zlib", "openssl", "libxml2", "libxslt", "curl", "libcurl", "lz4", "zstd", "zstandard", "protobuf",
-                 "libedit", "icu", "boost", "libevent", "rapidjson", "libcbor", "libfido2", "wolfssl", "yassl"]
+                 "libedit", "icu", "boost", "libevent", "rapidjson", "libcbor", "libfido2", "wolfssl", "yassl",
+                 "libpng", "sqlite", "jackson-databind"]
 BUNDLED_PRODUCTS = {"openssl:openssl", "zlib:zlib", "xmlsoft:libxml2", "xmlsoft:libxslt", "haxx:curl", "haxx:libcurl",
                     "lz4_project:lz4", "facebook:zstandard", "google:protobuf", "boost:boost", "wolfssl:wolfssl",
                     "yassl:yassl", "libevent_project:libevent"}
@@ -139,7 +140,9 @@ def metrics(rows):
     valid = [x for x in rows if x["valid"]]
     cit = sum(x["n_cited"] for x in rows)
     neutral = sum(x["n_neutral"] for x in rows)
-    judged = cit - neutral
+    unscored = sum(x["n_real_unscored"] for x in rows)
+    judged = cit - neutral - unscored          # "non-neutral citations": unscored ones count as neutral for the rates
+    fab_rej = sum(x["n_fabricated"] + x["n_rejected"] for x in rows)  # rejected ids are counted with fabricated
     c = sum(x["n_correct"] for x in rows)
     rec_rows = [x for x in rows if x["truth_size"]]
     crit_rows = [x for x in rows if x["critical_truth_size"]]
@@ -148,13 +151,14 @@ def metrics(rows):
     tps = [x["tokens_per_second"] for x in rows if x["tokens_per_second"] is not None]
     return {
         "calls": n, "valid_json_answers": len(valid), "invalid_output_rate": ratio(n - len(valid), n),
-        "citations": cit, "avg_cited_per_answer": round(cit / n, 1) if n else "", "neutral_citations": neutral,
+        "citations": cit, "judged_citations": judged, "avg_cited_per_answer": round(cit / n, 1) if n else "",
+        "neutral_citations": neutral,
         "neutral_disputed": sum(x["n_neutral_disputed"] for x in rows),
         "neutral_mysql_bundled": sum(x["n_neutral_bundled"] for x in rows),
         "correct": c, "real_but_wrong": sum(x["n_real_but_wrong"] for x in rows),
         "fabricated": sum(x["n_fabricated"] for x in rows), "rejected": sum(x["n_rejected"] for x in rows),
         "real_unscored": sum(x["n_real_unscored"] for x in rows), "real_unsupported": sum(x["n_real_unsupported"] for x in rows),
-        "fabricated_rate": ratio(sum(x["n_fabricated"] for x in rows), judged),
+        "fabricated_rate": ratio(fab_rej, judged),
         "real_but_wrong_rate": ratio(sum(x["n_real_but_wrong"] for x in rows), judged),
         "precision": ratio(c, judged),
         "recall": ratio(sum(x["n_correct"] for x in rec_rows), sum(x["truth_size"] for x in rec_rows)),
@@ -169,7 +173,8 @@ def metrics(rows):
     }
 
 
-METRIC_FIELDS = ["calls", "valid_json_answers", "invalid_output_rate", "citations", "avg_cited_per_answer",
+METRIC_FIELDS = ["calls", "valid_json_answers", "invalid_output_rate", "citations", "judged_citations",
+                 "avg_cited_per_answer",
                  "neutral_citations", "neutral_disputed",
                  "neutral_mysql_bundled", "correct", "real_but_wrong", "fabricated", "rejected", "real_unscored",
                  "real_unsupported", "fabricated_rate", "real_but_wrong_rate", "precision", "recall", "recall_critical",
@@ -495,10 +500,11 @@ def main():
         if x["run_type"] == "t07":
             sets[(x["model"], x["prompt"], x["condition"], x["service_id"])][x["run"]] = set(filter(None, x["cited_ids"].split(";")))
     for k, d in sorted(sets.items()):
+        d = {run: ids for run, ids in d.items() if ids}      # runs that cite nothing are left out
         if len(d) < 2:
             st_rows.append({"model": k[0], "prompt": k[1], "condition": k[2], "service_id": k[3], "runs": len(d), "mean_jaccard": ""})
             continue
-        js = [1.0 if not (a | b) else len(a & b) / len(a | b) for a, b in itertools.combinations(d.values(), 2)]
+        js = [len(a & b) / len(a | b) for a, b in itertools.combinations(d.values(), 2)]
         st_rows.append({"model": k[0], "prompt": k[1], "condition": k[2], "service_id": k[3], "runs": len(d),
                         "mean_jaccard": round(sum(js) / len(js), 4)})
     write_csv(os.path.join(args.out_dir, "stability.csv"), ["model", "prompt", "condition", "service_id", "runs", "mean_jaccard"], st_rows)
@@ -524,8 +530,11 @@ def main():
         "notes": [
             "CVE ids are extracted by regular expression from the raw text of every answer, including invalid JSON; in an answer "
             "cut off by the length limit, an id touching the end of the text is ignored.",
-            "Rates use all citations except neutral ones as the denominator; recall uses all answers on services with a non-empty "
+            "Rates use the non-neutral citations as the denominator (neutral and real_unscored citations are left out); "
+            "rejected ids are counted with fabricated ones in fabricated_rate; recall uses all answers on services with a non-empty "
             "effective ground truth; abstention rate = not_sure true / all answers.",
+            "Stability = mean pairwise Jaccard similarity of the CVE sets of the three temperature-0.7 runs, computed over the runs "
+            "that cite at least one CVE.",
             "Effective ground truth = version-specific NVD entries, minus MySQL bundled-library entries (neutral).",
             "Duplicate CVEs within one answer are counted once.",
         ],

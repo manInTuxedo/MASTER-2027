@@ -1,8 +1,10 @@
-# Experiment Protocol (v1.1)
+# Experiment Protocol (v1.2)
 
 **Status: FROZEN for the full run (v1.0, 2026-11-07).** The professor approved the prompts and JSON format, the candidate lists for prompt (c), the run settings, and the incomplete-input test, and decided how to treat the disputed OpenSSH entries (D1). The version is tagged `protocol-v1`. Any change after the first full-run call requires a new output folder and a new protocol version, because results produced with different prompts or settings cannot be mixed.
 
-**Version 1.1 (2026-11-07) changes only the grading rules** (Sections 9, 10, and 11), after the professor reviewed the full run. The prompts, settings, and the 612 recorded answers are unchanged. The changes are: CVE ids are extracted by regular expression from the raw text of every answer, including answers with broken JSON; a *neutral* label replaces *disputed* and also covers MySQL bundled-library CVEs; missing CVEs and an empty-answer rule are counted; and the non-AI baselines are graded in the same way as the models.
+**Version 1.2 (2026-11-12) aligns the grading rules with the paper draft:** rejected identifiers are counted with fabricated ones in the main rates (and listed separately); unscored identifiers (real, but without NVD applicability data) are left out of the rates like neutral ones; the list of MySQL bundled libraries also includes libpng, SQLite and jackson-databind; stability is computed over the runs that cite at least one CVE.
+
+**Version 1.1 (2026-11-07) changed only the grading rules** (Sections 9, 10, and 11), after the professor reviewed the full run. The prompts, settings, and the 612 recorded answers are unchanged. The changes are: CVE ids are extracted by regular expression from the raw text of every answer, including answers with broken JSON; a *neutral* label replaces *disputed* and also covers MySQL bundled-library CVEs; missing CVEs and an empty-answer rule are counted; and the non-AI baselines are graded in the same way as the models.
 
 Section 11 lists the decisions and their status.
 
@@ -117,17 +119,17 @@ Metrics are computed per model, per prompt, and per run type (the `t0` run, and 
 
 | Metric | Definition | When undefined |
 |---|---|---|
-| Fabricated rate | fabricated citations / all citations except neutral | no such citations |
-| Real-but-wrong rate | real-but-wrong citations / all citations except neutral | no such citations |
-| Precision | correct citations / all citations except neutral | no such citations |
-| Neutral citations | number of neutral citations (reported separately, not part of the rates above) | never |
+| Fabricated rate | (fabricated + rejected citations) / non-neutral citations | no such citations |
+| Real-but-wrong rate | real-but-wrong citations / non-neutral citations | no such citations |
+| Precision | correct citations / non-neutral citations | no such citations |
+| Neutral citations | number of neutral and unscored citations (reported separately; "non-neutral citations" in the rates above excludes both) | never |
 | Recall | correct citations / size of the effective ground-truth set, over all answers on services whose effective ground truth is not empty | no such service |
 | Missing CVEs | effective ground-truth CVEs not cited, summed over those answers | never |
 | Abstention rate | answers with `not_sure` true / all answers | never |
 | Empty-answer rate | answers that cite no CVE / all answers | never |
 | Clean-service rate | on clean services: answers that cite nothing / answers | no clean-service answer |
 | Invalid-output rate | answers whose JSON is invalid or cut off / all answers | never |
-| Stability | for each service and condition, the mean pairwise Jaccard similarity of the CVE sets across the three `t07` runs (two empty sets count as 1) | fewer than two runs |
+| Stability | for each service and condition, the mean pairwise Jaccard similarity of the CVE sets across the three `t07` runs, computed over the runs that cite at least one CVE so that repeated empty answers do not look perfectly stable | fewer than two runs that cite a CVE |
 | Response time | wall-clock seconds per call and generated tokens per second, from the recorded timings | never |
 
 Services with an empty effective ground truth (the latest versions of Apache, nginx, MySQL, and Redis) are reported with the rates that do not depend on the ground truth: fabricated rate, real-but-wrong rate, abstention rate, and the clean-service rate.
